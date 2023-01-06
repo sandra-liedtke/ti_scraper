@@ -96,7 +96,7 @@ def format_result(articles):
     # concatenate list entries to result string
     for entry in cleaned_list:
         # special handling for heise links
-        if (not 'heise' in entry) or entry.startswith('https://www.heise.de/security//news/'):
+        if 'heise' not in entry and 'infosecurity-magazine' not in entry or entry.startswith('https://www.heise.de/security//news/') or entry.startswith('https://www.infosecurity-magazine.com/news/'):
             # if last character is a / the index of the text is different
             if entry.endswith('/'):
                 # build and format record for each article to be added to the result

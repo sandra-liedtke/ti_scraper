@@ -5,7 +5,10 @@
             "https://thehackernews.com",
             "https://www.it-daily.net/it-sicherheit",
             "https://www.security-insider.de/fachbeitraege",
-            "https://www.heise.de/security/news"
+            "https://www.heise.de/security/news",
+            "https://netzpolitik.org/14-tage/",
+            "https://www.hackread.com/",
+            "https://www.infosecurity-magazine.com/news/"
         ],
         "stopwords": [
             "it-sicherheit/page", 
@@ -19,7 +22,24 @@
             "interred",
             "-collapse",
             "/search?",
-            "-sidebar"
+            "-sidebar",
+            "/author/",
+            "/#comments",
+            "/security/page/",
+            "/page-",
+            "https://www.hackread.com/sec/",
+            "/www.infosec.co.uk",
+            "relx",
+            "privacy.reedexpo",
+            "infosecurityme",
+            "infosecurity.",
+            "javascript",
+            "infosecurityeurope",
+            "infosecurityleadersnetwork",
+            "infosecuritynorthamerica",
+            "infosecurityrussia",
+            "facebook.com",
+            "twitter.com"
         ]
     },
     "getDeltaRecords": true,
