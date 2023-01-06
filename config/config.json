@@ -1,0 +1,36 @@
+{
+    "websiteconfig": {
+        "webpages": [
+            "https://www.darkreading.com/latest/news",
+            "https://thehackernews.com",
+            "https://www.it-daily.net/it-sicherheit",
+            "https://www.security-insider.de/fachbeitraege",
+            "https://www.heise.de/security/news"
+        ],
+        "stopwords": [
+            "it-sicherheit/page", 
+            "mediadaten",
+            "/datenschutz",
+            "vogel.de",
+            "bildergalerien",
+            "/agb/",
+            "analytics",
+            "data-google",
+            "interred",
+            "-collapse",
+            "/search?",
+            "-sidebar"
+        ]
+    },
+    "getDeltaRecords": true,
+    "resultfile": {
+        "createFile": true,
+        "folder": "Result Files",
+        "filename": "ti_scraper.txt"
+    },
+    "mailconfig":{
+        "sendMail": false,
+        "mailServer": "",
+        "destinationMailAddress": ""
+    }
+}
