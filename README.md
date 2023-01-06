@@ -15,6 +15,7 @@ Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 Diese Arbeit unterliegt den Bestimmungen einer
 [Creative Commons Namensnennung 4.0 International-Lizenz][cc-by].
+
 © 2023 Sandra Liedtke
 
 [![CC BY 4.0][cc-by-image]][cc-by]
@@ -24,7 +25,7 @@ Diese Arbeit unterliegt den Bestimmungen einer
 [cc-by-shield]: https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg
 
 
-### English Version
+## English Version:
 
 This repository contains a script that can be used to collect the latest news on cyber security in a file and/or send them via mail, but can also be used for other topics.
 
@@ -41,6 +42,7 @@ Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
+
 © 2023 Sandra Liedtke
 
 [![CC BY 4.0][cc-by-image]][cc-by]
