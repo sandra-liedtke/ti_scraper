@@ -39,8 +39,13 @@
             "infosecuritynorthamerica",
             "infosecurityrussia",
             "facebook.com",
-            "twitter.com"
-        ]
+            "twitter.com",
+            "rel=category"
+        ],
+        "specialHandling": {
+            "heise": "https://www.heise.de/security//news/",
+            "infosecurity-magazine": "https://www.infosecurity-magazine.com/news/"
+        }
     },
     "getDeltaRecords": true,
     "resultfile": {

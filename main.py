@@ -95,8 +95,14 @@ def format_result(articles):
         print('Continuing processing without cleaning list...')
     # concatenate list entries to result string
     for entry in cleaned_list:
-        # special handling for heise links
-        if 'heise' not in entry and 'infosecurity-magazine' not in entry or entry.startswith('https://www.heise.de/security//news/') or entry.startswith('https://www.infosecurity-magazine.com/news/'):
+        # special handling: record is only added if either the key is not contained or the key AND value are both contained
+        # loop through specialhandling dictionary
+        for key, value in CONFIG['websiteconfig']['specialHandling'].items():
+            # if the entry contains the key, but does not start with the repective value, exit the loop and process the next entry
+            if key in entry and not entry.startswith(value):
+                break
+        # if the loop has not yet been stopped due to special handling
+        else:
             # if last character is a / the index of the text is different
             if entry.endswith('/'):
                 # build and format record for each article to be added to the result
