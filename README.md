@@ -9,7 +9,7 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das Script gest
  - getDeltaRecords definiert, ob alle Einträge der jeweiligen Webseiten ins Ergebnis geschrieben werden sollen oder nur diejenigen, die noch nicht in vorherigen Dateien auftauchen
      - HINWEIS: Das Delta-Update funktioniert nur, wenn ein Unterordner für die Ergebnisdateien angegeben wird
  - In der resultfile-Sektion kann definiert werden, ob eine Datei mit den Ergebnissen erzeugt werden soll, wo diese gespeichert werden und wie sie heißen soll
-     - HINWEIS: Wenn ein Ordnername engegeben wird, der noch nicht existiert, erzeugt das Script den Ordner
+     - HINWEIS: Wenn ein Ordnername angegeben wird, der noch nicht existiert, erzeugt das Script den Ordner
  - Die weiteren Konfigurationen betreffen den Mailversand
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
@@ -17,7 +17,7 @@ Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 Diese Arbeit unterliegt den Bestimmungen einer
 [Creative Commons Namensnennung 4.0 International-Lizenz][cc-by].
 
-© 2023 Sandra Liedtke
+© 2023 Sandra Liedtke.
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
@@ -45,7 +45,7 @@ Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 This work is licensed under a
 [Creative Commons Attribution 4.0 International License][cc-by].
 
-© 2023 Sandra Liedtke
+© 2023 Sandra Liedtke.
 
 [![CC BY 4.0][cc-by-image]][cc-by]
 
