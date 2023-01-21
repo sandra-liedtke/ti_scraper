@@ -1,6 +1,5 @@
 import os
-from time import strftime, strptime
-import time
+from time import strftime
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -38,7 +37,7 @@ if CONFIG['getDeltaRecords'] and os.path.exists(DEST_FOLDER):
             LATEST_CONTENT += latest_file.read()
 
 
-# check if there are any files older than 10 days and if so, delete them based on user input
+# check if there are any files older than the days specified and if so, delete them based on user input
 def delete_old_files():
     obsolete_files = []
     [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getctime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
