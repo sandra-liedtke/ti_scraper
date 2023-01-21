@@ -1,9 +1,11 @@
 import os
+from time import strftime, strptime
+import time
 import requests
 from bs4 import BeautifulSoup
 import json
 import re
-from datetime import datetime
+from datetime import datetime, timedelta
 
 
 # load config
@@ -12,13 +14,13 @@ with open('config/config.json', 'r') as config_file:
 
 
 # get current date and add it to the result file name
-TODAY = datetime.now().date()
+TODAY = datetime.today().date()
 # define destination file name depending whether a folder name is given
 if CONFIG['resultfile']['folder']:
     DEST_FOLDER = CONFIG['resultfile']['folder'] + '/'
-    DEST_FILE_NAME = DEST_FOLDER + str(TODAY) + '_' + CONFIG['resultfile']['filename']
+    DEST_FILE_NAME = DEST_FOLDER + str(TODAY) + '_' + strftime('%H%M%S', datetime.now().timetuple()) + '_' + CONFIG['resultfile']['filename']
 else:
-    DEST_FILE_NAME = str(TODAY) + '_' + CONFIG['resultfile']['filename']
+    DEST_FILE_NAME = str(TODAY) + '_' + strftime('%H%M%S', datetime.now().timetuple()) + '_' + CONFIG['resultfile']['filename']
 
 
 ATAGS = re.compile('<a.*?>')
@@ -27,12 +29,24 @@ CLEAN = re.compile('<article.*?>|<a|class=".*?"|href=|[>]|name=".*?"|title=".*?"
 
 # delta records can only be extracted if a subfolder is given and existing
 LATEST_CONTENT = ''
-if CONFIG['getDeltaRecords'] and DEST_FOLDER:
-        EXISTING_FILES = [os.path.join(DEST_FOLDER, file) for file in os.listdir(DEST_FOLDER)]
-        for file in EXISTING_FILES:
-            # open newest file and read entries
-            with open(file, 'r') as latest_file:
-                LATEST_CONTENT += latest_file.read()
+EXISTING_FILES = []
+if CONFIG['getDeltaRecords'] and os.path.exists(DEST_FOLDER):
+    EXISTING_FILES = [os.path.join(DEST_FOLDER, file) for file in os.listdir(DEST_FOLDER)]
+    for file in EXISTING_FILES:
+        # open each file and read entries
+        with open(file, 'r') as latest_file:
+            LATEST_CONTENT += latest_file.read()
+
+
+# check if there are any files older than 10 days and if so, delete them based on user input
+def delete_old_files():
+    obsolete_files = []
+    [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getctime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
+    if obsolete_files:
+        delete_files = input("Found files older than 10 days. Delete them now (Y/n)? ")
+        if delete_files.upper() in ["Y", "YES"]:
+            for f in obsolete_files:
+                os.remove(f)
 
 
 def get_urls():
@@ -160,6 +174,8 @@ def main():
     if CONFIG['mailconfig']['sendMail']:
         print('Sending mail')
         send_mail(result)
+    # Checking for older files which will not be needed anymore
+    delete_old_files()
     print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')
 
 

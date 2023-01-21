@@ -31,23 +31,20 @@
             "/www.infosec.co.uk",
             "relx",
             "privacy.reedexpo",
-            "infosecurityme",
-            "infosecurity.",
             "javascript",
-            "infosecurityeurope",
-            "infosecurityleadersnetwork",
-            "infosecuritynorthamerica",
-            "infosecurityrussia",
             "facebook.com",
+            "google.com",
             "twitter.com",
-            "rel=category"
+            "rel=category",
+            "rel=sponsored"
         ],
         "specialHandling": {
             "heise": "https://www.heise.de/security//news/",
-            "infosecurity-magazine": "https://www.infosecurity-magazine.com/news/"
+            "infosecurity": "https://www.infosecurity-magazine.com/news/"
         }
     },
     "getDeltaRecords": true,
+    "timeDelta4Delete": 10,
     "resultfile": {
         "createFile": true,
         "folder": "Result Files",
