@@ -43,7 +43,7 @@ def delete_old_files():
     obsolete_files = []
     [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getctime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
     if obsolete_files:
-        delete_files = input("Found files older than 10 days. Delete them now (Y/n)? ")
+        delete_files = input("Found files older than " + str(CONFIG['timeDelta4Delete']) + " days. Delete them now (Y/n)? ")
         if delete_files.upper() in ["Y", "YES"]:
             for f in obsolete_files:
                 os.remove(f)
