@@ -3,12 +3,12 @@
         "webpages": [
             "https://www.darkreading.com/latest/news",
             "https://thehackernews.com",
-            "https://www.it-daily.net/it-sicherheit",
             "https://www.security-insider.de/fachbeitraege",
             "https://www.heise.de/security/news",
             "https://netzpolitik.org/14-tage/",
             "https://www.hackread.com/",
-            "https://www.infosecurity-magazine.com/news/"
+            "https://www.infosecurity-magazine.com/news/",
+            "https://www.bleepingcomputer.com/news/security"
         ],
         "stopwords": [
             "it-sicherheit/page", 
@@ -22,9 +22,9 @@
             "interred",
             "-collapse",
             "/search?",
-            "-sidebar",
+            "sidebar",
             "/author/",
-            "/#comments",
+            "#comment",
             "/security/page/",
             "/page-",
             "https://www.hackread.com/sec/",
@@ -36,11 +36,17 @@
             "google.com",
             "twitter.com",
             "rel=category",
-            "rel=sponsored"
+            "rel=sponsored",
+            "https://go.thn.li",
+            "youtube.com",
+            "#comment",
+            "www.plusline.net",
+            "www.techstage.de"
         ],
         "specialHandling": {
             "heise": "https://www.heise.de/security//news/",
-            "infosecurity": "https://www.infosecurity-magazine.com/news/"
+            "infosecurity": "https://www.infosecurity-magazine.com/news/",
+            "bleeping": "https://www.bleepingcomputer.com/news/security"
         }
     },
     "getDeltaRecords": true,
