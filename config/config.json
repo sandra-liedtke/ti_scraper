@@ -56,6 +56,7 @@
     },
     "getDeltaRecords": true,
     "timeDelta4Delete": 10,
+    "controllerPort": 0,
     "resultfile": {
         "createFile": true,
         "folder": "Result Files",

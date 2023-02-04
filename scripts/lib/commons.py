@@ -3,6 +3,8 @@ from time import strftime
 import requests
 import json
 from datetime import datetime, timedelta
+from stem import Signal
+from stem.control import Controller
 
 
 # load config
@@ -42,14 +44,27 @@ def get_webpage(urls):
     # define client and prepare header
     user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
     headers = {'User-Agent': user_agent}
-    # loop through list of urls and get webpage contents
-    for webpage in urls:
-        try: 
-            response = requests.get(webpage, headers=headers)
-            pages.append(response)
-        except Exception as e:
-            print('Error accessing webpages. Error Message: ', str(e))
-    print('Responses: ', pages)
+    # Check if a controller should be used
+    if CONFIG['controllerPort'] == 0:
+        for webpage in urls:
+            try: 
+                response = requests.get(webpage, headers=headers)
+                pages.append(response)
+            except Exception as e:
+                print('Error accessing webpages. Error Message: ', str(e))
+        print('Responses: ', pages)
+    else:
+        with Controller.from_port(port=CONFIG['controllerPort']) as controller:
+            controller.authenticate()
+            # loop through list of urls and get webpage contents
+            for webpage in urls:
+                try: 
+                    controller.signal(Signal.NEWNYM)
+                    response = requests.get(webpage, headers=headers)
+                    pages.append(response)
+                except Exception as e:
+                    print('Error accessing webpages. Error Message: ', str(e))
+                print('Responses: ', pages)
     return pages
 
 
