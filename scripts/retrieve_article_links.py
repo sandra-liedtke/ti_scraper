@@ -1,5 +1,6 @@
 from bs4 import BeautifulSoup
 from lib.commons import *
+from lib.regex import *
 
 
 def clean_webpages(websites):
@@ -13,17 +14,33 @@ def clean_webpages(websites):
             else:
                 website_content = website_content.find('body')
             # find all a-tags
-            website_content = website_content.find_all('a')
+            atags = website_content.find_all('a')
             # clean a-tags
-            for entry in website_content:
+            for entry in atags:
                 cleaned_result = entry.get('href')
+                # find headline
+                if len(re.findall(HEADLINE_HEADER, str(entry))) > 0:
+                    headline = re.findall(HEADLINE_HEADER, str(entry))[0]
+                elif len(re.findall(HEADLINE_H1, str(entry))) > 0:
+                    hl = str(re.findall(HEADLINE_H1, str(entry)))
+                    headline = hl.replace("[", "").replace("]", "")
+                elif len(re.findall(HEADLINE_SPAN, str(entry))) > 0:
+                    headline = re.findall(HEADLINE_SPAN, str(entry))[0]
+                elif len(re.findall(HEADLINE_DIV, str(entry))) > 0:
+                    headline = re.findall(HEADLINE_DIV, str(entry))[0]
+                else:
+                    if not cleaned_result.startswith('http'):
+                        headline = cleaned_result.strip("/").replace('-', ' ').replace('.html', '').title()
+                    else:
+                        headline = cleaned_result.strip("/").split("/")[len(cleaned_result.strip("/").split("/"))-1].replace('-', ' ').replace('.html', '').title()
                 # remove unnecessary extracted entries
                 if not any(stopword.upper() in cleaned_result.upper() for stopword in CONFIG['websiteconfig']['stopwords']):
                     # add webpage prefix if not already contained in url 
                     if cleaned_result.strip().startswith("/"):
                         cleaned_result = str(listentry.url).replace("/fachbeitraege/", '') + cleaned_result.strip()
-                    # add cleaned and filtered entry to result
-                    articles.append(cleaned_result.strip())
+                    # add cleaned and filtered entry to result if it is not yet there
+                    if not cleaned_result in str(articles):
+                        articles.append(cleaned_result.strip() + "|" + headline) 
         except Exception as e:
             print('Error cleaning webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
     return articles
@@ -37,15 +54,12 @@ def format_result(articles):
         [articles.remove(x) for x in articles if x.startswith("#")]
         [articles.remove(x) for x in articles if x.startswith("-")]
         [articles.remove(x) for x in articles if x.startswith("side")]
-        [articles.remove(x) for x in articles if not x]
-        # remove duplicates
-        cleaned_list = []    
-        [cleaned_list.append(x) for x in articles if x not in cleaned_list]
+        [articles.remove(x) for x in articles if x == "|"]
     except Exception as e:
         print('Error cleaning result ', str(articles), '. Error Message: ', str(e))
         print('Continuing processing without cleaning list...')
     # concatenate list entries to result string
-    for entry in cleaned_list:
+    for entry in articles:
         # special handling: record is only added if either the key is not contained or the key AND value are both contained
         # loop through specialhandling dictionary
         for key, value in CONFIG['websiteconfig']['specialHandling'].items():
@@ -54,15 +68,9 @@ def format_result(articles):
                 break
         # if the loop has not yet been stopped due to special handling
         else:
-            # if last character is a / the index of the text is different
-            if entry.endswith('/'):
-                # build and format record for each article to be added to the result
-                new_record = keep_delta(entry.split("/")[len(entry.split("/"))-2].replace('-', ' ').replace('.html', '').upper() + ': ' + str(entry) +   '\n' )
-                result_str += new_record
-            else:
-                # build and format record for each article to be added to the result
-                new_record = keep_delta(entry.split("/")[len(entry.split("/"))-1].replace('-', ' ').replace('.html', '').upper() + ': ' + str(entry).replace('/security//news/', '/security/') + '\n' )
-                result_str += new_record
+            # build and format record for each article to be added to the result
+            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0]  +  '\n\n' )
+            result_str += new_record
     return result_str
 
 

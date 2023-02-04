@@ -59,7 +59,7 @@ def write_file(articles):
         os.makedirs(DEST_FOLDER)
     try:
         # create result file
-        with open(DEST_FILE_NAME, 'w') as resultfile:
+        with open(DEST_FILE_NAME, 'w', encoding="utf-8") as resultfile:
             resultfile.write(str(articles))
     except Exception as e:
                 print('Error writing result file. Error Message: ', str(e))

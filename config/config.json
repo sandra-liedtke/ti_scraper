@@ -41,7 +41,12 @@
             "youtube.com",
             "#comment",
             "www.plusline.net",
-            "www.techstage.de"
+            "www.techstage.de",
+            "linkedin.com",
+            "infosec.exchange",
+            "/virus-removal/",
+            "/download/",
+            "/tutorials/"
         ],
         "specialHandling": {
             "heise": "https://www.heise.de/security//news/",
