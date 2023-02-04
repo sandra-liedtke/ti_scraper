@@ -54,6 +54,7 @@ def get_webpage(urls):
                 print('Error accessing webpages. Error Message: ', str(e))
         print('Responses: ', pages)
     else:
+        # use controller
         with Controller.from_port(port=CONFIG['controllerPort']) as controller:
             controller.authenticate()
             # loop through list of urls and get webpage contents
@@ -81,9 +82,9 @@ def write_file(articles):
 
 
 def keep_delta(record):
-    # check if current record is in newest existing file
+    # check if current record is in existing file
     if record in LATEST_CONTENT:
-        # clear record if it already exists in latest file
+        # clear record if it already exists in any file
         record = ''
     return record
 
