@@ -29,7 +29,7 @@ if CONFIG['getDeltaRecords'] and os.path.exists(DEST_FOLDER):
     EXISTING_FILES = [os.path.join(DEST_FOLDER, file) for file in os.listdir(DEST_FOLDER)]
     for file in EXISTING_FILES:
         # open each file and read entries
-        with open(file, 'r') as latest_file:
+        with open(file, 'r', encoding='utf-8') as latest_file:
             LATEST_CONTENT += latest_file.read()
 
 
@@ -83,7 +83,7 @@ def write_file(articles):
 
 def keep_delta(record):
     # check if current record is in existing file
-    if record in LATEST_CONTENT:
+    if record.replace('\n', '') in LATEST_CONTENT.replace('\n', ''):
         # clear record if it already exists in any file
         record = ''
     return record
