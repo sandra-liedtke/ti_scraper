@@ -64,7 +64,7 @@ def get_webpage(urls):
                     pages.append(response)
                 except Exception as e:
                     print('Error accessing webpages. Error Message: ', str(e))
-                print('Responses: ', pages)
+        print('Responses: ', pages)
     return pages
 
 
