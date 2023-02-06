@@ -69,7 +69,7 @@ def format_result(articles):
         # if the loop has not yet been stopped due to special handling
         else:
             # build and format record for each article to be added to the result
-            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0]  +  '\n\n' )
+            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/')  +  '\n\n' )
             result_str += new_record
     return result_str
 
