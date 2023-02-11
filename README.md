@@ -12,8 +12,11 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das Script gest
  - In controllerPort kann definiert werden, auf welchen Port der Controller gesetzt werden soll, welcher auf die Webseiten zugreift. Der Wert 0 legt fest, dass kein Controller verwendet werden soll.
  - In der resultfile-Sektion kann definiert werden, ob eine Datei mit den Ergebnissen erzeugt werden soll, wo diese gespeichert werden und wie sie heißen soll
      - HINWEIS: Wenn ein Ordnername angegeben wird, der noch nicht existiert, erzeugt das Script den Ordner
- - Im mailconfig-Abschnitt kann angegeben werden, ob Mails gesendet werden sollen. In dem Fall muss auch ein SMTP-Server angegeben werden, von welchem aus die Mails versendet werden.
- Das Feld destinationMailAddress enthält die Empänger-Mailadresse. Die sendende Mail-Addresse, die sich am SMTP-Server authentifiziert, wird in senderMailAddress angegeben. Das Passwort wird auf der Kommandozeile abgefragt während das Programm läuft und sollte **niemals** im Code oder in der Konfiguration gespeichert werden. In mailSubject kann dann noch der Betreff angegeben werden und in placeholder ein Text, der in der Mail enthalten ist, wenn es keine neuen Artikel gibt.
+ - Im mailconfig-Abschnitt kann angegeben werden, ob Mails gesendet werden sollen. In dem Fall muss auch ein SMTP-Server angegeben werden, von welchem aus die Mails versendet werden
+ - Das Feld destinationMailAddress enthält die Empänger-Mailadresse
+ - Die sendende Mail-Addresse, die sich am SMTP-Server authentifiziert, wird in senderMailAddress angegeben. Es ist empfehlenswert, hierfür eine komplett eigene Mail-Adresse zu erstellen anstatt einen existierenden Account zu verwenden, der auch für andere Dinge verwendet wird
+     - HINWEIS: Das Passwort wird auf der Kommandozeile abgefragt während das Programm läuft und sollte **niemals** im Code oder in der Konfiguration gespeichert werden
+ - In mailSubject kann dann noch der Betreff angegeben werden und in placeholder ein Text, der in der Mail enthalten ist, wenn es keine neuen Artikel gibt
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
@@ -43,8 +46,11 @@ There are some configurations that may be modified before running the script:
  - In controllerPort can be defined which port to use for the controller accessing the webpages. Value 0 defines that no controller should be used.
  - In the resultfile section can be defined whether a result file should be created, where it should be stored and how it should be named
      - HINT: If you give a folder name that is not yet existing, the script will create that respective folder
- - In the mailconfig section can be defined whether mails should be sent. If so, also a SMTP-Server needs to be given, from which mails will be sent.
- The field destinationMailAddress contains the receiver's mail address. The sending mail address, which is also used to authenticate at the SMTP-Server, is given in senderMailAddress. The password for the mail account is entered on the command line and should **never** be stored in the code or the configuration. In mailSubject can be the subject of the mail defined and in placeholder a text that will be contained in the mail body if there are no articles.
+ - In the mailconfig section can be defined whether mails should be sent. If so, also a SMTP-Server needs to be given, from which mails will be sent
+ - The field destinationMailAddress contains the receiver's mail address
+ - The sending mail address, which is also used to authenticate at the SMTP-Server, is given in senderMailAddress. Recommendation is to create a completely new mail address just for this purpose instead of using an existing address which is also used elsewhere
+     - HINT: The password for the mail account is entered on the command line and should **never** be stored in the code or the configuration
+ - In mailSubject can be the subject of the mail defined and in placeholder a text that will be contained in the mail body if there are no articles
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
