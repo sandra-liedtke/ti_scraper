@@ -1,4 +1,4 @@
-# ti_scraper
+# TI Scraper
 
 Dieses Repository enthält ein Script, das verwendet werden kann, um die neuesten Artikel zu IT-Sicherheit in einer Datei zu sammeln und/oder per Mail zu verschicken. Das Script kann auch für andere Themen verwendet werden, wenn die URLs in der Konfigurationsdatei getauscht werden.
 
