@@ -1,3 +1,4 @@
+from email.mime.text import MIMEText
 import os
 from time import strftime
 import requests
@@ -5,6 +6,8 @@ import json
 from datetime import datetime, timedelta
 from stem import Signal
 from stem.control import Controller
+import getpass
+import smtplib, ssl
 
 
 # load config
@@ -90,9 +93,30 @@ def keep_delta(record):
 
 
 def send_mail(articles):
-    # still a TODO
-    return 'OK'
-
+    # SSL
+    port = 465 
+    # prompt for password of sending mail account - do not show password on console
+    sender_mail = str(CONFIG['mailconfig']['senderMailAddress'])
+    password = getpass.getpass("Enter password for sending mail account: ")
+    receiver = str(CONFIG['mailconfig']['destinationMailAddress'])
+    subject = str(CONFIG['mailconfig']['mailSubject'])
+    # Create SSL context
+    context = ssl.create_default_context()
+    if not str(articles) == '':
+        message = MIMEText(articles)
+    else:
+        message = MIMEText(str(CONFIG['mailconfig']['placeholder']))
+    try: 
+        with smtplib.SMTP_SSL(CONFIG['mailconfig']['mailServer'], port, context=context) as server:
+            server.login(sender_mail, password)
+            # build mail and send it
+            message["Subject"] = subject
+            message["From"] = sender_mail
+            message["To"] = receiver
+            server.sendmail(sender_mail, receiver, str(message))
+    except Exception as e:
+        print('Error sending mail. Error message: ' + str(e))
+        
 
 # check if there are any files older than the days specified and if so, delete them based on user input
 def delete_old_files():

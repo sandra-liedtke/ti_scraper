@@ -1,14 +1,13 @@
 {
     "websiteconfig": {
         "webpages": [
+            "https://www.bleepingcomputer.com/news/security",
             "https://www.darkreading.com/latest/news",
             "https://thehackernews.com",
-            "https://www.security-insider.de/fachbeitraege",
-            "https://www.heise.de/security/news",
-            "https://netzpolitik.org/14-tage/",
             "https://www.hackread.com/",
             "https://www.infosecurity-magazine.com/news/",
-            "https://www.bleepingcomputer.com/news/security"
+            "https://www.security-insider.de/fachbeitraege",
+            "https://www.heise.de/security/news"
         ],
         "stopwords": [
             "it-sicherheit/page", 
@@ -44,6 +43,7 @@
             "www.techstage.de",
             "linkedin.com",
             "infosec.exchange",
+            "thn.news",
             "/virus-removal/",
             "/download/",
             "/tutorials/"
@@ -60,11 +60,14 @@
     "resultfile": {
         "createFile": true,
         "folder": "Result Files",
-        "filename": "ti_scraper.txt"
+        "filename": "articles.txt"
     },
     "mailconfig":{
         "sendMail": false,
         "mailServer": "",
-        "destinationMailAddress": ""
+        "senderMailAddress": "",
+        "destinationMailAddress": "",
+        "mailSubject": "[TEST MAIL] TI Scraper",
+        "placeholder": "Currently there are no new articles."
     }
 }
