@@ -34,15 +34,13 @@ def clean_webpages(websites):
                     else:
                         headline = cleaned_result.strip("/").split("/")[len(cleaned_result.strip("/").split("/"))-1].replace('-', ' ').replace('.html', '').title()
                 # remove unnecessary extracted entries
-                if not any(stopword.upper() in cleaned_result.upper() for stopword in CONFIG['websiteconfig']['stopwords']):
-                    # add webpage prefix if not already contained in url 
-                    if cleaned_result.strip().startswith("/"):
-                        cleaned_result = str(listentry.url).replace("/fachbeitraege/", '') + cleaned_result.strip()
+                if any(keyword.upper() in cleaned_result.upper() for keyword in CONFIG['websiteconfig']['keywords']):
                     # add cleaned and filtered entry to result if it is not yet there
                     if not cleaned_result in str(articles):
                         articles.append(cleaned_result.strip() + "|" + headline) 
         except Exception as e:
             print('Error cleaning webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
+            continue
     return articles
 
 
@@ -60,23 +58,15 @@ def format_result(articles):
         print('Continuing processing without cleaning list...')
     # concatenate list entries to result string
     for entry in articles:
-        # special handling: record is only added if either the key is not contained or the key AND value are both contained
-        # loop through specialhandling dictionary
-        for key, value in CONFIG['websiteconfig']['specialHandling'].items():
-            # if the entry contains the key, but does not start with the repective value, exit the loop and process the next entry
-            if key in entry and not entry.startswith(value):
-                break
-        # if the loop has not yet been stopped due to special handling
-        else:
-            # build and format record for each article to be added to the result
-            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/')  +  '\n\n' )
-            result_str += new_record
+        # build and format record for each article to be added to the result
+        new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/')  +  '\n\n' )
+        result_str += new_record
     return result_str
 
 
 def main():
     print('\n')
-    print('++++++++++++++++++++++++++++++++++ ARTICLE LINKS SCRIPT START ++++++++++++++++++++++++++++++++++')
+    print('++++++++++++++++++++++++++++++++++ KEYWORDS SEARCH SCRIPT START ++++++++++++++++++++++++++++++++++')
     # get urls from config.json
     print('Getting URLS from config')
     url_list = get_urls()

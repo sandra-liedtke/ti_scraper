@@ -59,7 +59,7 @@
     "controllerPort": 0,
     "resultfile": {
         "createFile": true,
-        "folder": "Result Files",
+        "folder": "00 Article Result Files",
         "filename": "articles.txt"
     },
     "mailconfig":{
@@ -67,7 +67,7 @@
         "mailServer": "",
         "senderMailAddress": "",
         "destinationMailAddress": "",
-        "mailSubject": "[TEST MAIL] TI Scraper",
+        "mailSubject": "[TEST MAIL] TI Scraper: New Articles",
         "placeholder": "Currently there are no new articles."
     }
 }

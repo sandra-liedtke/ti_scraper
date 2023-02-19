@@ -1,8 +1,9 @@
 from email.mime.text import MIMEText
+import json
 import os
+import sys
 from time import strftime
 import requests
-import json
 from datetime import datetime, timedelta
 from stem import Signal
 from stem.control import Controller
@@ -10,8 +11,14 @@ import getpass
 import smtplib, ssl
 
 
-# load config
-with open('../config/config.json', 'r') as config_file:
+# select correct config file based on executed script
+APP_NAME = sys.argv[0].split('\\')[len(sys.argv[0].split('\\'))-1]
+match APP_NAME:
+    case 'retrieve_article_links.py':
+        config_file_name = '../config/articles_config.json'
+    case 'keyword_search.py':
+        config_file_name = '../config/keywords_config.json'
+with open(config_file_name, 'r') as config_file:
     CONFIG = json.load(config_file)
 
 
@@ -76,6 +83,8 @@ def write_file(articles):
     # check if result file folder is there
     if CONFIG['resultfile']['folder'] and not os.path.exists(DEST_FOLDER):
         os.makedirs(DEST_FOLDER)
+    if str(articles) == '':
+        articles = str(CONFIG['mailconfig']['placeholder'])
     try:
         # create result file
         with open(DEST_FILE_NAME, 'w', encoding="utf-8") as resultfile:

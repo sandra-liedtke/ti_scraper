@@ -1,0 +1,33 @@
+{
+    "websiteconfig": {
+        "webpages": [
+            "https://www.n-tv.de/",
+            "https://www.tagesschau.de/",
+            "https://www.cnbc.com/"
+        ],
+        "keywords": [
+            "Cyber",
+            "Sicherheit",
+            "Security",
+            "Attack",
+            "Angriff",
+            "Hack"
+        ]
+    },
+    "getDeltaRecords": true,
+    "timeDelta4Delete": 10,
+    "controllerPort": 0,
+    "resultfile": {
+        "createFile": true,
+        "folder": "01 Keyword Result Files",
+        "filename": "keyword_search.txt"
+    },
+    "mailconfig":{
+        "sendMail": false,
+        "mailServer": "",
+        "senderMailAddress": "",
+        "destinationMailAddress": "",
+        "mailSubject": "[TEST MAIL] TI Scraper: New Articles for Keyword Search",
+        "placeholder": "Currently there are no new articles related to the keyword search."
+    }
+}
