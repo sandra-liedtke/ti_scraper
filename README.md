@@ -1,6 +1,6 @@
 # TI Scraper
 
-*~ English Version Below ~*
+*- English Version Below -*
 
 Dieses Repository enthält eine Sammlung an Skripten, die für die Verwendung im Rahmen von Cyber Threat Intelligence entwickelt wurden und noch werden. Prinzipiell können die Skripte aber auch für andere Themen verwendet werden, wenn die URLs und/oder Schlüsselwörter in den Konfigurationsdateien geändert werden. 
 Die folgenden Skripte sind hierfür verfügbar:
