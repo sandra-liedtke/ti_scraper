@@ -1,0 +1,34 @@
+{
+    "websiteconfig": {
+        "webpages": [
+            "https://www.n-tv.de/",
+            "https://www.tagesschau.de/",
+            "https://www.cnbc.com/"
+        ],
+        "hit": [
+            "Google",
+            "Microsoft",
+            "Twitter"
+        ]
+    },
+    "getDeltaRecords": false,
+    "timeDelta4Delete": 10,
+    "controllerPort": 0,
+    "resultfile": {
+        "createFile": true,
+        "tableHeaders": [
+            "Name",
+            "Hit",
+            "URL and Context"
+        ],
+        "folder": "02 Count Hits Result Files",
+        "filename": "counts.csv"
+    },
+    "mailconfig":{
+        "sendMail": false,
+        "mailServer": "",
+        "senderMailAddress": "",
+        "destinationMailAddress": "",
+        "mailSubject": "[TEST MAIL] TI Scraper: New Results for Count of Hits"
+    }
+}

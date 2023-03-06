@@ -1,6 +1,7 @@
 from email.mime.text import MIMEText
 import json
 import os
+import platform
 import sys
 from time import strftime
 import requests
@@ -11,13 +12,20 @@ import getpass
 import smtplib, ssl
 
 
+# get os to define the path separator to be used
+operating_sys = platform.system()
+if operating_sys == "Windows":
+    separator = "\\"
+else:
+    separator = "/"
 # select correct config file based on executed script
-APP_NAME = sys.argv[0].split('\\')[len(sys.argv[0].split('\\'))-1]
-match APP_NAME:
-    case 'retrieve_article_links.py':
-        config_file_name = '../config/articles_config.json'
-    case 'keyword_search.py':
-        config_file_name = '../config/keywords_config.json'
+APP_NAME = sys.argv[0].split(separator)[len(sys.argv[0].split(separator))-1]
+if APP_NAME == 'retrieve_article_links.py':
+    config_file_name = '../config/articles_config.json'
+elif APP_NAME == 'keyword_search.py':
+    config_file_name = '../config/keywords_config.json'
+elif APP_NAME == 'count_hits.py':
+    config_file_name = '../config/counts_config.json'
 with open(config_file_name, 'r') as config_file:
     CONFIG = json.load(config_file)
 
@@ -70,7 +78,6 @@ def get_webpage(urls):
             # loop through list of urls and get webpage contents
             for webpage in urls:
                 try: 
-                    controller.signal(Signal.NEWNYM)
                     response = requests.get(webpage, headers=headers)
                     pages.append(response)
                 except Exception as e:
@@ -123,8 +130,19 @@ def send_mail(articles):
             message["From"] = sender_mail
             message["To"] = receiver
             server.sendmail(sender_mail, receiver, str(message))
+            server.quit()
     except Exception as e:
+        # try disconnect
+        try:
+            server.quit()
+        except:
+            'disconnected'
         print('Error sending mail. Error message: ' + str(e))
+        retry = input('Retry connection and sending mail (Y/n)? ')
+        if retry.upper() in ["Y", "YES"]:
+            send_mail(articles)
+        else:
+            print("Skipping mailing function")
         
 
 # check if there are any files older than the days specified and if so, delete them based on user input
