@@ -8,7 +8,7 @@ Dieses Repository enthält eine Sammlung an Skripten, die für die Verwendung im
 Die folgenden Skripte sind hierfür verfügbar:
  - **retrieve_article_links.py:** verwendet die Konfigurationen aus articles_config.json, um aus einer Sammlung von Webseiten die neuesten Artikel zu extrahieren, in eine Datei zu schreiben und/oder per Mail zu versenden. Es werden alle Überschriften (sofern verfügbar) und URLs zu den Artikeln ins Ergebnis geschrieben, die keines der Stopwords enthalten. Das Skript ist dafür vorgesehen, aus Fachzeitschriften die neuesten Beiträge zusammenzustellen und erfüllt damit den gleichen Zweck wie ein selbst zusammengestellter Newsletter
  - **keyword_search.py:** verwendet die Konfigurationen aus keywords_config.json, um aus einer Sammlung von Webseiten lediglich die Artikel zu extrahieren, die eines oder mehrere der definierten Keywords enthalten. Das Ergebnis (Überschriften sofern verfügbar und URLs zu den Artikeln) kann in eine Textdatei geschrieben und/oder per Mail versendet werden. Das Skript kann eingesetzt werden, um aus aktuellen Nachrichten- und Pressemeldungen die Beiträge zu extrahieren, die für die Threat Intelligence zusätzlich relevant sind
- - **count_hits.py:** verwendet counts_config.json, um aus einer Liste von URLs auszuzählen, wie oft ein bestimmter Name oder ein bestimmtes Wort in den Ergebnissen gefunden wird. Es wird nur gezählt, auf wie vielen unterschiedlichen Seiten ein Wort auftaucht, nicht wie oft es auf ein und der selben Seite gefunden wird. Das Skript eignet sich insbesondere, um zu testen ob es öffentliche Mitteilungen über einen Sicherheitsvorfall bei einem (oder mehreren) bestimmten Unternehmen gibt. Der Code ist dahingehend optimiert, eine CSV-Datei anzulegen, die eine Tabelle mit drei Spalten enthält. In der ersten werden die Namen aus dem `hit`-Setting in alphabetischer Reihenfolge ausgegeben, in der zweiten Spalte ist die Anzahl der Treffer enthalten und in der dritten Spalte ist der Kontext, also die URL und die letzten 35 Zeichen vor dem Namen sowie die nächsten 35 Zeichen danach, enthalten
+ - **count_hits.py:** verwendet die Konfigurationen aus counts_config.json, um aus einer Liste von URLs auszuzählen, wie oft ein bestimmter Name oder ein bestimmtes Wort in den Ergebnissen gefunden wird. Es wird nur gezählt, auf wie vielen unterschiedlichen Seiten ein Wort auftaucht, nicht wie oft es auf ein und der selben Seite gefunden wird. Das Skript eignet sich insbesondere, um zu testen ob es öffentliche Mitteilungen über einen Sicherheitsvorfall bei einem (oder mehreren) bestimmten Unternehmen gibt. Der Code ist dahingehend optimiert, eine CSV-Datei anzulegen, die eine Tabelle mit drei Spalten enthält. In der ersten werden die Namen aus dem `hit`-Setting in alphabetischer Reihenfolge ausgegeben, in der zweiten Spalte ist die Anzahl der Treffer enthalten und in der dritten Spalte ist der Kontext, also die URL und die letzten 35 Zeichen vor dem Namen sowie die nächsten 35 Zeichen danach, enthalten
  - weitere folgen demnächst...
 
 WICHTIG: Die Skripte verwenden Konfigurationsdateien, die eine schnelle und einfache Anpassung ermöglichen. Bevor die Skripte das erste mal ausgeführt werden, sollten die Konfigurationen überprüft und ggf. individuell geändert werden.
@@ -32,12 +32,12 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige
  - Um die Webseiten zu ändern, die durchsucht werden sollen, können in der `webpages`-Sektion Links hinzugefügt oder gelöscht werden
  - In articles_config können `stopwords` definiert werden, sodass Einträge, die diese Stopwords enthalten, nicht ins Ergebnis geschrieben werden
  - keywords_config enthält keine Stopword-Sektion, dafür können im `keywords`-Teil Schlüsselworte definiert werden, nach welchen gesucht werden soll. Nur Einträge, die diese Schlüsselworte enthalten werden ins Ergebnis geschrieben
- - In counts_config werden die Namen, deren Treffer gezählt werden sollen in `hit` angegeben. Die Funktionsweise ist vergleichbar mit der Schlüsselwortsuche
+ - In counts_config werden die Namen, deren Treffer gezählt werden sollen, in `hit` angegeben. Die Funktionsweise ist vergleichbar mit der Schlüsselwortsuche
  - Einige Webseiten haben viele Referenzlinks, die automatisch mit ins Ergebnis geschrieben werden, aber eigentlich nicht gebraucht werden. Dafür kann in der `specialHandling`-Sektion in articles_config definiert werden, unter welchen Umständen Links für diese Webseiten ins Ergebnis geschrieben werden sollen nach der Logik *"Entweder der Key ist nicht in der URL enthalten, oder die URL fängt mit dem Value an"*
  - `getDeltaRecords` definiert, ob alle Einträge der jeweiligen Webseiten ins Ergebnis geschrieben werden sollen oder nur diejenigen, die noch nicht in vorherigen Dateien auftauchen
-     - HINWEIS: Das Delta-Update funktioniert nur, wenn ein Unterordner für die Ergebnisdateien angegeben wird. Es funktioniert nicht für count_hits, Änderungen an dieser Konfiguration haben keinen Einfluss
+     - HINWEIS: Das Delta-Update funktioniert nur, wenn ein Unterordner für die Ergebnisdateien angegeben wird. Es ist nicht verfügbar für count_hits
  - In `timeDelta4Delete` kann definiert werden, welche Dateien aufgehoben werden sollen. Die Löschfunktion sammelt alle Dateien ein, die älter sind als das Datum, das anhand des Zeitdeltas (in Tagen) errechnet wird. Nach Bestätigung auf der Kommandozeile werden die Dateien dann gelöscht.
- - In `controllerPort` kann definiert werden, auf welchen Port der Controller gesetzt werden soll, welcher auf die Webseiten zugreift. Der Wert 0 legt fest, dass kein Controller verwendet werden soll.
+ - In `controllerPort` kann definiert werden, welchen Quellport der Controller verwenden soll, welcher auf die Webseiten zugreift. Der Wert 0 legt fest, dass kein Controller verwendet werden soll.
      - HINWEIS: Der Controller wird lediglich für onion-Seiten benötigt und sollte daher **ausschließlich** für diese verwendet werden
  - In der `resultfile`-Sektion kann definiert werden, ob eine Datei mit den Ergebnissen erzeugt werden soll, wo diese gespeichert werden und wie sie heißen soll
      - HINWEIS: Wenn ein Ordnername angegeben wird, der noch nicht existiert, erzeugt das SKript den Ordner
@@ -57,8 +57,9 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige
      - requests
      - stem
  - Wenn der Controller verwendet wird, muss der Computer sich mit dem TOR-Netzwerk verbinden können
- - Ein E-Mail Account, um die Ergebnisse per Mail versenden zu können und ein weiterer Account (oder eine Alias-Adresse), die die Mails empfängt (kann auch der gleiche sein)
+ - Ein E-Mail Account, um die Ergebnisse per Mail versenden zu können und ein weiterer Account (oder eine Alias-Adresse), der die Mails empfängt (kann auch der gleiche sein)
  - Notepad++ um die Text-Dateien zu öffnen
+ - Excel oder Libre Calc, um die CSV-Dateien öffnen zu können
 
 
 ## English Version
@@ -91,14 +92,14 @@ This work is licensed under a
 
 There are some configurations that may be modified before running the related script:
  - To change the websites to be scraped, just add different links in the `webpages` section and/or remove existing links
- - In articles_config can be some `stopwords` defined, to remove all entries which contain these stopwords
+ - In articles_config can be some `stopwords` defined to remove all entries which contain these stopwords
  - keywords_config does not contain a stopword section, but in the `keywords` part can be search words defined. Only entries containing these keywords will be kept in the result
  - In counts_config the names for which the hits should be count are given in `hit`. The functionality is comparable with the keyword search
  - Some websites may have many reference links embedded, which would be added to the result, but are actually not needed. For this the `specialHandling` section in articles_config defines under which circumstances those URLs should be added to the result following the logic *"Either the key is not contained in the URL, or the URL starts as given in the value"*
  - `getDeltaRecords` defines whether all entries currently displayed on the respective webpage should be kept or only those that are not yet listed in existing result files
-     - HINT: The Delta-Update only works if a subfolder is given, where the result files are stored. It does not work for count_hits, changes in this configuration setting have no effect
+     - HINT: The Delta-Update only works if a subfolder is given, where the result files are stored. It is not available for count_hits
  - `timeDelta4Delete` defines which files should be kept. The delete function collects all files which are older than the date calculated based on the time delta (in days). After confirmation on the command line, the files will be deleted.
- - In `controllerPort` can be defined which port to use for the controller accessing the webpages. Value 0 defines that no controller should be used
+ - In `controllerPort` can be defined which source port to use for the controller accessing the webpages. Value 0 defines that no controller should be used
      - HINT: The controller is only needed for scraping onion sites and hence, should be used **exclusively** for those
  - In the `resultfile` section can be defined whether a result file should be created, where it should be stored and how it should be named
      - HINT: If you give a folder name that is not yet existing, the script will create that respective folder
@@ -120,3 +121,4 @@ There are some configurations that may be modified before running the related sc
  - If the controller is used, the computer must be able to connect to the TOR-Network
  - A mail account for sending the result via mail and a mail account or alias-address receiving the result (may also be the same)
  - Notepad++ to open the resulting text files
+ - Excel or Libre Calc to open the csv files

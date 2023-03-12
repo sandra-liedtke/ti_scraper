@@ -6,7 +6,6 @@ import sys
 from time import strftime
 import requests
 from datetime import datetime, timedelta
-from stem import Signal
 from stem.control import Controller
 import getpass
 import smtplib, ssl
@@ -43,13 +42,15 @@ else:
 # delta records can only be extracted if a subfolder is given and existing
 LATEST_CONTENT = ''
 EXISTING_FILES = []
-if CONFIG['getDeltaRecords'] and os.path.exists(DEST_FOLDER):
-    EXISTING_FILES = [os.path.join(DEST_FOLDER, file) for file in os.listdir(DEST_FOLDER)]
-    for file in EXISTING_FILES:
-        # open each file and read entries
-        with open(file, 'r', encoding='utf-8') as latest_file:
-            LATEST_CONTENT += latest_file.read()
-
+try:
+    if CONFIG['getDeltaRecords'] and os.path.exists(DEST_FOLDER):
+        EXISTING_FILES = [os.path.join(DEST_FOLDER, file) for file in os.listdir(DEST_FOLDER)]
+        for file in EXISTING_FILES:
+            # open each file and read entries
+            with open(file, 'r', encoding='utf-8') as latest_file:
+                LATEST_CONTENT += latest_file.read()
+except:
+    'continue without delta setting'
 
 # read url setting from config
 def get_urls():

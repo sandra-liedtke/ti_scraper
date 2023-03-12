@@ -11,7 +11,6 @@
             "Twitter"
         ]
     },
-    "getDeltaRecords": false,
     "timeDelta4Delete": 10,
     "controllerPort": 0,
     "resultfile": {
