@@ -20,7 +20,7 @@ This document describes how to initially prepare your environment, dependent lib
 
 ## Linux
 
- - You might need to do an updatee on existing software before continuing. To do so, in the command line type `sudo apt update`
+ - You might need to do an update on existing software before continuing. To do so, in the command line type `sudo apt update`
  - Type `sudo apt install python3.X`
  - Type `python3 --version`
  - Type `python3.X` and then `help("modules")` and make sure that (among others) also the beautifulsoup4, requests and stem libraries are listed
