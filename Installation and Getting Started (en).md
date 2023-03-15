@@ -1,4 +1,4 @@
-# Initial Setup
+# Installation
 
 This document describes how to initially prepare your environment, dependent libraries and the project for Windows and Linux and how to get started. 
 
