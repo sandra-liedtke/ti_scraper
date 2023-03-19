@@ -13,7 +13,7 @@ Die folgenden Skripte sind hierfür verfügbar:
 
 Beispiele für die Ergebnisdateien der mit der Standardkonfiguration ausgeführten Skripte befinden sich im Unterverzeichnis /assets/examples des Repositorys.
 
-WICHTIG: Die Skripte verwenden Konfigurationsdateien, die eine schnelle und einfache Anpassung ermöglichen. Bevor die Skripte das erste mal ausgeführt werden, sollten die Konfigurationen überprüft und ggf. individuell geändert werden.
+WICHTIG: Die Skripte verwenden Konfigurationsdateien, die eine schnelle und einfache Anpassung ermöglichen. Bevor die Skripte das erste mal ausgeführt werden, sollten die Konfigurationen überprüft und ggf. individuell geändert werden.</br>
 Eine weitere Möglichkeit, die Skripte anzupassen und zu erweitern, ist in der Datei *Extensibility (en).md* beschrieben.
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
@@ -78,7 +78,7 @@ The following scripts are available:
 
 Examples for the result files of the scripts run with the default configuration can be found in the repository sub-directory /assets/examples.
 
-IMPORTANT: Each of the scripts uses a configuration file which allows a fast and easy customization. Before the scripts are executed for the first time, the configuration settings should be checked and adjusted if necessary.
+IMPORTANT: Each of the scripts uses a configuration file which allows a fast and easy customization. Before the scripts are executed for the first time, the configuration settings should be checked and adjusted if necessary. </br>
 Further options to adjust and extend the scripts are described in the file *Extensibility (en).md*.
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
