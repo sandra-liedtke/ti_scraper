@@ -19,7 +19,7 @@
         "mailServer": "",
         "senderMailAddress": "",
         "destinationMailAddress": "",
-        "mailSubject": "[TEST MAIL] TI Scraper: New Articles for Contents",
+        "mailSubject": "[TEST MAIL] TI Scraper: New Records for Contents",
         "placeholder": "Currently there is no new content available."
     }
 }

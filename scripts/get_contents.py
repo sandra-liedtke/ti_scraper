@@ -4,7 +4,7 @@ from lib.regex import *
 
 
 def clean_webpages(websites):
-    articles = []
+    page_contents = []
     for listentry in websites:
         try:
             website_content = BeautifulSoup(listentry.content, 'html.parser')
@@ -17,19 +17,19 @@ def clean_webpages(websites):
             cleaned_result = re.sub(ALL_HTML, '', str(website_content))
             # clean from duplicate escape characters
             cleaned_result = re.sub(ESCAPE, '', cleaned_result)
-            if not cleaned_result in str(articles):
-                articles.append(cleaned_result) 
+            if not cleaned_result in str(page_contents):
+                page_contents.append(cleaned_result) 
         except Exception as e:
             print('Error cleaning webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
             continue
-    return articles
+    return page_contents
 
 
-def format_result(articles):
+def format_result(webpage):
     result_str = ""
     # concatenate list entries to result string
-    for entry in articles:
-        # build and format record for each article to be added to the result
+    for entry in webpage:
+        # build and format record for each webpage to be added to the result
         new_record = keep_delta(entry + '\n\n\n\n############################################################################# NEXT RECORD #############################################################################\n\n\n\n')
         result_str += new_record
     return result_str
@@ -46,8 +46,8 @@ def main():
     websites = get_webpage(url_list)
     # clean webpage content and format result
     print('Cleaning webpage contents')
-    articles = clean_webpages(websites)
-    result = format_result(articles)
+    webpage = clean_webpages(websites)
+    result = format_result(webpage)
     # write file and/or send as mail depending on config
     if CONFIG['resultfile']['createFile']:
         print('Writing result file')
