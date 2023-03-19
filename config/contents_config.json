@@ -1,0 +1,25 @@
+{
+    "websiteconfig": {
+        "webpages": [
+            "https://www.bleepingcomputer.com/",
+            "https://www.darkreading.com/",
+            "https://krebsonsecurity.com/"
+        ]
+    },
+    "getDeltaRecords": true,
+    "timeDelta4Delete": 10,
+    "controllerPort": 0,
+    "resultfile": {
+        "createFile": true,
+        "folder": "03 Content Result Files",
+        "filename": "contents.txt"
+    },
+    "mailconfig":{
+        "sendMail": false,
+        "mailServer": "",
+        "senderMailAddress": "",
+        "destinationMailAddress": "",
+        "mailSubject": "[TEST MAIL] TI Scraper: New Articles for Contents",
+        "placeholder": "Currently there is no new content available."
+    }
+}

@@ -4,14 +4,17 @@
 
 ### Beschreibung
 
-Dieses Repository enthält eine Sammlung an Skripten, die für die Verwendung im Rahmen von Cyber Threat Intelligence entwickelt wurden und noch werden. Prinzipiell können die Skripte aber auch für andere Themen verwendet werden, wenn die URLs und/oder Schlüsselwörter in den Konfigurationsdateien geändert werden. 
+Dieses Repository enthält eine Sammlung an Skripten, die für die Verwendung im Rahmen von Cyber Threat Intelligence entwickelt wurden. Prinzipiell können die Skripte aber auch für andere Themen verwendet werden, wenn die URLs und/oder Schlüsselwörter in den Konfigurationsdateien geändert werden. 
 Die folgenden Skripte sind hierfür verfügbar:
  - **retrieve_article_links.py:** verwendet die Konfigurationen aus articles_config.json, um aus einer Sammlung von Webseiten die neuesten Artikel zu extrahieren, in eine Datei zu schreiben und/oder per Mail zu versenden. Es werden alle Überschriften (sofern verfügbar) und URLs zu den Artikeln ins Ergebnis geschrieben, die keines der Stopwords enthalten. Das Skript ist dafür vorgesehen, aus Fachzeitschriften die neuesten Beiträge zusammenzustellen und erfüllt damit den gleichen Zweck wie ein selbst zusammengestellter Newsletter
  - **keyword_search.py:** verwendet die Konfigurationen aus keywords_config.json, um aus einer Sammlung von Webseiten lediglich die Artikel zu extrahieren, die eines oder mehrere der definierten Keywords enthalten. Das Ergebnis (Überschriften sofern verfügbar und URLs zu den Artikeln) kann in eine Textdatei geschrieben und/oder per Mail versendet werden. Das Skript kann eingesetzt werden, um aus aktuellen Nachrichten- und Pressemeldungen die Beiträge zu extrahieren, die für die Threat Intelligence zusätzlich relevant sind
  - **count_hits.py:** verwendet die Konfigurationen aus counts_config.json, um aus einer Liste von URLs auszuzählen, wie oft ein bestimmter Name oder ein bestimmtes Wort in den Ergebnissen gefunden wird. Es wird nur gezählt, auf wie vielen unterschiedlichen Seiten ein Wort auftaucht, nicht wie oft es auf ein und der selben Seite gefunden wird. Das Skript eignet sich insbesondere, um zu testen ob es öffentliche Mitteilungen über einen Sicherheitsvorfall bei einem (oder mehreren) bestimmten Unternehmen gibt. Der Code ist dahingehend optimiert, eine CSV-Datei anzulegen, die eine Tabelle mit drei Spalten enthält. In der ersten werden die Namen aus dem `hit`-Setting in alphabetischer Reihenfolge ausgegeben, in der zweiten Spalte ist die Anzahl der Treffer enthalten und in der dritten Spalte ist der Kontext, also die URL und die letzten 35 Zeichen vor dem Namen sowie die nächsten 35 Zeichen danach, enthalten
- - weitere folgen demnächst...
+ - **get_contents.py:** verwendet die Konfigurationen aus contents_config.json, um den Inhalt der Webseiten in eine Textdatei zu schreiben. Es wird der komplette Text-Inhalt der Seite aus dem `body`- oder `main`-Tag in die Datei geschrieben, ohne HTML-Tags, JavaScript-Funktionen und Bilder. Header und Footer werden nicht extrahiert. Das Skript ist dazu vorgesehen, insbesondere aus Blog-Webseiten Text-Inhalte zu extrahieren und in der Datei abzulegen. Dadurch kann festgestellt werden, ob sich eine Seite seit dem letzten Aufruf geändert hat ohne die Seite im Browser zu öffnen
+
+Beispiele für die Ergebnisdateien der mit der Standardkonfiguration ausgeführten Skripte befinden sich im Unterverzeichnis /assets/examples des Repositorys.
 
 WICHTIG: Die Skripte verwenden Konfigurationsdateien, die eine schnelle und einfache Anpassung ermöglichen. Bevor die Skripte das erste mal ausgeführt werden, sollten die Konfigurationen überprüft und ggf. individuell geändert werden.
+Eine weitere Möglichkeit, die Skripte anzupassen und zu erweitern, ist in der Datei *Extensibility (en).md* beschrieben.
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 
@@ -66,14 +69,17 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige
 
 ### Description
 
-This repository contains a collection of scripts which have been and still are being developed for the usage in the context of cyber threat intelligence. However, the scripts may be used for other topics as well if the URLs and/or the keywords in the configuration files are changed. 
+This repository contains a collection of scripts which have been developed for the usage in the context of cyber threat intelligence. However, the scripts may be used for other topics as well if the URLs and/or the keywords in the configuration files are changed. 
 The following scripts are available:
  - **retrieve_article_links.py:** uses the configurations from articles_config.json to extract the newest articles from a collection of webpages, write them into a file and/or send them via mail. It will take all headlines (if available) and URLs of the articles, which do not contain any of the stopwords defined. The script is intended to be used for the collection of the latest entries from journals and therefore works as a customizable newsletter
  - **keyword_search.py:** uses the configurations from keywords_config.json to extract those articles from a collection of websites, which contain one or more of the keywords defined. The result (headlines if available and URLs of the articles) can be written into a text file and/or be sent via mail. The script can be used to collect the latest posts from news media, which may be additionally relevant for the threat intelligence
-  - **count_hits.py:** uses the configurations from counts_config.json to count from a list of URLs how often a certain name or word is found in the results. It only counts on how many different pages the word is found, not how often it is found on the same webpage. The script is especially useful to check if there are public announcements about a security incident for one (or more) specific company. The code is optimized for creating a csv file containing a table with three columns. The first column contains the names from the `hit` setting in alphabethical order, the second one contains the count of the hits and the third contains the context, meaning the URL and the last 35 characters before the name as well as the next 35 characters after it
- - more to come soon...
+ - **count_hits.py:** uses the configurations from counts_config.json to count from a list of URLs how often a certain name or word is found in the results. It only counts on how many different pages the word is found, not how often it is found on the same webpage. The script is especially useful to check if there are public announcements about a security incident for one (or more) specific company. The code is optimized for creating a csv file containing a table with three columns. The first column contains the names from the `hit` setting in alphabethical order, the second one contains the count of the hits and the third contains the context, meaning the URL and the last 35 characters before the name as well as the next 35 characters after it
+ - **get_contents.py:** uses the configurations from contents_config.json to write the contents of a webpage into a text file. The entire text content of the `body` or `main` tags are written to the file without the HTML tags, JavaScript functions and images. Header and footer are not extracted. The script can be used to extract the contents of a webpage, especially of blog websites. This way can be determined if a webpage`s content has changed since the last call without opening it in the browser
+
+Examples for the result files of the scripts run with the default configuration can be found in the repository sub-directory /assets/examples.
 
 IMPORTANT: Each of the scripts uses a configuration file which allows a fast and easy customization. Before the scripts are executed for the first time, the configuration settings should be checked and adjusted if necessary.
+Further options to adjust and extend the scripts are described in the file *Extensibility (en).md*.
 
 Shield: [![CC BY 4.0][cc-by-shield]][cc-by]
 

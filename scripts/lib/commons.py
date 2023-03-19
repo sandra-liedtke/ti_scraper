@@ -25,6 +25,8 @@ elif APP_NAME == 'keyword_search.py':
     config_file_name = '../config/keywords_config.json'
 elif APP_NAME == 'count_hits.py':
     config_file_name = '../config/counts_config.json'
+elif APP_NAME == 'get_contents.py':
+    config_file_name = '../config/contents_config.json'
 with open(config_file_name, 'r') as config_file:
     CONFIG = json.load(config_file)
 

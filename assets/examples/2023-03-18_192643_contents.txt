@@ -1,0 +1,319 @@
+NewsFeatured
+LatestNordVPN open sources its Linux VPN client and librariesNordVPN open sources its Linux VPN client and librariesGoogle finds 18 zero-day vulnerabilities in Samsung Exynos chipsetsRAT developer arrested for infecting 10,000 PCs with malwareWindows 11 to ask for permission before pinning applicationsGet started in cybersecurity with this exam prep bundle dealAlleged BreachForums owner Pompompurin arrested on cybercrime chargesThe Week in Ransomware - March 17th 2023 - Shifting to data extortionDownloadsLatest
+Most DownloadedQualys BrowserCheckSTOPDecrypterAuroraDecrypterFilesLockerDecrypterAdwCleanerComboFixRKillJunkware Removal ToolVirus Removal GuidesLatest
+Most Viewed
+RansomwareRemove the Theonlinesearch.com Search RedirectRemove the Smartwebfinder.com Search RedirectHow to remove the PBlock+ adware browser extensionRemove the Toksearches.xyz Search RedirectRemove Security Tool and SecurityTool (Uninstall Guide)How to Remove WinFixer / Virtumonde / Msevents / Trojan.vundoHow to remove Antivirus 2009 (Uninstall Instructions)How to remove Google Redirects or the TDSS, TDL3, or Alureon rootkit using TDSSKillerLocky Ransomware Information, Help Guide, and FAQCryptoLocker Ransomware Information Guide and FAQCryptorBit and HowDecrypt Information Guide and FAQCryptoDefense and How_Decrypt Ransomware Information Guide and FAQTutorialsLatest
+PopularHow to open a Windows 11 Command Prompt as AdministratorHow to make the Start menu full screen in Windows 10How to install the Microsoft Visual C++ 2015 RuntimeHow to open an elevated PowerShell Admin prompt in Windows 10How to start Windows in Safe ModeHow to remove a Trojan, Virus, Worm, or other MalwareHow to show hidden files in Windows 7How to see hidden files in WindowsDealsCategorieseLearningIT Certification CoursesGear + GadgetsSecurityForums
+MoreStartup Database
+Uninstall Database
+Glossary
+Chat on Discord
+Send us a Tip!
+Welcome GuideNordVPN open sources its Linux VPN client and librariesGoogle finds 18 zero-day vulnerabilities in Samsung Exynos chipsetsRAT developer arrested for infecting 10,000 PCs with malwareMicrosoft is testing a built-in crypto wallet in Microsoft EdgeNordVPN open sources its Linux VPN client and librariesGoogle finds 18 zero-day vulnerabilities in Samsung Exynos chipsetsRAT developer arrested for infecting 10,000 PCs with malwareMicrosoft is testing a built-in crypto wallet in Microsoft EdgeLatest ArticlesMicrosoftWindows 11 to ask for permission before pinning applications
+Microsoft says it will provide developers with a new API that also asks Windows users for permission when pinning their apps to the taskbar, desktop, or the Start Menu.
+Sergiu Gatlan March 18, 2023
+10:05 AM
+ 0DealsGet started in cybersecurity with this exam prep bundle deal
+Everyone needs to work towards a safer and more secure network. This five-course exam prep bundle helps you lay the foundation of cybersecurity expertise for $79, 94% off the $1475 MSRP, and the best price on the web.
+BleepingComputer Deals March 18, 2023
+08:14 AM
+ 0SecurityAlleged BreachForums owner Pompompurin arrested on cybercrime charges
+U.S. law enforcement arrested on Wednesday a New York man believed to be Pompompurin, the owner of the BreachForums hacking forum.
+Sergiu Gatlan March 17, 2023
+07:32 PM
+ 4SecurityThe Week in Ransomware - March 17th 2023 - Shifting to data extortion
+The fallout from the Clop ransomware attacks on GoAnywhere platforms has become apparent this week, with the threat actors starting to extort victims on their data leak site and companies confirming breaches.
+Lawrence Abrams March 17, 2023
+07:01 PM
+ 0SecurityNBA alerts fans of a data breach exposing personal information
+The NBA (National Basketball Association) is notifying fans of a data breach after some of their personal information, "held" by a third-party newsletter service, was stolen.
+Sergiu Gatlan March 17, 2023
+04:21 PM
+ 0Microsoft, CryptoCurrencyMicrosoft is testing a built-in crypto wallet in Microsoft Edge
+Microsoft is working on a non-custodial built-in Ethereum crypto wallet for Microsoft Edge to allow users to send and receive cryptocurrency and NFTs.
+Sergiu Gatlan March 17, 2023
+02:54 PM
+ 0SecurityHitachi Energy confirms data breach after Clop GoAnywhere attacks
+Hitachi Energy confirmed it suffered a data breach after the Clop ransomware gang stole data using a zero-day GoAnyway zero-day vulnerability.
+Bill Toulas March 17, 2023
+12:20 PM
+ 0SecurityRAT developer arrested for infecting 10,000 PCs with malware
+Ukraine's cyberpolice has arrested the developer of a remote access trojan (RAT) malware that infected over 10,000 computers while posing as game applications.
+Bill Toulas March 17, 2023
+11:36 AM
+ 0DealsRefine your cybersecurity skills with this training bundle deal
+IT professionals need to constantly update their cybersecurity skills. This 26-course collection gives you new ones to learn and knowledge to refurbish your previous ones for $99.99, 98% off the $7774 MSRP.
+BleepingComputer Deals March 17, 2023
+07:14 AM
+ 0Security, MicrosoftMicrosoft shares script to fix WinRE BitLocker bypass flaw
+Microsoft has released a script to make it easier to patch a BitLocker bypass security vulnerability in the Windows Recovery Environment (WinRE).
+Sergiu Gatlan March 17, 2023
+02:03 AM
+ 2SecurityBianLian ransomware gang shifts focus to pure data extortion
+The BianLian ransomware group has shifted its focus from encrypting its victims' files to only exfiltrating data found on compromised networks and using them for extortion.
+Bill Toulas March 16, 2023
+06:10 PM
+ 0SecurityGoogle finds 18 zero-day vulnerabilities in Samsung Exynos chipsets
+Project Zero, Google's zero-day bug-hunting team, discovered and reported 18 zero-day vulnerabilities in Samsung's Exynos chipsets used in mobile devices, wearables, and cars.
+Sergiu Gatlan March 16, 2023
+04:33 PM
+ 1Security, Google, MobileFakeCalls Android malware returns with new ways to hide on phones
+Android malware 'FakeCalls' is circulating again in South Korea, imitating phone calls for over 20 financial organizations and attempting to fool targets into giving away their credit card details.
+Bill Toulas March 16, 2023
+03:36 PM
+ 0SecurityFortinet zero-day attacks linked to suspected Chinese hackers
+A suspected Chinese hacking group has been linked to a series of attacks on government organizations exploiting a Fortinet zero-day vulnerability (CVE-2022-41328) to deploy malware.
+Sergiu Gatlan March 16, 2023
+03:13 PM
+ 1SecurityAdobe Acrobat Sign abused to push Redline info-stealing malware
+Cybercriminals are abusing Adobe Acrobat Sign, an online document signing service, to distribute info-stealing malware to unsuspecting users.
+Bill Toulas March 16, 2023
+02:45 PM
+ 0SecurityConti-based ransomware ‘MeowCorp’ gets free decryptor
+A decryption tool for a modified version of the Conti ransomware could help hundreds of victims recover their files for free.
+Ionut Ilascu March 16, 2023
+02:08 PM
+ 0DealsKeep your drives up to spec with this Stellar Drive Monitor deal
+Maintaining your equipment is just as important as securing it. A Stellar Drive Monitor lifetime subscription makes it easy to spot problems early for $19,99, 80% off the $99 MSRP.
+BleepingComputer Deals March 16, 2023
+02:08 PM
+ 0SecurityLatitude cyberattack leads to data theft at two service providers
+Latitude Financial Services (Latitude) has published a notice on its website today informing that it has suffered a ransomware attack that resulted in the theft of some customer data.
+Bill Toulas March 16, 2023
+01:32 PM
+ 0MicrosoftMicrosoft unveils AI-powered Microsoft 365 Copilot assistant
+Microsoft has announced a new assistant powered by artificial intelligence to help boost productivity across Microsoft 365 apps, currently being tested by select commercial customers.
+Sergiu Gatlan March 16, 2023
+12:30 PM
+ 5SecurityConvincing Twitter 'quote tweet' phone scam targets bank customers
+A convincing Twitter scam is targeting bank customers by abusing the quote-tweets feature, as observed by BleepingComputer. The scam preys on customers tweeting to their banks—such as to raise a complaints. But these customers instead receive a reply from the scammer, via a quote-tweet, urging them to call the scammer's "helpline."
+Ax Sharma March 16, 2023
+10:00 AM
+ 11 2 3 4 5 
+View MorePopular StoriesMicrosoft support 'cracks' Windows for customer after activation failsGoogle finds 18 zero-day vulnerabilities in Samsung Exynos chipsetsLatest forum topicsHow do I Fix Error Code E203 on Xbox One?
+thinkmatrics in Computer Gamingpossible malware infection - extremly slow laptop - loud fan
+texasmitch14 in Virus, Trojan, Spyware, and Malware Removal HelpVideo card replacement?
+Bordersman in Internal Hardware
+Latest virus removal guidesRemove the Theonlinesearch.com Search Redirect
+Filed Under: AdwareRemove the Smartwebfinder.com Search Redirect
+Filed Under: AdwareHow to remove the PBlock+ adware browser extension
+Filed Under: AdwareRemove the Toksearches.xyz Search Redirect
+Filed Under: AdwareRemove the Smashapps.net Search Redirect
+Filed Under: AdwareLatest DownloadsMalwarebytes Anti-Malware
+Version: 4.5.24
+4M+ DownloadsAdwCleaner
+Version: 8.4.0.0
+56M+ DownloadsWindows Repair (All In One)
+Version: 4.13.1
+2M+ DownloadsEverything Desktop Search
+Version: 1.4.1.1017
+22,423 DownloadsZemana AntiLogger Free
+Version: 1.8.2.320
+53,210 DownloadsFollow us:Main SectionsNews
+VPN Buyer Guides
+Downloads
+Virus Removal Guides
+Tutorials
+Startup Database
+Uninstall Database
+GlossaryCommunityForums
+Forum Rules
+ChatUseful ResourcesWelcome Guide
+SitemapCompanyAbout BleepingComputer
+Contact Us
+Send us a Tip!
+Advertising
+Write for BleepingComputer
+Social &amp; Feeds
+ChangelogTerms of Use -  Privacy Policy - Ethics Statement - Affiliate DisclosureCopyright @ 2003 - 2023  Bleeping Computer® LLC  - All Rights ReservedLoginUsernamePasswordRemember MeSign in anonymously Sign in with TwitterNot a member yet? Register Now
+
+
+
+############################################################################# NEXT RECORD #############################################################################
+
+
+
+TOP STORIESMicrosoft Outlook Vulnerability Could Be 2023's 'It' BugMar 17, 2023Snowballing PoC exploits for CVE-2023-23397 and a massive attack surface means almost business user could be a victim.Meta Proposes Revamped Approach to Online Kill Chain FrameworksMar 17, 2023A more holistic model beyond MITRE et al is needed to help defenders better identify and understand commonalities in different online threat campaigns, the Facebook parent company says.Low-Budget 'Winter Vivern' APT Awakens After 2-Year HibernationMar 17, 2023The "underreported" APT has returned to focus after attacks promoting Russian and Belarusian government interests and going after targets with humor, zest, and scrappiness.Change Is Coming to the Network Detection and Response (NDR) MarketMar 16, 2023After years of relative stability and steady growth, Omdia research indicates the NDR segment is poised for rapid change.  Latest NewsMore NewsLatest CommentaryMore Commentary   Partner PerspectivesDeepfakes, Synthetic Media: How Digital Propaganda Undermines TrustOrganizations must educate themselves and their users on how to detect, disrupt, and defend against the increasing volume of online disinformation.Mar 14, 2023Read More From Microsoft  Products &amp; ReleasesMore Products &amp; Releases  ResourcesWhite PapersEvaluator's Guide for Managed Detection and Response (MDR) ServicesAttack Surface Management v2.0 by Brad LaPorteCloud Incident Response DatasheetThe CISOs Report: Perspectives, Challenges, and Plans for 2022 and BeyondHow to Plan for Tomorrow's SOC, TodayMore White PapersEventsEmerging Cybersecurity Technologies - A Dark Reading Mar 23 EventBlack Hat USA - August 5-10 - Learn MoreBlack Hat Asia - May 9-12 - Learn MoreMore EventsWebinarsSecDevOps: The Smart Way to Shift LeftMar 22, 2023Building Out the Best Response Playbook for Ransomware AttacksMar 28, 2023ChatGPT: Defending Your Business Against AI-Supercharged RansomwareMar 29, 2023Ten Emerging Vulnerabilities Every Enterprise Should KnowMar 30, 2023How Applications Are Attacked: A Year in Application SecurityApr 04, 2023More Webinars Connect with usRegister for aSubscribe to theFollow usDark Reading WebinarDark Reading Newsletter@DarkReadingRegister for aDark Reading WebinarLearn about New Cybersecurity Threats, Vulnerabilities and Technology Trends.SCHEDULESubscribe to theDark Reading NewsletterGet daily or weekly Dark Reading top stories delivered straight into your inbox.SUBSCRIBEFollow us@DarkReadingFollow us @darkreading to stay up-to-date with the latest news &amp; insider information about events &amp; more.  
+
+
+
+############################################################################# NEXT RECORD #############################################################################
+
+
+
+ -->
+AdvertisementAdvertisement -->Skip to contentHomeAbout the Author
+Advertising/Speaking
+Feds Charge NY Man as BreachForums Boss “Pompompurin”March 17, 202323 Comments
+ The U.S. Federal Bureau of Investigation (FBI) this week arrested a New York man on suspicion of running BreachForums, a popular English-language cybercrime forum where some of the world biggest hacked databases routinely show up for sale. The forum’s administrator “Pompompurin” has been a thorn in the side of the FBI for years, and BreachForums is widely considered a reincarnation of RaidForums, a remarkably similar crime forum that the FBI infiltrated and dismantled in 2022.
+FBI agents carting items out of Fitzpatrick’s home on March 15. Image: News 12 Westchester.
+In an affidavit filed with the District Court for the Southern District of New York, FBI Special Agent John Langmire said that at around 4:30 p.m. on March 15, 2023, he led a team of law enforcement agents that made a probable cause arrest of a Conor Brian Fitzpatrick in Peekskill, NY.
+“When I arrested the defendant on March 15, 2023, he stated to me in substance and in part that: a) his name was Conor Brian Fitzpatrick; b) he used the alias ‘pompompurin/’ and c) he was the owner and administrator of ‘BreachForums’ the data breach website referenced in the Complaint,” Langmire wrote.
+Pompompurin has been something of a nemesis to the FBI for several years. In November 2021, KrebsOnSecurity broke the news that thousands of fake emails about a cybercrime investigation were blasted out from the FBI’s email systems and Internet addresses.
+Pompompurin took credit for that stunt, and said he was able to send the FBI email blast by exploiting a flaw in an FBI portal designed to share information with state and local law enforcement authorities. The FBI later acknowledged that a software misconfiguration allowed someone to send the fake emails.
+In December, 2022, KrebsOnSecurity broke the news that hackers active on BreachForums had infiltrated the FBI’s InfraGard program, a vetted FBI program designed to build cyber and physical threat information sharing partnerships with experts in the private sector. The hackers impersonated the CEO of a major financial company, applied for InfraGard membership in the CEO’s name, and were granted admission to the community.
+From there, the hackers plundered the InfraGard member database, and proceeded to sell contact information on more than 80,000 InfraGard members in an auction on BreachForums. The FBI responded by disabling the portal for some time, before ultimately forcing all InfraGard members to re-apply for membership.
+More recently, BreachForums was the sales forum for data stolen from DC Health Link, a health insurance exchange based in Washington, D.C. that suffered a data breach this month. The sales thread initially said the data included the names, Social Security numbers, dates of birth, health plan and enrollee information and more on 170,000 individuals, although the official notice about the breach says 56,415 people were affected.
+In April 2022, U.S. Justice Department seized the servers and domains for RaidForums, an extremely popular English-language cybercrime forum that sold access to more than 10 billion consumer records stolen in some of the world’s largest data breaches since 2015. As part of that operation, the feds also charged the alleged administrator, 21-year-old Diogo Santos Coelho of Portugal, with six criminal counts.
+Coelho was arrested in the United Kingdom on Jan. 31, 2022. By that time, the new BreachForums had been live for just under a week, but with a familiar look.
+BreachForums remains accessible online, and from reviewing the live chat stream on the site’s home page it appears the forum’s active users are only just becoming aware that their administrator — and the site’s database — is likely now in FBI hands:
+Members of BreachForums discuss the arrest of the forum’s alleged owner.
+“Wait if they arrested pom then doesn’t the FBI have all of our details we’ve registered with?” asked one worried BreachForums member.
+“But we all have good VPNs I guess, right…right guys?” another denizen offered.
+“Like pom would most likely do a plea bargain and cooperate with the feds as much as possible,” replied another.
+Fitzpatrick could not be immediately reached for comment. The FBI declined to comment for this story.
+There is only one page to the criminal complaint against Fitzpatrick (PDF), which charges him with one count of conspiracy to commit access device fraud. The affidavit on his arrest is available here (PDF). Microsoft Patch Tuesday, March 2023 EditionMarch 15, 202325 Comments
+ Microsoft on Tuesday released updates to quash at least 74 security bugs in its Windows operating systems and software. Two of those flaws are already being actively attacked, including an especially severe weakness in Microsoft Outlook that can be exploited without any user interaction.The Outlook vulnerability (CVE-2023-23397) affects all versions of Microsoft Outlook from 2013 to the newest. Microsoft said it has seen evidence that attackers are exploiting this flaw, which can be done without any user interaction by sending a booby-trapped email that triggers automatically when retrieved by the email server — before the email is even viewed in the Preview Pane.
+While CVE-2023-23397 is labeled as an “Elevation of Privilege” vulnerability, that label doesn’t accurately reflect its severity, said Kevin Breen, director of cyber threat research at Immersive Labs.
+Known as an NTLM relay attack, it allows an attacker to get someone’s NTLM hash [Windows account password] and use it in an attack commonly referred to as “Pass The Hash.”
+“The vulnerability effectively lets the attacker authenticate as a trusted individual without having to know the person’s password,” Breen said. “This is on par with an attacker having a valid password with access to an organization’s systems.”
+Security firm Rapid7 points out that this bug affects self-hosted versions of Outlook like Microsoft 365 Apps for Enterprise, but Microsoft-hosted online services like Microsoft 365 are not vulnerable. Continue reading →Advertisement Two U.S. Men Charged in 2022 Hacking of DEA PortalMarch 14, 202323 Comments
+ Two U.S. men have been charged with hacking into a U.S. Drug Enforcement Agency (DEA) online portal that taps into 16 different federal law enforcement databases. Both are alleged to be part of a larger criminal organization that specializes in using fake emergency data requests from compromised police and government email accounts to publicly threaten and extort their victims.Prosecutors for the Eastern District of New York today unsealed criminal complaints against Sagar Steven Singh — a.k.a “Weep” — a 19-year-old from Pawtucket, Rhode Island; and Nicholas Ceraolo, 25, of Queens, NY, who allegedly went by the handles “Convict” and “Ominus.”
+The Justice Department says Singh and Ceraolo belong to a group of cybercriminals known to its members as “ViLE,” who specialize in obtaining personal information about third-party victims, which they then use to harass, threaten or extort the victims, a practice known as “doxing.”
+“ViLE is collaborative, and the members routinely share tactics and illicitly obtained information with each other,” prosecutors charged.
+The government alleges the defendants and other members of ViLE use various methods to obtain victims’ personal information, including:
+-tricking customer service employees;
+-submitting fraudulent legal process to social media companies to elicit users’ registration information;
+-co-opting and corrupting corporate insiders;
+-searching public and private online databases;
+-accessing a nonpublic United States government database without authorization
+-unlawfully using official email accounts belonging to other countries.
+The complaint says once they obtained a victim’s information, Singh and Ceraolo would post the information in an online forum. The government refers to this community only as “Forum-1,” saying that it is administered by the leader of ViLE (referenced in the complaint as “CC-1”).
+“Victims are extorted into paying CC-1 to have their information removed from Forum-1,” prosecutors allege. “Singh also uses the threat of revealing personal information to extort victims into giving him access to their social media accounts, which Singh then resells.”
+Sources tell KrebsOnSecurity in addition to being members of ViLE, both Weep and Ominous are or were staff members for Doxbin, a highly toxic online community that provides a forum for digging up personal information on people and posting it publicly. This is supported by the Doxbin administrator’s claimed responsibility for a high-profile intrusion at the DEA’s law enforcement data sharing portal last year.
+A screenshot of alleged access to the Drug Enforcement Agency’s intelligence sharing portal, shared by “KT,” the current administrator of the doxing and harassment community Doxbin.
+The government alleges that on May 7, 2022, Singh used stolen credentials to log into a U.S. federal government portal without authorization. The complaint doesn’t specify which agency portal was hacked, but it does state that the portal included access to law enforcement databases that track narcotics seizures in the United States.
+On May 12, 2022, KrebsOnSecurity broke the news that hackers had gained access to a DEA portal that taps into 16 different federal law enforcement databases. As reported at the time, the inside scoop on how that hack went down came from KT, the current administrator of the Doxbin and the individual referenced in the government’s complaint as “CC-1.”
+ Continue reading →Who’s Behind the NetWire Remote Access Trojan?March 9, 202326 Comments
+ A Croatian national has been arrested for allegedly operating NetWire, a Remote Access Trojan (RAT) marketed on cybercrime forums since 2012 as a stealthy way to spy on infected systems and siphon passwords. The arrest coincided with a seizure of the NetWire sales website by the U.S. Federal Bureau of Investigation (FBI). While the defendant in this case hasn’t yet been named publicly, the NetWire website has been leaking information about the likely true identity and location of its owner for the past 11 years.Typically installed by booby-trapped Microsoft Office documents and distributed via email, NetWire is a multi-platform threat that is capable of targeting not only Microsoft Windows machines but also Android, Linux and Mac systems.
+NetWire’s reliability and relatively low cost ($80-$140 depending on features) has made it an extremely popular RAT on the cybercrime forums for years, and NetWire infections consistently rank among the top 10 most active RATs in use.
+NetWire has been sold openly on the same website since 2012: worldwiredlabs[.]com. That website now features a seizure notice from the U.S. Department of Justice (DOJ), which says the domain was taken as part of “a coordinated law enforcement action taken against the NetWire Remote Access Trojan.”
+“As part of this week’s law enforcement action, authorities in Croatia on Tuesday arrested a Croatian national who allegedly was the administrator of the website,” reads a statement by the DOJ today. “This defendant will be prosecuted by Croatian authorities. Additionally, law enforcement in Switzerland on Tuesday seized the computer server hosting the NetWire RAT infrastructure.”
+Neither the DOJ’s statement nor a press release on the operation published by Croatian authorities mentioned the name of the accused. But it’s fairly remarkable that it has taken so long for authorities in the United States and elsewhere to move against NetWire and its alleged proprietor, given that the RAT’s author apparently did very little to hide his real-life identity.
+The WorldWiredLabs website first came online in February 2012 using a dedicated host with no other domains. The site’s true WHOIS registration records have always been hidden by privacy protection services, but there are plenty of clues in historical Domain Name System (DNS) records for WorldWiredLabs that point in the same direction.
+In October 2012, the WorldWiredLabs domain moved to another dedicated server at the Internet address 198.91.90.7, which was home to just one other domain: printschoolmedia[.]org, also registered in 2012.
+According to DomainTools.com, printschoolmedia[.]org was registered to a Mario Zanko in Zapresic, Croatia, and to the email address zankomario@gmail.com. DomainTools further shows this email address was used to register one other domain in 2012: wwlabshosting[.]com, also registered to Mario Zanko from Croatia.
+A review of DNS records for both printschoolmedia[.]org and wwlabshosting[.]com shows that while these domains were online they both used the DNS name server ns1.worldwiredlabs[.]com. No other domains have been recorded using that same name server.
+The WorldWiredLabs website, in 2013. Source: Archive.org.
+DNS records for worldwiredlabs[.]com also show the site forwarded incoming email to the address tommaloney@ruggedinbox.com. Constella Intelligence, a service that indexes information exposed by public database leaks, shows this email address was used to register an account at the clothing retailer romwe.com, using the password “123456xx.”
+Running a reverse search on this password in Constella Intelligence shows there are more than 450 email addresses known to have used this credential, and two of those are zankomario@gmail.com and zankomario@yahoo.com.
+ Continue reading →Sued by Meta, Freenom Halts Domain RegistrationsMarch 7, 202323 Comments
+ The domain name registrar Freenom, whose free domain names have long been a draw for spammers and phishers, has stopped allowing new domain name registrations. The move comes after the Dutch registrar was sued by Meta, which alleges the company ignores abuse complaints about phishing websites while monetizing traffic to those abusive domains.
+Freenom’s website features a message saying it is not currently allowing new registrations.
+Freenom is the domain name registry service provider for five so-called “country code top level domains” (ccTLDs), including .cf for the Central African Republic; .ga for Gabon; .gq for Equatorial Guinea; .ml for Mali; and .tk for Tokelau.
+Freenom has always waived the registration fees for domains in these country-code domains, presumably as a way to encourage users to pay for related services, such as registering a .com or .net domain, for which Freenom does charge a fee.
+On March 3, 2023, social media giant Meta sued Freenom in a Northern California court, alleging cybersquatting violations and trademark infringement. The lawsuit also seeks information about the identities of 20 different “John Does” — Freenom customers that Meta says have been particularly active in phishing attacks against Facebook, Instagram, and WhatsApp users.
+The lawsuit points to a 2021 study (PDF) on the abuse of domains conducted by Interisle Consulting Group, which discovered that those ccTLDs operated by Freenom made up five of the Top Ten TLDs most abused by phishers.
+“The five ccTLDs to which Freenom provides its services are the TLDs of choice for cybercriminals because Freenom provides free domain name registration services and shields its customers’ identity, even after being presented with evidence that the domain names are being used for illegal purposes,” the complaint charges. “Even after receiving notices of infringement or phishing by its customers, Freenom continues to license new infringing domain names to those same customers.”
+Meta further alleges that “Freenom has repeatedly failed to take appropriate steps to investigate and respond appropriately to reports of abuse,” and that it monetizes the traffic from infringing domains by reselling them and by adding “parking pages” that redirect visitors to other commercial websites, websites with pornographic content, and websites used for malicious activity like phishing.
+Freenom has not yet responded to requests for comment. But attempts to register a domain through the company’s website as of publication time generated an error message that reads:
+“Because of technical issues the Freenom application for new registrations is temporarily out-of-order. Please accept our apologies for the inconvenience. We are working on a solution and hope to resume operations shortly. Thank you for your understanding.”
+Image: Interisle Consulting Group, Phishing Landscape 2021, Sept. 2021.
+Although Freenom is based in The Netherlands, some of its other sister companies named as defendants in the lawsuit are incorporated in the United States.
+Meta initially filed this lawsuit in December 2022, but it asked the court to seal the case, which would have restricted public access to court documents in the dispute. That request was denied, and Meta amended and re-filed the lawsuit last week. Continue reading →Highlights from the New U.S. Cybersecurity StrategyMarch 2, 202338 Comments
+ The Biden administration today issued its vision for beefing up the nation’s collective cybersecurity posture, including calls for legislation establishing liability for software products and services that are sold with little regard for security. The White House’s new national cybersecurity strategy also envisions a more active role by cloud providers and the U.S. military in disrupting cybercriminal infrastructure, and it names China as the single biggest cyber threat to U.S. interests.The strategy says the White House will work with Congress and the private sector to develop legislation that would prevent companies from disavowing responsibility for the security of their software products or services.
+Coupled with this stick would be a carrot: An as-yet-undefined “safe harbor framework” that would lay out what these companies could do to demonstrate that they are making cybersecurity a central concern of their design and operations.
+“Any such legislation should prevent manufacturers and software publishers with market power from fully disclaiming liability by contract, and establish higher standards of care for software in specific high-risk scenarios,” the strategy explains. “To begin to shape standards of care for secure software development, the Administration will drive the development of an adaptable safe harbor framework to shield from liability companies that securely develop and maintain their software products and services.”
+Brian Fox, chief technology officer and founder of the software supply chain security firm Sonatype, called the software liability push a landmark moment for the industry.
+“Market forces are leading to a race to the bottom in certain industries, while contract law allows software vendors of all kinds to shield themselves from liability,” Fox said. “Regulations for other industries went through a similar transformation, and we saw a positive result — there’s now an expectation of appropriate due care, and accountability for those who fail to comply. Establishing the concept of safe harbors allows the industry to mature incrementally, leveling up security best practices in order to retain a liability shield, versus calling for sweeping reform and unrealistic outcomes as previous regulatory attempts have.”
+THE MOST ACTIVE, PERSISTENT THREAT
+In 2012 (approximately three national cyber strategies ago), then director of the U.S. National Security Agency (NSA) Keith Alexander made headlines when he remarked that years of successful cyber espionage campaigns from Chinese state-sponsored hackers represented “the greatest transfer of wealth in history.”
+The document released today says the People’s Republic of China (PRC) “now presents the broadest, most active, and most persistent threat to both government and private sector networks,” and says China is “the only country with both the intent to reshape the international order and, increasingly, the economic, diplomatic, military, and technological power to do so.”
+Many of the U.S. government’s efforts to restrain China’s technology prowess involve ongoing initiatives like the CHIPS Act, a new law signed by President Biden last year that sets aside more than $50 billion to expand U.S.-based semiconductor manufacturing and research and to make the U.S. less dependent on foreign suppliers; the National Artificial Intelligence Initiative; and the National Strategy to Secure 5G.
+As the maker of most consumer gizmos with a computer chip inside, China is also the source of an incredible number of low-cost Internet of Things (IoT) devices that are not only poorly secured, but are probably more accurately described as insecure by design.
+The Biden administration said it would continue its previously announced plans to develop a system of labeling that could be applied to various IoT products and give consumers some idea of how secure the products may be. But it remains unclear how those labels might apply to products made by companies outside of the United States. Continue reading →Hackers Claim They Breached T-Mobile More Than 100 Times in 2022February 28, 202337 Comments
+ Image: Shutterstock.com
+Three different cybercriminal groups claimed access to internal networks at communications giant T-Mobile in more than 100 separate incidents throughout 2022, new data suggests. In each case, the goal of the attackers was the same: Phish T-Mobile employees for access to internal company tools, and then convert that access into a cybercrime service that could be hired to divert any T-Mobile user’s text messages and phone calls to another device.
+The conclusions above are based on an extensive analysis of Telegram chat logs from three distinct cybercrime groups or actors that have been identified by security researchers as particularly active in and effective at “SIM-swapping,” which involves temporarily seizing control over a target’s mobile phone number.
+Countless websites and online services use SMS text messages for both password resets and multi-factor authentication. This means that stealing someone’s phone number often can let cybercriminals hijack the target’s entire digital life in short order — including access to any financial, email and social media accounts tied to that phone number.
+All three SIM-swapping entities that were tracked for this story remain active in 2023, and they all conduct business in open channels on the instant messaging platform Telegram. KrebsOnSecurity is not naming those channels or groups here because they will simply migrate to more private servers if exposed publicly, and for now those servers remain a useful source of intelligence about their activities.
+Each advertises their claimed access to T-Mobile systems in a similar way. At a minimum, every SIM-swapping opportunity is announced with a brief “Tmobile up!” or “Tmo up!” message to channel participants. Other information in the announcements includes the price for a single SIM-swap request, and the handle of the person who takes the payment and information about the targeted subscriber.
+The information required from the customer of the SIM-swapping service includes the target’s phone number, and the serial number tied to the new SIM card that will be used to receive text messages and phone calls from the hijacked phone number.
+Initially, the goal of this project was to count how many times each entity claimed access to T-Mobile throughout 2022, by cataloging the various “Tmo up!” posts from each day and working backwards from Dec. 31, 2022.
+But by the time we got to claims made in the middle of May 2022, completing the rest of the year’s timeline seemed unnecessary. The tally shows that in the last seven-and-a-half months of 2022, these groups collectively made SIM-swapping claims against T-Mobile on 104 separate days — often with multiple groups claiming access on the same days.
+The 104 days in the latter half of 2022 in which different known SIM-swapping groups claimed access to T-Mobile employee tools.
+KrebsOnSecurity shared a large amount of data gathered for this story with T-Mobile. The company declined to confirm or deny any of these claimed intrusions. But in a written statement, T-Mobile said this type of activity affects the entire wireless industry.
+“And we are constantly working to fight against it,” the statement reads. “We have continued to drive enhancements that further protect against unauthorized access, including enhancing multi-factor authentication controls, hardening environments, limiting access to data, apps or services, and more. We are also focused on gathering threat intelligence data, like what you have shared, to help further strengthen these ongoing efforts.”
+TMO UP!
+While it is true that each of these cybercriminal actors periodically offer SIM-swapping services for other mobile phone providers — including AT&amp;T, Verizon and smaller carriers — those solicitations appear far less frequently in these group chats than T-Mobile swap offers. And when those offers do materialize, they are considerably more expensive.
+The prices advertised for a SIM-swap against T-Mobile customers in the latter half of 2022 ranged between USD $1,000 and $1,500, while SIM-swaps offered against AT&amp;T and Verizon customers often cost well more than twice that amount.To be clear, KrebsOnSecurity is not aware of specific SIM-swapping incidents tied to any of these breach claims. However, the vast majority of advertisements for SIM-swapping claims against T-Mobile tracked in this story had two things in common that set them apart from random SIM-swapping ads on Telegram.
+First, they included an offer to use a mutually trusted “middleman” or escrow provider for the transaction (to protect either party from getting scammed). More importantly, the cybercriminal handles that were posting ads for SIM-swapping opportunities from these groups generally did so on a daily or near-daily basis — often teasing their upcoming swap events in the hours before posting a “Tmo up!” message announcement.
+In other words, if the crooks offering these SIM-swapping services were ripping off their customers or claiming to have access that they didn’t, this would be almost immediately obvious from the responses of the more seasoned and serious cybercriminals in the same chat channel.
+There are plenty of people on Telegram claiming to have SIM-swap access at major telecommunications firms, but a great many such offers are simply four-figure scams, and any pretenders on this front are soon identified and banned (if not worse).
+One of the groups that reliably posted “Tmo up!” messages to announce SIM-swap availability against T-Mobile customers also reliably posted “Tmo down!” follow-up messages announcing exactly when their claimed access to T-Mobile employee tools was discovered and revoked by the mobile giant.
+A review of the timestamps associated with this group’s incessant “Tmo up” and “Tmo down” posts indicates that while their claimed access to employee tools usually lasted less than an hour, in some cases that access apparently went undiscovered for several hours or even days. Continue reading →When Low-Tech Hacks Cause High-Impact BreachesFebruary 26, 202312 Comments
+ Web hosting giant GoDaddy made headlines this month when it disclosed that a multi-year breach allowed intruders to steal company source code, siphon customer and employee login credentials, and foist malware on customer websites. Media coverage understandably focused on GoDaddy’s admission that it suffered three different cyberattacks over as many years at the hands of the same hacking group.  But it’s worth revisiting how this group typically got in to targeted companies: By calling employees and tricking them into navigating to a phishing website.In a filing with the U.S. Securities and Exchange Commission (SEC), GoDaddy said it determined that the same “sophisticated threat actor group” was responsible for three separate intrusions, including:
+-March 2020: A spear-phishing attack on a GoDaddy employee compromised the hosting login credentials of approximately 28,000 GoDaddy customers, as well as login credentials for a small number employees;
+-November 2021: A compromised GoDaddy password let attackers steal source code and information tied to 1.2 million customers, including website administrator passwords, sFTP credentials, and private SSL keys;
+-December 2022: Hackers gained access to and installed malware on GoDaddy’s cPanel hosting servers that “intermittently redirected random customer websites to malicious sites.”
+“Based on our investigation, we believe these incidents are part of a multi-year campaign by a sophisticated threat actor group that, among other things, installed malware on our systems and obtained pieces of code related to some services within GoDaddy,” the company stated in its SEC filing.
+What else do we know about the cause of these incidents? We don’t know much about the source of the November 2021 incident, other than GoDaddy’s statement that it involved a compromised password, and that it took about two months for the company to detect the intrusion. GoDaddy has not disclosed the source of the breach in December 2022 that led to malware on some customer websites.
+But we do know the March 2020 attack was precipitated by a spear-phishing attack against a GoDaddy employee. GoDaddy described the incident at the time in general terms as a social engineering attack, but one of its customers affected by that March 2020 breach actually spoke to one of the hackers involved.
+The hackers were able to change the Domain Name System (DNS) records for the transaction brokering site escrow.com so that it pointed to an address in Malaysia that was host to just a few other domains, including the then brand-new phishing domain servicenow-godaddy[.]com.
+The general manager of Escrow.com found himself on the phone with one of the GoDaddy hackers, after someone who claimed they worked at GoDaddy called and said they needed him to authorize some changes to the account.
+In reality, the caller had just tricked a GoDaddy employee into giving away their credentials, and he could see from the employee’s account that Escrow.com required a specific security procedure to complete a domain transfer.
+The general manager of Escrow.com said he suspected the call was a scam, but decided to play along for about an hour — all the while recording the call and coaxing information out of the scammer.
+“This guy had access to the notes, and knew the number to call,” to make changes to the account, the CEO of Escrow.com told KrebsOnSecurity. “He was literally reading off the tickets to the notes of the admin panel inside GoDaddy.”
+About halfway through this conversation — after being called out by the general manager as an imposter — the hacker admitted that he was not a GoDaddy employee, and that he was in fact part of a group that enjoyed repeated success with social engineering employees at targeted companies over the phone.
+Absent from GoDaddy’s SEC statement is another spate of attacks in November 2020, in which unknown intruders redirected email and web traffic for multiple cryptocurrency services that used GoDaddy in some capacity.
+It is possible this incident was not mentioned because it was the work of yet another group of intruders. But in response to questions from KrebsOnSecurity at the time, GoDaddy said that incident also stemmed from a “limited” number of GoDaddy employees falling for a sophisticated social engineering scam. Continue reading →Who’s Behind the Botnet-Based Service BHProxies?February 24, 202315 Comments
+ A security firm has discovered that a six-year-old crafty botnet known as Mylobot appears to be powering a residential proxy service called BHProxies, which offers paying customers the ability to route their web traffic anonymously through compromised computers. Here’s a closer look at Mylobot, and a deep dive into who may be responsible for operating the BHProxies service.
+The BHProxies website.
+First identified in 2017 by the security firm Deep Instinct, Mylobot employs a number of fairly sophisticated methods to remain undetected on infected hosts, such as running exclusively in the computer’s temporary memory, and waiting 14 days before attempting to contact the botnet’s command and control servers.
+Last year, researchers at Minerva Labs spotted the botnet being used to blast out sextortion scams. But according to a new report from BitSight, the Mylobot botnet’s main functionality has always been about transforming the infected system into a proxy.
+The Mylobot malware includes more than 1,000 hard-coded and encrypted domain names, any one of which can be registered and used as control networks for the infected hosts. BitSight researchers found significant overlap in the Internet addresses used by those domains and a domain called BHproxies[.]com.
+BHProxies sells access to “residential proxy” networks, which allow someone to rent a residential IP address to use as a relay for their Internet communications, providing anonymity and the advantage of being perceived as a residential user surfing the web. The service is currently advertising access to more than 150,000 devices globally.
+“At this point, we cannot prove that BHProxies is linked to Mylobot, but we have a strong suspicion,” wrote BitSight’s Stanislas Arnoud.
+To test their hypothesis, BitSight obtained 50 proxies from BHProxies. The researchers were able to use 48 of those 50 proxies to browse to a website they controlled — allowing them to record the true IP addresses of each proxy device.
+“Among these 48 recovered residential proxies IP addresses, 28 (58.3%) of those were already present in our sinkhole systems, associated with the Mylobot malware family,” Arnoud continued. “This number is probably higher, but we don’t have a full visibility of the botnet. This gave us clear evidence that Mylobot infected computers are used by the BHProxies service.”
+BitSight said it is currently seeing more than 50,000 unique Mylobot infected systems every day, and that India appears to be the most targeted country, followed by the United States, Indonesia and Iran.
+“We believe we are only seeing part of the full botnet, which may lead to more than 150,000 infected computers as advertised by BHProxies’ operators,” Arnoud wrote.
+WHO’S BEHIND BHPROXIES?
+The website BHProxies[.]com has been advertised for nearly a decade on the forum Black Hat World by the user BHProxies. BHProxies has authored 129 posts on Black Hat World since 2012, and their last post on the forum was in December 2022. 
+BHProxies initially was fairly active on Black Hat World between May and November 2012, after which it suddenly ceased all activity. The account didn’t resume posting on the forum until April 2014.
+According to cyber intelligence firm Intel 471, the user BHProxies also used the handle “hassan_isabad_subar” and marketed various software tools, including “Subar’s free email creator” and “Subar’s free proxy scraper.” 
+Intel 471’s data shows that hassan_isabad_subar registered on the forum using the email address jesus.fn.christ@gmail.com. In a June 2012 private message exchange with a website developer on Black Hat World, hassan_isabad_subar confided that they were working at the time to develop two websites, including the now-defunct customscrabblejewelry.com. Continue reading →New Protections for Food Benefits Stolen by SkimmersFebruary 17, 202332 Comments
+ Millions of Americans receiving food assistance benefits just earned a new right that they can’t yet enforce: The right to be reimbursed if funds on their Electronic Benefit Transfer (EBT) cards are stolen by card skimming devices secretly installed at cash machines and grocery store checkout lanes.On December 29, 2022, President Biden signed into law the Consolidated Appropriations Act of 2023, which — for the first time ever — includes provisions for the replacement of stolen EBT benefits. This is a big deal because in 2022, organized crime groups began massively targeting EBT accounts — often emptying affected accounts at ATMs immediately after the states disperse funds each month.
+EBT cards can be used along with a personal identification number (PIN) to pay for goods at participating stores, and to withdraw cash from an ATM. However, EBT cards differ from debit cards issued to most Americans in two important ways. First, most states do not equip EBT cards with smart chip technology, which can make the cards more difficult and expensive for skimming thieves to clone.
+More critically, EBT participants traditionally have had little hope of recovering food assistance funds when their cards were copied by card-skimming devices and used for fraud. That’s because while the EBT programs are operated by individually by the states, those programs are funded by the U.S. Department of Agriculture (USDA), which until late last year was barred from reimbursing states for stolen EBT funds.
+The protections passed in the 2023 Appropriations Act allow states to use federal funds to replace stolen EBT benefits, and they permit states to seek reimbursement for any skimmed EBT funds they may have replaced from their own coffers (dating back to Oct. 1, 2022).
+But first, all 50 states must each submit a plan for how they are going to protect and replace food benefits stolen via card skimming. Guidance for the states in drafting those plans was issued by the USDA on Jan. 31 (PDF), and states that don’t get them done before Feb. 27, 2023 risk losing the ability to be reimbursed for EBT fraud losses.
+Deborah Harris is a staff attorney at The Massachusetts Law Reform Institute (MLRI), a nonprofit legal assistance organization that has closely tracked the EBT skimming epidemic. In November 2022, the MLRI filed a class-action lawsuit against Massachusetts on behalf of thousands of low-income families who were collectively robbed of more than $1 million in food assistance benefits by card skimming devices secretly installed at cash machines and grocery store checkout lanes across the state.
+Harris said she’s pleased that the USDA guidelines were issued so promptly, and that the guidance for states was not overly prescriptive. For example, some security experts have suggested that adding contactless capability to EBT cards could help participants avoid skimming devices altogether. But Harris said contactless cards do not require a PIN, which is the only thing that stops EBT cards from being drained at the ATM when a participant’s card is lost or stolen.
+Then again, nothing in the guidance even mentions chip-based cards, or any other advice for improving the physical security of EBT cards. Rather, it suggests states should seek to develop the capability to perform basic fraud detection and alerting on suspicious transactions, such as when an EBT card that is normally used only in one geographic area suddenly is used to withdraw cash at an ATM halfway across the country.
+“Besides having the states move fast to approve their plans, we’d also like to see a focused effort to move states from magstripe-only cards to chip, and also assisting states to develop the algorithms that will enable them to identify likely incidents of stolen benefits,” Harris said.
+Harris said Massachusetts has begun using algorithms to look for these suspicious transaction patterns throughout its EBT network, and now has the ability to alert households and verify transactions. But she said most states do not have this capability.
+“We have heard that other states aren’t currently able to do that,” Harris said. “But encouraging states to more affirmatively identify instances of likely theft and assisting with the claims and verification process is critical. Most households can’t do that on their own, and in Massachusetts it’s very hard for a person to get a copy of their transaction history. Some states can do that through third-party apps, but something so basic should not be on the burden of EBT households.”
+Some states aren’t waiting for direction from the federal government to beef up EBT card security. Like Maryland, which identified more than 1,400 households hit by EBT skimming attacks last year — a tenfold increase over 2021. Continue reading →1234Next ›Last »AdvertisementAdvertisement
+Mailing ListSubscribe hereSearch KrebsOnSecuritySearch for:Recent PostsFeds Charge NY Man as BreachForums Boss “Pompompurin”Microsoft Patch Tuesday, March 2023 EditionTwo U.S. Men Charged in 2022 Hacking of DEA PortalWho’s Behind the NetWire Remote Access Trojan?Sued by Meta, Freenom Halts Domain Registrations 
+Spam NationA New York Times Bestseller! 
+Thinking of a Cybersecurity Career?Read this.
+All About Skimmers Click image for my skimmer series.
+Story CategoriesA Little SunshineAll About SkimmersAshley Madison breachBreadcrumbsData BreachesDDoS-for-HireEmployment FraudHow to Break Into SecurityLatest WarningsNe'er-Do-Well NewsOtherPharma WarsRansomwareRussia's War on UkraineSecurity ToolsSIM SwappingSpam NationTarget: Small BusinessesTax Refund FraudThe Coming StormTime to PatchWeb Fraud 2.0The Value of a Hacked PCBadguy uses for your PC
+Badguy Uses for Your Email Your email account may be worth far more than you imagine.Most Popular Posts
+ Sextortion Scam Uses Recipient's Hacked Passwords (1076)
+Online Cheating Site AshleyMadison Hacked (798)
+Sources: Target Investigating Data Breach (620)
+Trump Fires Security Chief Christopher Krebs (534)
+Why Paper Receipts are Money at the Drive-Thru (530)
+Cards Stolen in Target Breach Flood Underground Markets (445)
+Reports: Liberty Reserve Founder Arrested, Site Shuttered (416)
+Was the Ashley Madison Database Leaked? (376)
+DDoS-Guard To Forfeit Internet Space Occupied by Parler (374)
+True Goodbye: 'Using TrueCrypt Is Not Secure' (363)Why So Many Top Hackers Hail from RussiaCategory: Web Fraud 2.0Innovations from the Underground
+ID Protection Services Examined
+Is Antivirus Dead?The reasons for its decline
+The Growing Tax Fraud MenaceFile 'em Before the Bad Guys Can 
+Inside a Carding ShopA crash course in carding. 
+Beware Social Security FraudSign up, or Be Signed Up! 
+How Was Your Card Stolen?Finding out is not so easy. 
+Krebs’s 3 Rules…...For Online Safety. 
+ 
+© Krebs on Security - Mastodon 
+
+
+
+############################################################################# NEXT RECORD #############################################################################
+
+
+

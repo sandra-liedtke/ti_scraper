@@ -1,0 +1,351 @@
+Nordvpn Open Sources Its Linux Vpn Client And Libraries
+https://www.bleepingcomputer.com/news/security/nordvpn-open-sources-its-linux-vpn-client-and-libraries/
+
+Google Finds 18 Zero Day Vulnerabilities In Samsung Exynos Chipsets
+https://www.bleepingcomputer.com/news/security/google-finds-18-zero-day-vulnerabilities-in-samsung-exynos-chipsets/
+
+Rat Developer Arrested For Infecting 10 000 Pcs With Malware
+https://www.bleepingcomputer.com/news/security/rat-developer-arrested-for-infecting-10-000-pcs-with-malware/
+
+Alleged Breachforums Owner Pompompurin Arrested On Cybercrime Charges
+https://www.bleepingcomputer.com/news/security/alleged-breachforums-owner-pompompurin-arrested-on-cybercrime-charges/
+
+The Week In Ransomware March 17Th 2023 Shifting To Data Extortion
+https://www.bleepingcomputer.com/news/security/the-week-in-ransomware-march-17th-2023-shifting-to-data-extortion/
+
+#Vmost
+#vmost
+
+Nba Alerts Fans Of A Data Breach Exposing Personal Information
+https://www.bleepingcomputer.com/news/security/nba-alerts-fans-of-a-data-breach-exposing-personal-information/
+
+Hitachi Energy Confirms Data Breach After Clop Goanywhere Attacks
+https://www.bleepingcomputer.com/news/security/hitachi-energy-confirms-data-breach-after-clop-goanywhere-attacks/
+
+Microsoft Shares Script To Fix Winre Bitlocker Bypass Flaw
+https://www.bleepingcomputer.com/news/security/microsoft-shares-script-to-fix-winre-bitlocker-bypass-flaw/
+
+Bianlian Ransomware Gang Shifts Focus To Pure Data Extortion
+https://www.bleepingcomputer.com/news/security/bianlian-ransomware-gang-shifts-focus-to-pure-data-extortion/
+
+Fakecalls Android Malware Returns With New Ways To Hide On Phones
+https://www.bleepingcomputer.com/news/security/fakecalls-android-malware-returns-with-new-ways-to-hide-on-phones/
+
+Fortinet Zero Day Attacks Linked To Suspected Chinese Hackers
+https://www.bleepingcomputer.com/news/security/fortinet-zero-day-attacks-linked-to-suspected-chinese-hackers/
+
+Adobe Acrobat Sign Abused To Push Redline Info Stealing Malware
+https://www.bleepingcomputer.com/news/security/adobe-acrobat-sign-abused-to-push-redline-info-stealing-malware/
+
+Conti Based Ransomware Meowcorp Gets Free Decryptor
+https://www.bleepingcomputer.com/news/security/conti-based-ransomware-meowcorp-gets-free-decryptor/
+
+Latitude Cyberattack Leads To Data Theft At Two Service Providers
+https://www.bleepingcomputer.com/news/security/latitude-cyberattack-leads-to-data-theft-at-two-service-providers/
+
+Convincing Twitter Quote Tweet Phone Scam Targets Bank Customers
+https://www.bleepingcomputer.com/news/security/convincing-twitter-quote-tweet-phone-scam-targets-bank-customers/
+
+Microsoft Support Cracks Windows For Customer After Activation Fails
+https://www.bleepingcomputer.com/news/security/microsoft-support-cracks-windows-for-customer-after-activation-fails/
+
+Winter Vivern Apt Hackers Use Fake Antivirus Scans To Install Malware
+https://www.bleepingcomputer.com/news/security/winter-vivern-apt-hackers-use-fake-antivirus-scans-to-install-malware/
+
+Cisa Warns Of Adobe Coldfusion Bug Exploited As A Zero Day
+https://www.bleepingcomputer.com/news/security/cisa-warns-of-adobe-coldfusion-bug-exploited-as-a-zero-day/
+
+Mozilla Firefox Gets Built In Firefox Relay Controls
+https://www.bleepingcomputer.com/news/security/mozilla-firefox-gets-built-in-firefox-relay-controls/
+
+Microsoft Outlook Vulnerability Could Be 2023's 'It' Bug
+https://www.darkreading.com/application-security/microsoft-outlook-vulnerability-2023-it-bug
+
+Low-Budget 'Winter Vivern' APT Awakens After 2-Year Hibernation
+https://www.darkreading.com/threat-intelligence/low-budget-winter-vivern-apt-awakens-after-2-year-hibernation
+
+Meta Proposes Revamped Approach to Online Kill Chain Frameworks
+https://www.darkreading.com/application-security/meta-proposes-revamped-kill-chain-framework-online-threats
+
+BianLian Ransomware Pivots From Encryption to Pure Data-Theft Extortion
+https://www.darkreading.com/risk/bianlian-ransomware-pivots-encryption-pure-data-theft-extortion
+
+Cyberattackers Continue Assault Against Fortinet Devices
+https://www.darkreading.com/vulnerabilities-threats/cyberattackers-continue-assault-against-fortinet-devices
+
+Analysts Spot a Wave of SVB-Related Cyber Fraud Striking the Business Sector
+https://www.darkreading.com/threat-intelligence/analysts-wave-svb-cyber-fraud-striking-business-sector
+
+GoatRAT Android Banking Trojan Targets Mobile Automated Payment System
+https://www.darkreading.com/attacks-breaches/goatrat-android-trojan-targets-mobile-banking-automated-payment-system
+
+SMBs Orgs Want Help, but Cybersecurity Expertise Is Scarce
+https://www.darkreading.com/operations/midsize-orgs-want-help-cybersecurity-pros-scarce
+
+Microsoft Zero-Day Bugs Allow Security Feature Bypass
+https://www.darkreading.com/vulnerabilities-threats/microsoft-zero-day-bugs-security-feature-bypass
+
+Access Control Gap in Microsoft Active Directory Widens Enterprise Attack Surface
+https://www.darkreading.com/risk/access-control-gap-microsoft-active-directory-enterprise-attack-surface
+
+Emotet, QSnatch Malware Dominate Malicious DNS Traffic
+https://www.darkreading.com/threat-intelligence/dns-autobahn-malicious-network-traffic
+
+SVB Meltdown: What It Means for Cybersecurity Startups' Access to Capital
+https://www.darkreading.com/risk/svb-meltdown-cybersec-startups-access-capital
+
+Brand Names in Finance, Telecom, Tech Lead Successful Phishing Lures
+https://www.darkreading.com/threat-intelligence/brand-names-finance-telecom-tech-successful-phishing-lures
+
+ChatGPT Browser Extension Hijacks Facebook Business Accounts
+https://www.darkreading.com/application-security/chatgpt-browser-extension-hijacks-facebook-business-accounts
+
+Pig Butchering &amp; Investment Scams: The $3B Cybercrime Threat Overtaking BEC
+https://www.darkreading.com/application-security/pig-butchering-investment-scams-3b-cybercrime-threat-overtaking-bec
+
+'Chinese Hackers Exploit Fortinet Zero-Day Flaw for Cyber Espionage Attack'
+https://thehackernews.com/2023/03/chinese-hackers-exploit-fortinet-zero.html
+
+'Pompompurin Unmasked: Infamous BreachForums Mastermind Arrested in New York'
+https://thehackernews.com/2023/03/pompompurin-unmasked-infamous.html
+
+'THN Webinar: 3 Research-Backed Ways to Secure Your Identity Perimeter'
+https://thehackernews.com/2023/03/thn-webinar-3-research-backed-ways-to.html
+
+"LockBit 3.0 Ransomware: Inside the Cyberthreat That's Costing Millions"
+https://thehackernews.com/2023/03/lockbit-30-ransomware-inside.html
+
+'FakeCalls Vishing Malware Targets South Korean Users via Popular Financial Apps'
+https://thehackernews.com/2023/03/fakecalls-vishing-malware-targets-south.html
+
+'New GoLang-Based HinataBot Exploiting Router and Server Flaws for DDoS Attacks'
+https://thehackernews.com/2023/03/new-golang-based-hinatabot-exploiting.html
+
+'A New Security Category Addresses Web-borne Threats'
+https://thehackernews.com/2023/03/a-new-security-category-addresses-web.html
+
+'Lookalike Telegram and WhatsApp Websites Distributing Cryptocurrency Stealing Malware'
+https://thehackernews.com/2023/03/lookalike-telegram-and-whatsapp.html
+
+'Winter Vivern APT Group Targeting Indian, Lithuanian, Slovakian, and Vatican Officials'
+https://thehackernews.com/2023/03/winter-vivern-apt-group-targeting.html
+
+Microsoft Warns of Large-Scale Use of Phishing Kits to Send Millions of Emails Daily
+https://thehackernews.com/2023/03/microsoft-warns-of-large-scale-use-of.html
+
+Microsoft Rolls Out Patches for 80 New Security Flaws — Two Under Active Attack
+https://thehackernews.com/2023/03/microsoft-rolls-out-patches-for-80-new.html
+
+Fake ChatGPT Chrome Extension Hijacking Facebook Accounts for Malicious Advertising
+https://thehackernews.com/2023/03/fake-chatgpt-chrome-extension-hijacking.html
+
+Google Uncovers 18 Severe Security Vulnerabilities in Samsung Exynos Chips
+https://thehackernews.com/2023/03/google-uncovers-18-severe-security.html
+
+Warning: AI-generated YouTube Video Tutorials Spreading Infostealer Malware
+https://thehackernews.com/2023/03/warning-ai-generated-youtube-video.html
+
+Fortinet FortiOS Flaw Exploited in Targeted Cyberattacks on Government Entities
+https://thehackernews.com/2023/03/fortinet-fortios-flaw-exploited-in.html
+
+Breach Forums Owner Pompompurin Arrested New York
+https://www.hackread.com/breach-forums-owner-pompompurin-arrested-new-york/
+
+Latest Cyber Crime
+https://www.hackread.com/latest-cyber-crime/
+
+New Vishing Attack Spreading Fakecalls Android Malware
+https://www.hackread.com/new-vishing-attack-spreading-fakecalls-android-malware/
+
+Fortinet 0 Day Vulnerability Chinese Actors
+https://www.hackread.com/fortinet-0-day-vulnerability-chinese-actors/
+
+Telegram Whatsapp Crypto Android Windows
+https://www.hackread.com/telegram-whatsapp-crypto-android-windows/
+
+Managing Risk In Crypto Trading Techniques
+https://www.hackread.com/managing-risk-in-crypto-trading-techniques/
+
+Apt Telerik Vulnerability Iis Server Cisa
+https://www.hackread.com/apt-telerik-vulnerability-iis-server-cisa/
+
+Us Marshals Service Data Russian Hacker Forum
+https://www.hackread.com/us-marshals-service-data-russian-hacker-forum/
+
+Crypto Exchange Fiatusdt Leaked Kyc Data
+https://www.hackread.com/crypto-exchange-fiatusdt-leaked-kyc-data/
+
+Telegram Whatsapp Trojanized
+https://www.infosecurity-magazine.com/news/telegram-whatsapp-trojanized/
+
+Google Finds 18 Zero Days Samsung
+https://www.infosecurity-magazine.com/news/google-finds-18-zero-days-samsung/
+
+Russia Winter Vivern Apt Targets
+https://www.infosecurity-magazine.com/news/russia-winter-vivern-apt-targets/
+
+Ico Reprimands Metropolitan Police
+https://www.infosecurity-magazine.com/news/ico-reprimands-metropolitan-police/
+
+'Russian Military Preparing New Destructive Attacks: Microsoft'
+https://www.infosecurity-magazine.com/news/russian-military-preparing/
+
+'Vishing Campaign Targets Social Security Administration'
+https://www.infosecurity-magazine.com/news/vishing-campaign-social-security/
+
+'US Government IIS Server Breached via Telerik Software Flaw'
+https://www.infosecurity-magazine.com/news/us-server-breached-via-telerik/
+
+'ChipMixer Crypto Laundromat Shut Down By German, US Authorities'
+https://www.infosecurity-magazine.com/news/chipmixer-crypto-laundromat-shut/
+
+'UK Joins US, Canada, Others in Banning TikTok From Government Devices'
+https://www.infosecurity-magazine.com/news/uk-ban-tiktok-government-devices/
+
+'NCSC Calms Fears Over ChatGPT Threat'
+https://www.infosecurity-magazine.com/news/ncsc-calms-fears-chatgpt/
+
+'BEC Volumes Double on Phishing Surge '
+https://www.infosecurity-magazine.com/news/bec-volumes-double-on-phishing/
+
+'Chinese SilkLoader Malware Sold to Russian Cyber-Criminals'
+https://www.infosecurity-magazine.com/news/chinese-silkloader-sold-russian/
+
+'Most Computer Code Compilers Vulnerable to Novel Attacks'
+https://www.infosecurity-magazine.com/news/computer-code-compilers-attacks/
+
+'MI5 Launches New Agency to Tackle State-Backed Attacks'
+https://www.infosecurity-magazine.com/news/mi5-new-agency-tackle-statebacked/
+
+'UK Crypto Firm Loses $200m in Cyber-Attack'
+https://www.infosecurity-magazine.com/news/uk-crypto-firm-loses-200m/
+
+'White House Allocates $3.1bn to Cybersecurity in New Budget'
+https://www.infosecurity-magazine.com/news/white-house-allocates-dollar31bn/
+
+'CISA Creates New Ransomware Vulnerability Warning Program'
+https://www.infosecurity-magazine.com/news/cisa-creates-ransomware-warning/
+
+'TikTok Initiates Project Clover Amid European Data Security Concerns '
+https://www.infosecurity-magazine.com/news/tiktok-initiates-project-clover/
+
+Anatomie Eines Privilege Escalation Angriffs A 9B5442De583C30Abfe5C5C7Bcb3Ac6Ef
+https://www.security-insider.de/anatomie-eines-privilege-escalation-angriffs-a-9b5442de583c30abfe5c5c7bcb3ac6ef/
+
+Herausforderung Medizinisches Xiot A 8B0674Fb2Bbab420Ce94402Bb1727Fd4
+https://www.security-insider.de/herausforderung-medizinisches-xiot-a-8b0674fb2bbab420ce94402bb1727fd4/
+
+Der Cyber Resilience Act Bringt Endlich Security By Design A Ca202E0984A0Fd7Ac647Cbda5667E961
+https://www.security-insider.de/der-cyber-resilience-act-bringt-endlich-security-by-design-a-ca202e0984a0fd7ac647cbda5667e961/
+
+Chatgpt Held Oder Boesewicht A 7De6Aa17988C940B3Fb42584974A6F65
+https://www.security-insider.de/chatgpt-held-oder-boesewicht-a-7de6aa17988c940b3fb42584974a6f65/
+
+Was Sind Microservices A 95D43053Cc558779Cc6F563C46Fd7744
+https://www.security-insider.de/was-sind-microservices-a-95d43053cc558779cc6f563c46fd7744/
+
+Updates Fuer Oeffentlich Bekannte Luecken Und Exploits A 5Fcee7Becb01Fe447F60220Ce5Ba4396
+https://www.security-insider.de/updates-fuer-oeffentlich-bekannte-luecken-und-exploits-a-5fcee7becb01fe447f60220ce5ba4396/
+
+Sicherheitsrelevante Daten Seetauglich Machen A B390Be9F165C4A6215C34E722Cfcbf04
+https://www.security-insider.de/sicherheitsrelevante-daten-seetauglich-machen-a-b390be9f165c4a6215c34e722cfcbf04/
+
+Wie Sicher Ist Multi Faktor Authentifizierung Wirklich A 4F9Ea0B2A4217B49Cffdbb5Cef91F798
+https://www.security-insider.de/wie-sicher-ist-multi-faktor-authentifizierung-wirklich-a-4f9ea0b2a4217b49cffdbb5cef91f798/
+
+Mehr Sicherheit Fuer Die Powershell A F0F3870A10430F96Be070F6031268E9B
+https://www.security-insider.de/mehr-sicherheit-fuer-die-powershell-a-f0f3870a10430f96be070f6031268e9b/
+
+It Sicherheit Bloss Nicht In Fremde Haende Geben Gal 4288026Ff44760C4D8A3B37282Ac759F
+https://www.security-insider.de/it-sicherheit-bloss-nicht-in-fremde-haende-geben-gal-4288026ff44760c4d8a3b37282ac759f/
+
+Mehr Sicherheit Fuer Die Powershell Gal F0F3870A10430F96Be070F6031268E9B
+https://www.security-insider.de/mehr-sicherheit-fuer-die-powershell-gal-f0f3870a10430f96be070f6031268e9b/
+
+Arcitecta Will Ransomware Ins Leere Laufen Lassen Gal C70F568A3305134727C6A1Faa2F43Cf6
+https://www.security-insider.de/arcitecta-will-ransomware-ins-leere-laufen-lassen-gal-c70f568a3305134727c6a1faa2f43cf6/
+
+Ungefilterte Datenflut Beeintraechtigt Die Netzwerksicherheit Gal 8E734E1F42B9Cd8A3Ca3Afa8Cdc382B5
+https://www.security-insider.de/ungefilterte-datenflut-beeintraechtigt-die-netzwerksicherheit-gal-8e734e1f42b9cd8a3ca3afa8cdc382b5/
+
+Physische Sicherheit In Datencentern Analog Und Digital Hand In Hand A Fb9A6F90Cb9E245C95D5252051E25587
+https://www.security-insider.de/physische-sicherheit-in-datencentern-analog-und-digital-hand-in-hand-a-fb9a6f90cb9e245c95d5252051e25587/
+
+Mit Zero Trust Zum Sicheren Remote Arbeiten A 07E7419Ed617595F71Fbea78556275Fa
+https://www.security-insider.de/mit-zero-trust-zum-sicheren-remote-arbeiten-a-07e7419ed617595f71fbea78556275fa/
+
+5 Best Practices Zur Absicherung Der Software Supply Chain A 436729Fdec3010C1836Ac6618A66C162
+https://www.security-insider.de/5-best-practices-zur-absicherung-der-software-supply-chain-a-436729fdec3010c1836ac6618a66c162/
+
+Unternehmen Scheitern Oft An Den Eigenen Security Anforderungen A B2Dc41Bd30548Af3F6A46Dd9Db7Bf3C5
+https://www.security-insider.de/unternehmen-scheitern-oft-an-den-eigenen-security-anforderungen-a-b2dc41bd30548af3f6a46dd9db7bf3c5/
+
+So Lassen Sie Sich Von Hacker Angriffen Nicht Unvorbereitet Ueberraschen A 8437413E81E7C0Eb2Af463618Dcafc95
+https://www.security-insider.de/so-lassen-sie-sich-von-hacker-angriffen-nicht-unvorbereitet-ueberraschen-a-8437413e81e7c0eb2af463618dcafc95/
+
+'Exynos-Chips mit teils kritischen Zero-Day-Lücken'
+https://www.heise.de//news/Nicht-nur-Samsung-Smartphones-Exynos-Chips-mit-teils-kritischen-Zero-Day-Luecken-7548678.html
+
+'Der heise Security Crashkurs zum Schutz vor Ransomware'
+https://www.heise.de//news/Der-heise-Security-Crashkurs-zum-Schutz-vor-Ransomware-7545254.html
+
+News/Kritisches Leck In Ssl Vpn Gateway Von Array Networks 7548009
+https://www.heise.de//news/Kritisches-Leck-in-SSL-VPN-Gateway-von-Array-Networks-7548009.html
+
+News/Webkonferenzen Hochriskante Luecken In Zoom 7547291
+https://www.heise.de//news/Webkonferenzen-Hochriskante-Luecken-in-Zoom-7547291.html
+
+News/Patchday Adobe Schliesst Zero Day Luecke Und Mehr Als 100 Schwachstellen 7546150
+https://www.heise.de//news/Patchday-Adobe-schliesst-Zero-Day-Luecke-und-mehr-als-100-Schwachstellen-7546150.html
+
+News/Patchday Microsoft Dichtet Aktiv Angegriffene Sicherheitsluecken Ab 7545903
+https://www.heise.de//news/Patchday-Microsoft-dichtet-aktiv-angegriffene-Sicherheitsluecken-ab-7545903.html
+
+News/Bka Und Zitis Suchen Zero Day Exploits Bundesregierung Weiss Nichts Davon 7550346
+https://www.heise.de//news/BKA-und-Zitis-suchen-Zero-Day-Exploits-Bundesregierung-weiss-nichts-davon-7550346.html
+
+News/Konfigurationsfehler Fuehrt Zu Datenleck Bei Mastodon 7550217
+https://www.heise.de//news/Konfigurationsfehler-fuehrt-zu-Datenleck-bei-Mastodon-7550217.html
+
+News/Security Neues Cli Tool Soll Npm Install Vor Malware Schuetzen 7549005
+https://www.heise.de//news/Security-Neues-CLI-Tool-soll-npm-install-vor-Malware-schuetzen-7549005.html
+
+News/Bitlocker Luecke Microsoft Liefert Skript Zum Patchen Von Winre Partition 7548899
+https://www.heise.de//news/Bitlocker-Luecke-Microsoft-liefert-Skript-zum-Patchen-von-WinRE-Partition-7548899.html
+
+News/Ix Workshop Angriffsziel Lokales Active Directory Effiziente Absicherung 7548102
+https://www.heise.de//news/iX-Workshop-Angriffsziel-lokales-Active-Directory-effiziente-Absicherung-7548102.html
+
+News/Dell Deutet Neue Security Plattform An Erstmal Gibt Es Aber Vier Neue Tools 7548174
+https://www.heise.de//news/Dell-deutet-neue-Security-Plattform-an-erstmal-gibt-es-aber-vier-neue-Tools-7548174.html
+
+News/Ransomware Us Sicherheitsbehoerde Cisa Scannt Kritis Auf Schwachstellen 7547847
+https://www.heise.de//news/Ransomware-US-Sicherheitsbehoerde-CISA-scannt-KRITIS-auf-Schwachstellen-7547847.html
+
+News/Betrueger Missbrauchen Zusammenbruch Der Svb Fuer Geld Und Datenklau 7546557
+https://www.heise.de//news/Betrueger-missbrauchen-Zusammenbruch-der-SVB-fuer-Geld-und-Datenklau-7546557.html
+
+News/Kryptowaehrungen Polizei Schaltet Geldwaeschedienst Chipmixer Ab 7547142
+https://www.heise.de//news/Kryptowaehrungen-Polizei-schaltet-Geldwaeschedienst-Chipmixer-ab-7547142.html
+
+News/Ebay Kleinanzeigen Mehr Phishing Schutz Durch Warnhinweise 7546638
+https://www.heise.de//news/eBay-Kleinanzeigen-Mehr-Phishing-Schutz-durch-Warnhinweise-7546638.html
+
+News/Ix Workshop Effiziente It Sicherheit Fuer Kleine Und Mittlere Unternehmen 7543797
+https://www.heise.de//news/iX-Workshop-Effiziente-IT-Sicherheit-fuer-kleine-und-mittlere-Unternehmen-7543797.html
+
+News/Bsi Fordert Bessere It Sicherheit Fuer Verbraucher 7545818
+https://www.heise.de//news/BSI-fordert-bessere-IT-Sicherheit-fuer-Verbraucher-7545818.html
+
+News/Spacex Lockbit Cybergang Will Tausende Bauplaene Veroeffentlichen 7545456
+https://www.heise.de//news/SpaceX-Lockbit-Cybergang-will-tausende-Bauplaene-veroeffentlichen-7545456.html
+
+News/Webbrowser Firefox 111 Dichtet 13 Sicherheitsluecken Ab 7545380
+https://www.heise.de//news/Webbrowser-Firefox-111-dichtet-13-Sicherheitsluecken-ab-7545380.html
+
+News/Zwei Faktor Authentifizierung Online Thementag Der Heise Devsec Im Mai 2023 7544836
+https://www.heise.de//news/Zwei-Faktor-Authentifizierung-Online-Thementag-der-heise-devSec-im-Mai-2023-7544836.html
+
+News/Patchday Sap Schliesst 19 Teils Kritische Sicherheitsluecken 7544782
+https://www.heise.de//news/Patchday-SAP-schliesst-19-teils-kritische-Sicherheitsluecken-7544782.html
+
