@@ -9,10 +9,8 @@ To extend the existing scripts, follow the below steps:
 > 2. In the config folder, copy, paste and rename the related *_config.json
 > 3. In scripts/lib/commons.py go the the if statement starting in line 22 and copy and paste one of the `elif`-Statements. Change the `APP_NAME` to the name of the new python script and the `config_file_name` to the new config.json.</br>
   Elif-statement to copy: </br>
->  ```python
-  elif APP_NAME == 'NEW SCRIPT NAME.py':
-        config_file_name = '../config/NEW CONFIG JSON NAME.json'
-    ```
+>  `elif APP_NAME == '<NEW SCRIPT NAME>.py':`
+>> `config_file_name = '../config/<NEW CONFIG JSON NAME>.json'`
 > 4. Open the newly created script and config and modify them accordingly. There are per default only two functions that may require modification while all others are called in the `main()` function from lib folder
 >   - In `main()` function, check which other functions should be called. Also check the `print()` statements, especially the script start print
 >   - In `clean_webpages()`, check which content should be extracted from the called websites
