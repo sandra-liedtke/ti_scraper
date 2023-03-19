@@ -5,15 +5,15 @@ Therefore the available scripts of the TI Scraper can be easily extended as the 
 
 To extend the existing scripts, follow the below steps:
 
-> 1. Identify the script which comes closest to what you want to achieve with the new script and copy it. Paste it in the scripts folder and rename it
-> 2. In the config folder, copy, paste and rename the related *_config.json
-> 3. In scripts/lib/commons.py go the the if statement starting in line 22 and copy and paste one of the `elif`-Statements. Change the `APP_NAME` to the name of the new python script and the `config_file_name` to the new config.json.</br>
+1. Identify the script which comes closest to what you want to achieve with the new script and copy it. Paste it in the scripts folder and rename it
+2. In the config folder, copy, paste and rename the related *_config.json
+3. In scripts/lib/commons.py go the the if statement starting in line 22 and copy and paste one of the `elif`-Statements. Change the `APP_NAME` to the name of the new python script and the `config_file_name` to the new config.json.</br>
   Elif-statement to copy: </br>
   ```python
     elif APP_NAME == 'NEW_SCRIPT_NAME.py':
         config_file_name = '../config/NEW_CONFIG_JSON_NAME.json'
   ```
-> 4. Open the newly created script and config and modify them accordingly. There are per default only two functions that may require modification while all others are called in the `main()` function from lib folder
+4. Open the newly created script and config and modify them accordingly. There are per default only two functions that may require modification while all others are called in the `main()` function from lib folder
 >   - In `main()` function, check which other functions should be called. Also check the `print()` statements, especially the script start print
 >   - In `clean_webpages()`, check which content should be extracted from the called websites
 >   - In `format_result()`, define the format of the output. Based on the formatting here, you may also define the best file format to be created like .txt or .csv. The file ending itself is then defined in the config file, `resultfile` section
