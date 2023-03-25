@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 from lib.commons import *
 from lib.regex import *
+from lib.archiver import *
 
 
 def clean_webpages(websites):
@@ -84,6 +85,9 @@ def main():
     if CONFIG['mailconfig']['sendMail']:
         print('Sending mail')
         send_mail(result)
+    if CONFIG['archiveRecords']:
+        print('Archiving records')
+        archive_records(result)
     # Checking for older files which will not be needed anymore
     delete_old_files()
     print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')

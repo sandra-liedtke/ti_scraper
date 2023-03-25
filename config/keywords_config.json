@@ -29,5 +29,12 @@
         "destinationMailAddress": "",
         "mailSubject": "[TEST MAIL] TI Scraper: New Articles for Keyword Search",
         "placeholder": "Currently there are no new articles related to the keyword search."
-    }
+    },
+    "archiveRecords": false,
+    "archiveFolderName": "99 Archive",
+    "archivedData": [
+            "Loki",
+            "Conti",
+            "Dark Power"
+    ]
 }

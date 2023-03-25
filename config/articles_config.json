@@ -69,5 +69,12 @@
         "destinationMailAddress": "",
         "mailSubject": "[TEST MAIL] TI Scraper: New Articles",
         "placeholder": "Currently there are no new articles."
-    }
+    },
+    "archiveRecords": true,
+    "archiveFolderName": "99 Archive",
+    "archivedData": [
+            "Loki",
+            "Conti",
+            "Dark Power"
+    ]
 }
