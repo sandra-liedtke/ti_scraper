@@ -16,7 +16,7 @@ def archive_records(records):
                 # archival file does not yet exist and needs to be created
                 with open('../' + CONFIG['archiveFolderName'] + '/' + entry + '_archive.txt', 'w', encoding='utf-8') as archive_file:
                     for new_rec in records:
-                        if entry in new_rec:
+                        if entry.upper() in new_rec.upper():
                             archive += '\n\n' + new_rec
                     archive_file.write(str(archive))
 
@@ -24,5 +24,5 @@ def archive_records(records):
                 # archival file exists and needs to be appended
                 with open('../' + CONFIG['archiveFolderName'] + '/' + entry + '_archive.txt', 'a', encoding='utf-8') as archive_file:
                     for new_rec in records:
-                        if entry in new_rec:
+                        if entry.upper() in new_rec.upper():
                             archive_file.write('\n\n' + new_rec)
