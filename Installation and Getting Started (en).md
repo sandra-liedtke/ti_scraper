@@ -32,6 +32,6 @@ This document describes how to initially prepare your environment, dependent lib
  - Review the configurations in the related *_config.json and adjust them where necessary
  - In the Command Line, navigate to the extracted folder and then navigate to the scripts folder
  - Type `python <scriptname>.py` or - if on Linux - `python3 <scriptname>.py` to start the script
- - The Command Line should look something similar to the below:
+ - The terminal should look something similar to the below:
 
-    ![Windows Cmd Screenshot](/assets/images/getting_started.PNG "Windows Cmd Screenshot")
+    ![Linux Terminal Screenshot](/assets/images/getting_started.png "Linux Terminal Screenshot")

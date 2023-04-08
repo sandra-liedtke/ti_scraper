@@ -151,7 +151,10 @@ def send_mail(articles):
 # check if there are any files older than the days specified and if so, delete them based on user input
 def delete_old_files():
     obsolete_files = []
-    [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getctime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
+    if operating_sys == 'Windows':
+        [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getctime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
+    else:
+        [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getmtime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
     if obsolete_files:
         delete_files = input("Found files older than " + str(CONFIG['timeDelta4Delete']) + " days. Delete them now (Y/n)? ")
         if delete_files.upper() in ["Y", "YES"]:
