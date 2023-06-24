@@ -4,18 +4,18 @@ This document describes how to initially prepare your environment, dependent lib
 
 ## Windows
 
- - Install Python 3.9 or higher from https://www.python.org/downloads/
+ - Install Python 3.9 or higher from [here](https://www.python.org/downloads/)
  - Open Command Prompt and type `python --version`
      - If Python is **not** recognized as a command, do the following:
      - Open the *Environment Variables* and add the path to the Python Installation to the *Path* variable
      - You might need to reboot for changes to take effect
      - After rebooting try again the `python --version` command
  - In Command Prompt type `pip --version`
-     - If pip is not recognized as a command, download the script from https://bootstrap.pypa.io/get-pip.py
+     - If pip is not recognized as a command, download the script from [here](https://bootstrap.pypa.io/get-pip.py)
      - Back on Command Prompt, type `python get-pip.py`
      - Try again the `pip --version` command
  - In Command Prompt type `pip list`
-     - Make sure that (among others) also the beautifulsoup4, requests and stem libraries are listed
+     - Make sure that (among others) also the beautifulsoup4, requests, stem, demisto-py and tzlocal libraries are listed
      - If any of the libraries is **not** listed, type `pip install <libraryname>` to install it
 
 ## Linux
@@ -23,7 +23,7 @@ This document describes how to initially prepare your environment, dependent lib
  - You might need to do an update on existing software before continuing. To do so, in the command line type `sudo apt update`
  - Type `sudo apt install python3.X`
  - Type `python3 --version`
- - Type `python3.X` and then `help("modules")` and make sure that (among others) also the beautifulsoup4, requests and stem libraries are listed
+ - Type `python3.X` and then `help("modules")` and make sure that (among others) also the beautifulsoup4, requests, stem, demisto-py and tzlocal libraries are listed
      - If any of the libraries is **not** listed, type `sudo apt-get install python3-<libraryname>` to install it
 
 # Getting Started
