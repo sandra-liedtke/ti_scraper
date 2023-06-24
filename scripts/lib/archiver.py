@@ -92,18 +92,17 @@ def archive_records(records):
                     # archival file does not yet exist and needs to be created
                     with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'w', encoding='utf-8') as archive_file:
                         for new_rec in records:
-                            if entry.upper() in new_rec.upper():
-                                archive += '\n\n' + new_rec
-                        archive_file.write(str(archive))
+                            if entry.upper() in new_rec.upper().replace(' ',''):
+                                archive_file.write('\n\n' + new_rec)
                 else:
                     # archival file exists and needs to be appended
                     with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'a', encoding='utf-8') as archive_file:
                         for new_rec in records:
-                            if entry.upper() in new_rec.upper():
+                            if entry.upper() in new_rec.upper().replace(' ',''):
                                 archive_file.write('\n\n' + new_rec)
             # Cortex XSOAR Integration
             if CONFIG['archiving']['archive2cortex'] == True:
                 print("Archiving " + str(entry) + " to Cortex XSOAR...")
                 for new_rec in records:
-                    if entry.upper() in new_rec.upper():
-                        send_api_request(new_rec, entry)
+                    if entry.upper() in new_rec.upper().replace(' ', ''):
+                        send_api_request(new_rec, entry.replace(' ', ''))
