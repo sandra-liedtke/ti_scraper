@@ -16,7 +16,7 @@ Beispiele für die Ergebnisdateien der mit der Standardkonfiguration ausgeführt
 WICHTIG: Die Skripte verwenden Konfigurationsdateien, die eine schnelle und einfache Anpassung ermöglichen. Bevor die Skripte das erste mal ausgeführt werden, sollten die Konfigurationen überprüft und ggf. individuell geändert werden.</br>
 Eine weitere Möglichkeit, die Skripte anzupassen und zu erweitern, ist in der Datei [Extensibility (en)](Extensibility(en).md) beschrieben.
 
-Diese Arbeit unterliegt den Bestimmungen einer MIT-Lizenz.
+Diese Arbeit unterliegt den Bestimmungen einer MIT-Lizenz.<br/>
 © 2023 Sandra Liedtke.
 
 ### Konfigurationsmöglichkeiten
@@ -89,7 +89,7 @@ Examples for the result files of the scripts run with the default configuration 
 IMPORTANT: Each of the scripts uses a configuration file which allows a fast and easy customization. Before the scripts are executed for the first time, the configuration settings should be checked and adjusted if necessary. </br>
 Further options to adjust and extend the scripts are described in the file [Extensibility (en)](Extensibility(en).md).
 
-This work is licensed under an MIT License.
+This work is licensed under an MIT License.<br/>
 © 2023 Sandra Liedtke.
 
 ### Configuration Options
