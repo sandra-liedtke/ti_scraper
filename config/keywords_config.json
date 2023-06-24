@@ -31,10 +31,20 @@
         "placeholder": "Currently there are no new articles related to the keyword search."
     },
     "archiveRecords": false,
-    "archiveFolderName": "99 Archive",
-    "archivedData": [
-            "Loki",
+    "archiving": {
+        "archivedData": [
+            "Clop",
             "Conti",
-            "Dark Power"
-    ]
+            "Dark Power",
+            "APT"
+        ],
+        "archive2file": false,
+        "archiveFolderName": "99 Archive",
+        "archive2cortex": false,
+        "CortexXSOARAPIConfig": {
+            "host": "",
+            "api_key": "",
+            "search_field": "value"
+        }
+    }
 }

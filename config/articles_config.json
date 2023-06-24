@@ -8,7 +8,7 @@
             "https://www.infosecurity-magazine.com/news/",
             "https://www.security-insider.de/fachbeitraege",
             "https://www.heise.de/security/news"
-        ],
+            ],
         "stopwords": [
             "it-sicherheit/page", 
             "mediadaten",
@@ -71,10 +71,20 @@
         "placeholder": "Currently there are no new articles."
     },
     "archiveRecords": true,
-    "archiveFolderName": "99 Archive",
-    "archivedData": [
-            "Loki",
+    "archiving": {
+        "archivedData": [
+            "Clop",
             "Conti",
-            "Dark Power"
-    ]
+            "APT",
+            "Mirai"
+        ],
+        "archive2file": false,
+        "archiveFolderName": "99 Archive",
+        "archive2cortex": false,
+        "CortexXSOARAPIConfig": {
+            "host": "",
+            "api_key": "",
+            "search_field": "value"
+        }
+    }
 }

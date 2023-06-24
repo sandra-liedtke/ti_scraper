@@ -50,7 +50,7 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige
  - Die sendende Mail-Addresse, die sich am SMTP-Server authentifiziert, wird in `senderMailAddress` angegeben. Es ist empfehlenswert, hierfür eine komplett eigene Mail-Adresse zu erstellen anstatt einen existierenden Account zu verwenden, der auch für andere Dinge verwendet wird
      - HINWEIS: Das Passwort wird auf der Kommandozeile abgefragt während das Programm läuft und sollte **niemals** im Code oder in der Konfiguration gespeichert werden
  - In `mailSubject` kann dann noch der Betreff angegeben werden und in `placeholder` ein Text, der in der Mail enthalten ist, wenn es keine neuen Artikel gibt. Der Text aus `placeholder` wird auch in die Datei geschrieben, wenn es keine neuen Artikel gibt
- - articles_config und keywords_config enthalten zusätzlich noch die Option, Einträge für bestimmte Schlagworte zu archivieren und sie in eine eigene Archiv-Datei zu schreiben, die nicht gelöscht wird. In `archiveRecords` kann festgelegt werden, ob es Einträge gibt, die archiviert werden sollen, es kann ein Archiv-Ordner angegeben werden und in `archivedData` kann festgelegt werden, für welche Einträge die Archivierung stattfinden soll. Dadurch können beispielsweise Artikel zu bestimmter Malware getrackt werden 
+ - articles_config und keywords_config enthalten zusätzlich noch die Option, Einträge für bestimmte Schlagworte zu archivieren und sie in eine eigene Archiv-Datei zu schreiben, die nicht gelöscht wird. In `archiveRecords` kann festgelegt werden, ob es Einträge gibt, die archiviert werden sollen, es kann ein Archiv-Ordner angegeben werden und in `archivedData` kann festgelegt werden, für welche Einträge die Archivierung stattfinden soll. Dadurch können beispielsweise Artikel zu bestimmter Malware getrackt werden. Anstatt in Textdateien kann die Archivierung auch in Palo Alto Cortex® XSOAR stattfinden. Die Details dazu sind in der Datei *PaloAlto Cortex XSOAR Integration (en)* hinterlegt
 
 ### System-Anforderungen
 
@@ -60,6 +60,8 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige
      - beautifulsoup4
      - requests
      - stem
+     - demisto-py
+     - tzlocal
  - Wenn der Controller verwendet wird, muss der Computer sich mit dem TOR-Netzwerk verbinden können
  - Ein E-Mail Account, um die Ergebnisse per Mail versenden zu können und ein weiterer Account (oder eine Alias-Adresse), der die Mails empfängt (kann auch der gleiche sein)
  - Notepad++ um die Text-Dateien zu öffnen
@@ -116,8 +118,8 @@ There are some configurations that may be modified before running the related sc
  - The sending mail address, which is also used to authenticate at the SMTP-Server, is given in `senderMailAddress`. Recommendation is to create a completely new mail account just for this purpose instead of using an existing address which is also used elsewhere
      - HINT: The password for the mail account is entered on the command line and should **never** be stored in the code or the configuration
  - In `mailSubject` can be the subject of the mail defined and in `placeholder` a text that will be contained in the mail body if there are no articles. The `placeholder` text is also written to the result file if there are no articles
- - articles_config and keywords_config have additionally an option to archive records containing specific keywords and to write them into a designated archiving file, which will not be considered by the delete function. In `archiveRecords` can be defined if there are records to be archived, an archival folder can be set and in `archivedData` can be specified for which records the archival should happen. This can be used for example to track specific malware
-
+ - articles_config and keywords_config have additionally an option to archive records containing specific keywords and to write them into a designated archiving file, which will not be considered by the delete function. In `archiveRecords` can be defined if there are records to be archived, an archival folder can be set and in `archivedData` can be specified for which records the archival should happen. This can be used for example to track specific malware. Instead of creating textfiles archiving can also happen in Palo Alto Cortex® XSOAR. Details regarding the setup can be found in the file *PaloAlto Cortex XSOAR Integration (en)* 
+ 
 ### System Requirements
 
  - The scripts have been tested on Windows and Linux
@@ -126,6 +128,8 @@ There are some configurations that may be modified before running the related sc
      - beautifulsoup4
      - requests
      - stem
+     - demisto-py
+     - tzlocal
  - If the controller is used, the computer must be able to connect to the TOR-Network
  - A mail account for sending the result via mail and a mail account or alias-address receiving the result (may also be the same)
  - Notepad++ to open the resulting text files
