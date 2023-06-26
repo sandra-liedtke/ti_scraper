@@ -14,7 +14,7 @@ If a new entry should be archived from now on, it must only be added to the `arc
 The Terminal will also print the response of the API-Request. <br/>
 The article entries are added to the newly created or already existing XSOAR-Record into the "Community Notes" as a new note for each article.
 
-![Records of the "APT" entry](/assets/images/XSOAR/added_records.png "Records of the "APT" entry in PA Cortex XSOAR")
+![Records of the APT entry](/assets/images/XSOAR/added_records.png "Records of the APT entry in PA Cortex XSOAR")
 
 The value of the new record will always be the name given in the `archiving - archivedData` setting. If the names given as `archivedData` should be written into a different field, the code must be changed in the [archiver.py](/scripts/lib/archiver.py) file, line 18. However, a `value` for the Cortx XSOAR record **must** be given, otherwise the record will still be created, but is actually not useable. So it is recommended to - instead delete the line - just add the new field where the `archivedData` entries should be written to. <br/>
 The filter to find the record once it exists can be set in the config in `archiving - CortexXSOARAPIConfig - search_field`. The values of the field name given here must match the entries from `archivedData` to generate the search query.
