@@ -1,3 +1,4 @@
+import datetime
 import os
 from lib.commons import CONFIG
 import ssl
@@ -15,6 +16,7 @@ def create_new_indicator(entry, name):
         "indicator":{
             "CustomFields":{"communitynotes": [{"notes": str(entry).replace('\n', ': ')}]},
             "indicator_type":  "Threat Actor" ,
+            "last_seen": datetime.datetime.now() ,
             "value": name
         }
     }
@@ -40,7 +42,7 @@ def send_api_request(curr_updt_value, indicator_name):
             ioc_object.first_seen_entry_id = found_indicator.ioc_objects[0]['firstSeenEntryID']
             ioc_object.id = found_indicator.ioc_objects[0]['id']
             ioc_object.indicator_type = found_indicator.ioc_objects[0]['indicator_type']
-            ioc_object.last_seen = found_indicator.ioc_objects[0]['lastSeen']
+            ioc_object.last_seen = datetime.datetime.now()
             ioc_object.last_seen_entry_id = found_indicator.ioc_objects[0]['lastSeenEntryID']
             ioc_object.modified = found_indicator.ioc_objects[0]['modified']
             ioc_object.score = found_indicator.ioc_objects[0]['score']
