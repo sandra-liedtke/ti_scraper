@@ -4,7 +4,7 @@ print('''
 \tThis script adds known MITRE ATT&CK information to the Cortex XSOAR indicators specified in the          
 \tarchivedData setting.                                                                                    
 \tIt checks the MITRE webpage for groups and software and if it finds the value from archivedData there, it
-\tadds all known techniques, aliases and a description if the latter 2 are not yet available in Cortex.    
+\tadds all known techniques, aliases and a description if the latter is not yet available in Cortex.    
 \n\t!! Data will only be overwritten in Cortex after confirmation.                                         
 \tYou can still decide for each single entry whether it should be updated or not !!                        
 \n\tThe configuration file is the same as used for the retrieve_article_links.py.                          
@@ -31,7 +31,7 @@ mitre_field_name = "mitreattacktechnique"
 continue_ = input("Found MITRE ATT&CK Techniques will be entered to the field custom_fields." + mitre_field_name + "\n\nTHIS MAY OVERWRITE EXISTING VALUES IN CORTEX XSOAR!\nDo you want to continue and replace existing data (Y/n)? ")
 
 if continue_.upper() in ["Y", "YES"]:
-    print("Further information will be added to the fields custom_fields.aliases and/or custom_fields.description. These fields will not be overwritten if the already have values in Cortex XSOAR")
+    print("Further information will be added to the fields custom_fields.aliases and/or custom_fields.description. The description field will not be overwritten if it already has values in Cortex XSOAR")
     # api instance
     api_instance = demisto_client.configure(base_url=CONFIG['archiving']['CortexXSOARAPIConfig']['host'], debug=False, verify_ssl=ssl.CERT_NONE, api_key=CONFIG['archiving']['CortexXSOARAPIConfig']['api_key'])
 
@@ -104,8 +104,10 @@ if continue_.upper() in ["Y", "YES"]:
                             # append mitre attack infos
                             ioc_object.custom_fields['mitreattacktechnique'] = techniques
                             # add aliases and description if they exist in MITRE and do not exist in Cortex
-                            if table_data[2].text.replace ('\n', '').strip() != '' and ('aliases' not in ioc_object.custom_fields or ioc_object.custom_fields['aliases'] == []):
-                                ioc_object.custom_fields['aliases'] = list(table_data[2].text.replace ('\n', '').strip())
+                            if table_data[2].text.replace ('\n', '').strip() != '':
+                                ioc_object.custom_fields['aliases'] = []
+                                for alias in table_data[2].text.replace ('\n', '').split(','):
+                                    ioc_object.custom_fields['aliases'].append(alias)
                             if ioc_object.custom_fields['description'] == '' or 'description' not in ioc_object.custom_fields:
                                 ioc_object.custom_fields['description'] = table_data[3].text.replace ('\n', '').strip()
                             # the actual API-Request
