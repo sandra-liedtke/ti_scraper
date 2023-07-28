@@ -1,11 +1,15 @@
 print('''
+########################################################################################################################
+      
+\tThis script adds a date as firstSeen for each of the indicator entries in XSOAR that has been created by the 
+\tTI Scraper. 
+\tThis script can run immediately after the new indicators have been created. The TI Scraper cannot add a firstSeen 
+\tDate when creating the entry, hence need to update it afterwards.
+\n\tThe configuration file is the same as used for the retrieve_article_links.py.
 
-This script adds a date as firstSeen for each of the indicator entries in XSOAR that has been created by the TI Scraper. 
-This script can run immediately after the new indicators have been created. The TI Scraper cannot add a firstSeen Date when creating the entry, hence need to update it afterwards.
-The configuration file is the same as used for the retrieve_article_links.py.
-
-(c) 2023 Sandra Liedtke.
-
+\t(c) 2023 Sandra Liedtke.
+                                                                                                          
+########################################################################################################################
 ''')
 import json
 import ssl
