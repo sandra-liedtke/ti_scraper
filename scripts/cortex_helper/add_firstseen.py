@@ -45,7 +45,7 @@ for indicator_name in CONFIG['archiving']['archivedData']:
             ioc_object.first_seen_entry_id = found_indicator.ioc_objects[0]['firstSeenEntryID']
             ioc_object.id = found_indicator.ioc_objects[0]['id']
             ioc_object.indicator_type = found_indicator.ioc_objects[0]['indicator_type']
-            ioc_object.last_seen = found_indicator.ioc_objects[0]['lastSeen']
+            ioc_object.last_seen = found_indicator.ioc_objects[0]['timestamp'] if str(found_indicator.ioc_objects[0]['lastSeen'])=="0001-01-01T00:00:00Z" else found_indicator.ioc_objects[0]['lastSeen']
             ioc_object.last_seen_entry_id = found_indicator.ioc_objects[0]['lastSeenEntryID']
             ioc_object.modified = found_indicator.ioc_objects[0]['modified']
             ioc_object.score = found_indicator.ioc_objects[0]['score']

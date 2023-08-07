@@ -61,7 +61,8 @@ if continue_.upper() in ["Y", "YES"]:
             table_data = tr.find_all('td')
             # match the name in the second column
             match = table_data[1].text.replace ('\n', '').strip()
-            if indicator_name.upper() in match.replace(' ', '').upper():
+            aliases = table_data[2].text.replace ('\n', '')
+            if (indicator_name.upper() in match.replace(' ', '').upper()) or (indicator_name.upper() in aliases.replace(' ', '').upper()):
                 try: 
                     # search current record in Cortex
                     indicator_filter = demisto_client.demisto_api.IndicatorFilter()
@@ -69,7 +70,7 @@ if continue_.upper() in ["Y", "YES"]:
                     found_indicator = api_instance.indicators_search(indicator_filter=indicator_filter)
                     # if the record exists in Cortex re-verify before updating it
                     if found_indicator.total == 1:
-                        print("\n\nFound " + indicator_name.upper() + " in mitre row " + match.upper())
+                        print("\n\nFound " + indicator_name.upper() + " in mitre row " + match.upper() + " with Aliases " + aliases.strip().upper())
                         print("The record does also exist in Cortex")
                         go_on = input("Continue overwriting Cortex values with mitre values (Y,n)? ")
                         if go_on.upper() in ["Y", "YES"]:
@@ -106,7 +107,7 @@ if continue_.upper() in ["Y", "YES"]:
                             # add aliases and description if they exist in MITRE and do not exist in Cortex
                             if table_data[2].text.replace ('\n', '').strip() != '':
                                 ioc_object.custom_fields['aliases'] = []
-                                for alias in table_data[2].text.replace ('\n', '').split(','):
+                                for alias in aliases.split(','):
                                     ioc_object.custom_fields['aliases'].append(alias)
                             if ioc_object.custom_fields['description'] == '' or 'description' not in ioc_object.custom_fields:
                                 ioc_object.custom_fields['description'] = table_data[3].text.replace ('\n', '').strip()
