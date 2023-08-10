@@ -13,10 +13,12 @@ api_instance = demisto_client.configure(base_url=BASE_URL, debug=False, verify_s
 
 def create_new_indicator(entry, name):
     ioc_object = {
-        "indicator":{
-            "CustomFields":{"communitynotes": [{"notes": str(entry).replace('\n', ': ')}]},
-            "indicator_type":  "Threat Actor" ,
-            "last_seen": datetime.datetime.now() ,
+        "indicator": {
+            "CustomFields": {"communitynotes": [{"notes": str(entry).replace('\n', ': ')}],
+                             "aliases": [name],
+                             },
+            "indicator_type": "Threat Actor",
+            "last_seen": datetime.datetime.now(),
             "value": name
         }
     }
