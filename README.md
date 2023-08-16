@@ -63,7 +63,6 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige
  - https://www.bleepingcomputer.com
  - https://www.darkreading.com
  - https://thehackernews.com
- - https://www.hackread.com
  - https://www.infosecurity-magazine.com
  - https://www.security-insider.de
  - https://www.heise.de
@@ -136,7 +135,6 @@ With the default configuration, articles/contents from below sources are being r
  - https://www.bleepingcomputer.com
  - https://www.darkreading.com
  - https://thehackernews.com
- - https://www.hackread.com
  - https://www.infosecurity-magazine.com
  - https://www.security-insider.de
  - https://www.heise.de
