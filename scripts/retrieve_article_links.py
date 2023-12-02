@@ -29,6 +29,8 @@ def clean_webpages(websites):
                     headline = re.findall(HEADLINE_SPAN, str(entry))[0]
                 elif len(re.findall(HEADLINE_DIV, str(entry))) > 0:
                     headline = re.findall(HEADLINE_DIV, str(entry))[0]
+                elif len(re.findall(HEADLINE_A, str(entry))) > 0:
+                    headline = re.findall(HEADLINE_A, str(entry))[0]
                 else:
                     if not cleaned_result.startswith('http'):
                         headline = cleaned_result.strip("/").replace('-', ' ').replace('.html', '').title()
@@ -40,8 +42,9 @@ def clean_webpages(websites):
                     if cleaned_result.strip().startswith("/"):
                         cleaned_result = str(listentry.url).replace("/fachbeitraege/", '') + cleaned_result.strip()
                     # add cleaned and filtered entry to result if it is not yet there
-                    if not cleaned_result in str(articles):
-                        articles.append(cleaned_result.strip() + "|" + headline) 
+                    if not headline == "":
+                        if not cleaned_result in str(articles):
+                            articles.append(cleaned_result.strip() + "|" + str(headline))
         except Exception as e:
             print('Error cleaning webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
     return articles
@@ -70,7 +73,7 @@ def format_result(articles):
         # if the loop has not yet been stopped due to special handling
         else:
             # build and format record for each article to be added to the result
-            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/').replace('theregister.com/security//', 'theregister.com/').replace('/blog/blog/', '/blog/')  +  '\n\n' )
+            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/').replace('theregister.com/security//', 'theregister.com/').replace('/blog/blog/', '/blog/').replace('darkreading.com/latest-news/','darkreading.com/')  +  '\n\n' )
             result_str += new_record
     return result_str
 
