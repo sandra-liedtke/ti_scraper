@@ -10,7 +10,7 @@ HEADLINE_H1 = re.compile(r'<h[0-9].*?>(.*?)</h[0-9]>')
 # regex for headline between div tags
 HEADLINE_DIV = re.compile(r'<div.*?>(.*?)</div>')
 # regex for headline between a tags
-HEADLINE_A = re.compile(r'<a class=".*?>(.*?)</a>')
+HEADLINE_A = re.compile(r'<a .*?>(.*?)</a>')
 
 # regex to remove scripts, all tags and all duplicate empty spaces
 ALL_HTML = re.compile(r'<script.+?</script>|<.*?>|</.*?>|[ ]{2,5}', flags=re.DOTALL)

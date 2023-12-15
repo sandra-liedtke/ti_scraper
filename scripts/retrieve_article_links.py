@@ -1,3 +1,5 @@
+import re
+
 from bs4 import BeautifulSoup
 from lib.commons import *
 from lib.regex import *
@@ -19,6 +21,7 @@ def clean_webpages(websites):
             # clean a-tags
             for entry in atags:
                 cleaned_result = entry.get('href')
+                headline = ""
                 # find headline
                 if len(re.findall(HEADLINE_HEADER, str(entry))) > 0:
                     headline = re.findall(HEADLINE_HEADER, str(entry))[0]
@@ -31,7 +34,8 @@ def clean_webpages(websites):
                     headline = re.findall(HEADLINE_DIV, str(entry))[0]
                 elif len(re.findall(HEADLINE_A, str(entry))) > 0:
                     headline = re.findall(HEADLINE_A, str(entry))[0]
-                else:
+                # if headline still has not been set before
+                if headline == "":
                     if not cleaned_result.startswith('http'):
                         headline = cleaned_result.strip("/").replace('-', ' ').replace('.html', '').title()
                     else:
@@ -42,9 +46,8 @@ def clean_webpages(websites):
                     if cleaned_result.strip().startswith("/"):
                         cleaned_result = str(listentry.url).replace("/fachbeitraege/", '') + cleaned_result.strip()
                     # add cleaned and filtered entry to result if it is not yet there
-                    if not headline == "":
-                        if not cleaned_result in str(articles):
-                            articles.append(cleaned_result.strip() + "|" + str(headline))
+                    if not cleaned_result in str(articles):
+                        articles.append(cleaned_result.strip() + "|" + str(headline))
         except Exception as e:
             print('Error cleaning webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
     return articles
