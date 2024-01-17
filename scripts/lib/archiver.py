@@ -1,6 +1,6 @@
 import datetime
 import os
-from lib.commons import CONFIG
+from commons import CONFIG
 import ssl
 import demisto_client
 import demisto_client.demisto_api

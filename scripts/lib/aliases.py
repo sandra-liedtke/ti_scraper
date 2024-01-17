@@ -2,7 +2,7 @@ import json
 import ssl
 import demisto_client.demisto_api
 from demisto_client.demisto_api.rest import ApiException
-from lib.commons import CONFIG
+from commons import CONFIG
 
 
 def update_aliases():
