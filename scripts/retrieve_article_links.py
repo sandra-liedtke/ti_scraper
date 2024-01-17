@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 from lib.commons import *
 from lib.regex import *
 from lib.archiver import *
+from lib.aliases import *
 
 
 def clean_webpages(websites):
@@ -106,6 +107,10 @@ def main():
         archive_records(result)
     # Checking for older files which will not be needed anymore
     delete_old_files()
+    # Checking if aliases should be updated
+    alias_update = input("Want to update the cortex_aliases.config file (Y/n)? ")
+    if alias_update.upper() in ["Y", "YES"]:
+        update_aliases()
     print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')
 
 

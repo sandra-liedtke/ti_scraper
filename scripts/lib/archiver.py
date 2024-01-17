@@ -5,11 +5,11 @@ import ssl
 import demisto_client
 import demisto_client.demisto_api
 from demisto_client.demisto_api.rest import ApiException
-
+import json
 
 BASE_URL = CONFIG['archiving']['CortexXSOARAPIConfig']['host']
-api_instance = demisto_client.configure(base_url=BASE_URL, debug=False, verify_ssl=ssl.CERT_NONE, api_key=CONFIG['archiving']['CortexXSOARAPIConfig']['api_key'])
-
+api_instance = demisto_client.configure(base_url=BASE_URL, debug=False, verify_ssl=ssl.CERT_NONE,
+                                        api_key=CONFIG['archiving']['CortexXSOARAPIConfig']['api_key'])
 
 def create_new_indicator(entry, name):
     ioc_object = {
@@ -24,21 +24,23 @@ def create_new_indicator(entry, name):
     }
     api_response = api_instance.indicators_create(ioc_object=ioc_object)
     print(api_response)
-    print("The new record has been created in the Cortex XSOAR Application. Please add further details of the record manually as the TI Scraper creates a record with very basic information only")
+    print(
+        "The new record has been created in the Cortex XSOAR Application. Please add further details of the record manually as the TI Scraper creates a record with very basic information only")
 
 
 # API Request to Cortex XSOAR
 def send_api_request(curr_updt_value, indicator_name):
-    try: 
+    try:
         # search current record in Cortex
         indicator_filter = demisto_client.demisto_api.IndicatorFilter()
-        indicator_filter.query = CONFIG['archiving']['CortexXSOARAPIConfig']['search_field'] + ':"' + indicator_name + '"'
+        indicator_filter.query = CONFIG['archiving']['CortexXSOARAPIConfig'][
+                                     'search_field'] + ':"' + indicator_name + '"'
         found_indicator = api_instance.indicators_search(indicator_filter=indicator_filter)
         if found_indicator.total == 1:
             # indicator exists -> update it
             ioc_object = demisto_client.demisto_api.IocObject(found_indicator.ioc_objects[0])
             # Mapping of existing values
-            ioc_object.custom_fields = found_indicator.ioc_objects[0]['CustomFields'] 
+            ioc_object.custom_fields = found_indicator.ioc_objects[0]['CustomFields']
             ioc_object.calculated_time = found_indicator.ioc_objects[0]['calculatedTime']
             ioc_object.first_seen = found_indicator.ioc_objects[0]['firstSeen']
             ioc_object.first_seen_entry_id = found_indicator.ioc_objects[0]['firstSeenEntryID']
@@ -64,7 +66,8 @@ def send_api_request(curr_updt_value, indicator_name):
         elif found_indicator.total == 0:
             # indicator does not exist -> let user chose to create it
             try:
-                create_indicator = input("The requested Indicator with value " + indicator_name + " could not be found. Want to create it now (Yes,No)? ")
+                create_indicator = input(
+                    "The requested Indicator with value " + indicator_name + " could not be found. Want to create it now (Yes,No)? ")
                 if create_indicator.upper() == "YES" or create_indicator.upper() == "Y":
                     create_new_indicator(curr_updt_value, indicator_name)
             except Exception as ex:
@@ -72,7 +75,8 @@ def send_api_request(curr_updt_value, indicator_name):
                 print(ex)
         else:
             # If more than one indicator is found it must be handled manually
-            print("Found more than one indicator with filter " + indicator_filter.query + "! Please check indicators in Cortex XSOAR")
+            print(
+                "Found more than one indicator with filter " + indicator_filter.query + "! Please check indicators in Cortex XSOAR")
             print("Skipping update in Cortex XSOAR for " + indicator_name)
     except ApiException as e:
         print(e)
@@ -85,7 +89,18 @@ def archive_records(records):
     if not str(records) == '':
         records = str(records).split('\n\n')
         archive = ''
-        for entry in CONFIG['archiving']['archivedData']:
+        if not os.path.exists('../config/cortex_aliases.json'):
+            print(
+                "Could not find file cortex_aliases.json in config directory. Continuing with values from config file only...")
+            existing_aliases = []
+        else:
+            with open('../config/cortex_aliases.json', 'r') as alias_file:
+                existing_aliases = json.load(alias_file)
+
+        aliases_to_check = CONFIG['archiving']['archivedData']
+        for alias in existing_aliases:
+            aliases_to_check.append(str(alias))
+        for entry in aliases_to_check:
             # write archiving files in folder
             if CONFIG['archiving']['archive2file'] == True:
                 print("Archiving " + str(entry) + " to file...")
@@ -94,15 +109,17 @@ def archive_records(records):
                     os.makedirs('../' + CONFIG['archiving']['archiveFolderName'])
                 if not os.path.exists('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt'):
                     # archival file does not yet exist and needs to be created
-                    with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'w', encoding='utf-8') as archive_file:
+                    with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'w',
+                              encoding='utf-8') as archive_file:
                         for new_rec in records:
-                            if entry.upper() in new_rec.upper().replace(' ',''):
+                            if entry.upper() in new_rec.upper().replace(' ', ''):
                                 archive_file.write('\n\n' + new_rec)
                 else:
                     # archival file exists and needs to be appended
-                    with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'a', encoding='utf-8') as archive_file:
+                    with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'a',
+                              encoding='utf-8') as archive_file:
                         for new_rec in records:
-                            if entry.upper() in new_rec.upper().replace(' ',''):
+                            if entry.upper() in new_rec.upper().replace(' ', ''):
                                 archive_file.write('\n\n' + new_rec)
             # Cortex XSOAR Integration
             if CONFIG['archiving']['archive2cortex'] == True:
