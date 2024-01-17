@@ -30,16 +30,16 @@
         "mailSubject": "[TEST MAIL] TI Scraper: New Articles for Keyword Search",
         "placeholder": "Currently there are no new articles related to the keyword search."
     },
-    "archiveRecords": false,
-    "archiving": {
-        "archivedData": [
+    "profileRecords": false,
+    "profiling": {
+        "profileData": [
             "Clop",
             "Conti",
             "DarkPower"
         ],
-        "archive2file": false,
-        "archiveFolderName": "99 Archive",
-        "archive2cortex": false,
+        "profile2file": false,
+        "profileFolderName": "99 Archive",
+        "profile2cortex": false,
         "CortexXSOARAPIConfig": {
             "host": "",
             "api_key": "",

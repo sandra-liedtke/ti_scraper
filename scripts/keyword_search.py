@@ -1,7 +1,8 @@
 from bs4 import BeautifulSoup
 from lib.commons import *
 from lib.regex import *
-from lib.archiver import *
+from lib.profiling import *
+from lib.aliases import *
 
 
 def clean_webpages(websites):
@@ -85,9 +86,14 @@ def main():
     if CONFIG['mailconfig']['sendMail']:
         print('Sending mail')
         send_mail(result)
-    if CONFIG['archiveRecords']:
-        print('Archiving records')
-        archive_records(result)
+    if CONFIG['profileRecords']:
+        print('Updating profile records')
+        profiling_records(result)
+        # Checking if aliases should be updated
+        if CONFIG['profiling']['profile2cortex']:
+            alias_update = input("Want to update the cortex_aliases.config file (Y/n)? ")
+            if alias_update.upper() in ["Y", "YES"]:
+                update_aliases()
     # Checking for older files which will not be needed anymore
     delete_old_files()
     print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')

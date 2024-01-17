@@ -27,6 +27,10 @@ elif APP_NAME == 'count_hits.py':
     config_file_name = '../config/counts_config.json'
 elif APP_NAME == 'get_contents.py':
     config_file_name = '../config/contents_config.json'
+else:
+    print("Unknown app with name " + APP_NAME + ". Forgot to define the config file for it?")
+    print("Cancelling...")
+    exit()
 with open(config_file_name, 'r') as config_file:
     CONFIG = json.load(config_file)
 

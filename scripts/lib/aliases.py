@@ -2,20 +2,20 @@ import json
 import ssl
 import demisto_client.demisto_api
 from demisto_client.demisto_api.rest import ApiException
-from commons import CONFIG
+from lib.commons import CONFIG
 
 
 def update_aliases():
 
     # api instance
-    api_instance = demisto_client.configure(base_url=CONFIG['archiving']['CortexXSOARAPIConfig']['host'], debug=False,
+    api_instance = demisto_client.configure(base_url=CONFIG['profiling']['CortexXSOARAPIConfig']['host'], debug=False,
                                             verify_ssl=ssl.CERT_NONE,
-                                            api_key=CONFIG['archiving']['CortexXSOARAPIConfig']['api_key'])
+                                            api_key=CONFIG['profiling']['CortexXSOARAPIConfig']['api_key'])
 
     # list collecting the aliases
     missing_aliases = []
-    # for each archivedData entry
-    for indicator_name in CONFIG['archiving']['archivedData']:
+    # for each profileData entry
+    for indicator_name in CONFIG['profiling']['profileData']:
         try:
             # search current record in Cortex
             indicator_filter = demisto_client.demisto_api.IndicatorFilter()
@@ -25,7 +25,7 @@ def update_aliases():
             if found_indicator.total > 0:
                 print("Checking aliases for indicator " + indicator_name)
                 for alias in found_indicator.ioc_objects[0]['CustomFields']['aliases']:
-                    if alias not in CONFIG['archiving']['archivedData'] and alias not in missing_aliases:
+                    if alias not in CONFIG['profiling']['profileData'] and alias not in missing_aliases:
                         missing_aliases.append(alias)
         # catch exceptions
         except ApiException as e:
@@ -34,7 +34,7 @@ def update_aliases():
 
     # remove those which are available in config with different case letters
     for collected_alias in missing_aliases:
-        for indicator in CONFIG['archiving']['archivedData']:
+        for indicator in CONFIG['profiling']['profileData']:
             if collected_alias.upper() == indicator.upper():
                 missing_aliases.remove(collected_alias)
 

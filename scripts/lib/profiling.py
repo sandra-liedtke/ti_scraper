@@ -1,15 +1,16 @@
 import datetime
 import os
-from commons import CONFIG
+from lib.commons import CONFIG
 import ssl
 import demisto_client
 import demisto_client.demisto_api
 from demisto_client.demisto_api.rest import ApiException
 import json
 
-BASE_URL = CONFIG['archiving']['CortexXSOARAPIConfig']['host']
+BASE_URL = CONFIG['profiling']['CortexXSOARAPIConfig']['host']
 api_instance = demisto_client.configure(base_url=BASE_URL, debug=False, verify_ssl=ssl.CERT_NONE,
-                                        api_key=CONFIG['archiving']['CortexXSOARAPIConfig']['api_key'])
+                                        api_key=CONFIG['profiling']['CortexXSOARAPIConfig']['api_key'])
+
 
 def create_new_indicator(entry, name):
     ioc_object = {
@@ -33,7 +34,7 @@ def send_api_request(curr_updt_value, indicator_name):
     try:
         # search current record in Cortex
         indicator_filter = demisto_client.demisto_api.IndicatorFilter()
-        indicator_filter.query = CONFIG['archiving']['CortexXSOARAPIConfig'][
+        indicator_filter.query = CONFIG['profiling']['CortexXSOARAPIConfig'][
                                      'search_field'] + ':"' + indicator_name + '"'
         found_indicator = api_instance.indicators_search(indicator_filter=indicator_filter)
         if found_indicator.total == 1:
@@ -80,11 +81,11 @@ def send_api_request(curr_updt_value, indicator_name):
             print("Skipping update in Cortex XSOAR for " + indicator_name)
     except ApiException as e:
         print(e)
-        print("Skipping XSOAR Archiving for " + indicator_name)
+        print("Skipping XSOAR Profiling for " + indicator_name)
 
 
-# archive records to the respective file
-def archive_records(records):
+# add records to the respective file or Cortex entry for Tracing/Profiling
+def profiling_records(records):
     # if records are available
     if not str(records) == '':
         records = str(records).split('\n\n')
@@ -97,33 +98,33 @@ def archive_records(records):
             with open('../config/cortex_aliases.json', 'r') as alias_file:
                 existing_aliases = json.load(alias_file)
 
-        aliases_to_check = CONFIG['archiving']['archivedData']
+        aliases_to_check = CONFIG['profiling']['profileData']
         for alias in existing_aliases:
             aliases_to_check.append(str(alias))
         for entry in aliases_to_check:
-            # write archiving files in folder
-            if CONFIG['archiving']['archive2file'] == True:
-                print("Archiving " + str(entry) + " to file...")
-                # check if the archival folder exists
-                if not os.path.exists('../' + CONFIG['archiving']['archiveFolderName']):
-                    os.makedirs('../' + CONFIG['archiving']['archiveFolderName'])
-                if not os.path.exists('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt'):
-                    # archival file does not yet exist and needs to be created
-                    with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'w',
-                              encoding='utf-8') as archive_file:
+            # write profile files to folder
+            if CONFIG['profiling']['profile2file'] == True:
+                print("Adding " + str(entry) + " to file...")
+                # check if the profiling folder exists
+                if not os.path.exists('../' + CONFIG['profiling']['profileFolderName']):
+                    os.makedirs('../' + CONFIG['profiling']['profileFolderName'])
+                if not os.path.exists('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt'):
+                    # profiling file does not yet exist and needs to be created
+                    with open('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt', 'w',
+                              encoding='utf-8') as profile_file:
                         for new_rec in records:
                             if entry.upper() in new_rec.upper().replace(' ', ''):
-                                archive_file.write('\n\n' + new_rec)
+                                profile_file.write('\n\n' + new_rec)
                 else:
-                    # archival file exists and needs to be appended
-                    with open('../' + CONFIG['archiving']['archiveFolderName'] + '/' + entry + '_archive.txt', 'a',
-                              encoding='utf-8') as archive_file:
+                    # profiling file exists and needs to be appended
+                    with open('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt', 'a',
+                              encoding='utf-8') as profile_file:
                         for new_rec in records:
                             if entry.upper() in new_rec.upper().replace(' ', ''):
-                                archive_file.write('\n\n' + new_rec)
+                                profile_file.write('\n\n' + new_rec)
             # Cortex XSOAR Integration
-            if CONFIG['archiving']['archive2cortex'] == True:
-                print("Archiving " + str(entry) + " to Cortex XSOAR...")
+            if CONFIG['profiling']['profile2cortex'] == True:
+                print("Adding records for profile " + str(entry) + " to Cortex XSOAR...")
                 for new_rec in records:
                     if entry.upper() in new_rec.upper().replace(' ', ''):
                         send_api_request(new_rec, entry.replace(' ', ''))
