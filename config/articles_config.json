@@ -84,7 +84,7 @@
         "CortexXSOARAPIConfig": {
             "host": "",
             "api_key": "",
-            "search_field": "value"
+            "search_field": "aliases"
         }
     }
 }
