@@ -15,7 +15,7 @@ api_instance = demisto_client.configure(base_url=BASE_URL, debug=False, verify_s
 def create_new_indicator(entry, name):
     ioc_object = {
         "indicator": {
-            "CustomFields": {"communitynotes": [{"notes": str(entry).replace('\n', ': ')}],
+            "CustomFields": {"communitynotes": [{"notes": str(entry).replace('\n', ': '), "timestamp": datetime.datetime.now()}],
                              "aliases": [name],
                              },
             "indicator_type": "Threat Actor",
@@ -56,7 +56,7 @@ def send_api_request(curr_updt_value, indicator_name):
             ioc_object.value = found_indicator.ioc_objects[0]['value']
             ioc_object.version = found_indicator.ioc_objects[0]['version']
             # enter the current article as a new Community Note
-            ioc_object.custom_fields['communitynotes'].append({'notes': curr_updt_value.replace('\n', ': ')})
+            ioc_object.custom_fields['communitynotes'].append({'notes': curr_updt_value.replace('\n', ': '), "timestamp": datetime.datetime.now()})
             # the actual API-Request
             try:
                 api_response = api_instance.indicators_edit(ioc_object=ioc_object)
