@@ -14,6 +14,10 @@ Ziel war die Erstellung einer möglichst konfigurierbaren und individuell anpass
 Beispiele für die Ergebnisdateien der mit der Standardkonfiguration ausgeführten Skripte befinden sich im Unterverzeichnis [Examples](/assets/examples) des Repositorys. Das Demo-Video zeigt die Ausführung des [retrieve_article_links.py](/scripts/retrieve_article_links.py) mit integriertem Profiling in der PaloAlto Cortex XSOAR.</br></br>
 
 
+https://github.com/sandra-liedtke/ti_scraper/assets/60545571/ad395406-6c77-4d23-b473-cf2a0d154096
+
+
+
 WICHTIG: Die Skripte verwenden Konfigurationsdateien, die eine schnelle und einfache Anpassung ermöglichen. Bevor die Skripte das erste mal ausgeführt werden, sollten die Konfigurationen überprüft und ggf. individuell geändert werden.</br>
 Eine weitere Möglichkeit, die Skripte anzupassen und zu erweitern, ist in der Datei [Extensibility (en)](Extensibility(en).md) beschrieben.
 
@@ -85,6 +89,10 @@ The purpose was the creation of a configurable and individually adjustable colle
  - **get_contents.py:** uses the configurations from contents_config.json to write the contents of a webpage into a text file. The entire text content of the `body` or `main` tags are written to the file without the HTML tags, JavaScript functions and images. Header and footer are not extracted. The script can be used to extract the contents of a webpage, especially of blog websites. This way can be determined if a webpage`s content has changed since the last call without opening it in the browser. This can be a use case especially for onion sites
 
 Examples for the result files of the scripts run with the default configuration can be found in the repository sub-directory [Examples](/assets/examples). The demo video shows the execution of [retrieve_article_links.py](/scripts/retrieve_article_links.py) with integrated profiling in the PaloAlto Cortex XSOAR.</br></br>
+
+
+https://github.com/sandra-liedtke/ti_scraper/assets/60545571/eea9f576-4fb1-4873-8682-dbd121d00957
+
 
 
 IMPORTANT: Each of the scripts uses a configuration file which allows a fast and easy customization. Before the scripts are executed for the first time, the configuration settings should be reviewed and adjusted where necessary. </br>
