@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 from lib.commons import *
 from lib.profiling import *
 from lib.regex import *
-from lib.aliases import *
+from lib.aliases import update_aliases
 
 
 def clean_webpages(websites):
