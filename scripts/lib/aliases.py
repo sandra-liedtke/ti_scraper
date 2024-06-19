@@ -24,8 +24,9 @@ def update_aliases():
             if found_indicator.total == 1:
                 print("Checking aliases for indicator " + config_profile)
                 for cortex_alias in found_indicator.ioc_objects[0]['CustomFields']['aliases']:
-                    if not cortex_alias in str(missing_aliases):
-                        missing_aliases.append(cortex_alias)
+                    if not cortex_alias.upper() == config_profile.upper():
+                        if not cortex_alias.upper() in str(missing_aliases).upper():
+                            missing_aliases.append(cortex_alias)
         # catch exceptions
         except ApiException as e:
             print(e)
@@ -33,5 +34,5 @@ def update_aliases():
 
     # create the file
     with open('../config/cortex_aliases.json', 'w', encoding='UTF-8') as file:
-        file.write(json.dumps(missing_aliases))
+        file.write(json.dumps(list(set(missing_aliases))))
 
