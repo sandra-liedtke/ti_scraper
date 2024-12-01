@@ -1,8 +1,8 @@
-from bs4 import BeautifulSoup
 from lib.commons import *
 from lib.regex import *
 from lib.profiling import *
 from lib.aliases import *
+from lib.summarizer import *
 
 
 def clean_webpages(websites):
@@ -85,7 +85,13 @@ def main():
         write_file(result)
     if CONFIG['mailconfig']['sendMail']:
         print('Sending mail')
-        send_mail(result)
+        # get and send summaries if specified in config
+        if CONFIG['mailconfig']['sendSummary']:
+            webpage_contents = parse_websites(result.split("\n\n"))
+            result_summary = summarize(webpage_contents)
+            send_mail(result_summary)
+        else:
+            send_mail(result)
     if CONFIG['profileRecords']:
         print('Updating profile records')
         profiling_records(result)

@@ -24,6 +24,7 @@
     },
     "mailconfig":{
         "sendMail": false,
+        "sendSummary": false,
         "mailServer": "",
         "senderMailAddress": "",
         "destinationMailAddress": "",
