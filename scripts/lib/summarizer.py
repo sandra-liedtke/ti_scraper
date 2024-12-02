@@ -22,8 +22,11 @@ def parse_websites(webpages):
                 webpage = webpage[0]
                 # parse webpage content
                 website_content = BeautifulSoup(webpage.content, 'html.parser')
-                # find the text of the article
-                if website_content.find('p'):
+                # only page which requires the article tag - retrieving p tags does not give the required result
+                if url[0].startswith("https://www.bleepingcomputer"):
+                    website_content = website_content.find('article')
+                # find the text of the article for all other pages
+                elif website_content.find('p'):
                     website_content = website_content.find_all('p')
                 # only fallback - the article text should be organized in p tags
                 elif website_content.find('main'):
