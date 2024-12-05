@@ -16,6 +16,8 @@ def parse_websites(webpages):
             # use only the URL
             url = []
             url.append(webpage_entry.split("\n")[1])
+            if not url[0].startswith("http"):
+                continue
             try:
                 # call webpage
                 webpage = get_webpage(url)
