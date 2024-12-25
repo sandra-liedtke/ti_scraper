@@ -52,18 +52,19 @@ def clean_webpages(websites):
     return articles
 
 
-def format_result(articles):
+def format_result(all_articles):
     result_str = ""
     # remove leftovers
-    try: 
-        [articles.remove(x) for x in articles if not x.startswith("http")]
-        [articles.remove(x) for x in articles if x.startswith("#")]
-        [articles.remove(x) for x in articles if x.startswith("-")]
-        [articles.remove(x) for x in articles if x.startswith("side")]
-        [articles.remove(x) for x in articles if x == "|"]
+    try:
+        articles = []
+        for url in CONFIG['websiteconfig']['webpages']:
+            page = url.rsplit(".", 1)[0]
+            for x in all_articles:
+                if x.startswith(page):
+                    articles.append(x)
     except Exception as e:
-        print('Error cleaning result ', str(articles), '. Error Message: ', str(e))
-        print('Continuing processing without cleaning list...')
+        print('Error cleaning result ', str(all_articles), '. Error Message: ', str(e))
+        exit()
     # concatenate list entries to result string
     for entry in articles:
         # special handling: record is only added if either the key is not contained or the key AND value are both contained
