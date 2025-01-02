@@ -78,7 +78,7 @@ def main():
         write_file(result)
     if CONFIG['mailconfig']['sendMail']:
         print('Sending mail')
-        send_mail(result)
+        send_mail(result, "")
     # Checking for older files which will not be needed anymore
     delete_old_files()
     print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')

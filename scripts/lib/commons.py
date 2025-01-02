@@ -115,7 +115,7 @@ def keep_delta(record):
     return record
 
 
-def send_mail(articles):
+def send_mail(articles, message_type):
     # SSL
     port = 465 
     # prompt for password of sending mail account - do not show password on console
@@ -126,7 +126,7 @@ def send_mail(articles):
     # Create SSL context
     context = ssl.create_default_context()
     if not str(articles) == '':
-        message = MIMEText(articles)
+        message = MIMEText(articles, message_type)
     else:
         message = MIMEText(str(CONFIG['mailconfig']['placeholder']))
     try: 
@@ -147,7 +147,7 @@ def send_mail(articles):
         print('Error sending mail. Error message: ' + str(e))
         retry = input('Retry connection and sending mail (Y/n)? ')
         if retry.upper() in ["Y", "YES"]:
-            send_mail(articles)
+            send_mail(articles, message_type)
         else:
             print("Skipping mailing function")
         

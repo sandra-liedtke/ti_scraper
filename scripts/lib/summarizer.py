@@ -53,7 +53,11 @@ def parse_websites(webpages):
 # summarizing the texts
 def summarize(original_texts):
     print("Summarizing webpages...")
-    summaries = ""
+    summaries = '''\
+    <html>
+    <head></head>
+    <body>
+    '''
     for text in original_texts:
         try:
             # split headline, original text and URL at the separator
@@ -102,8 +106,12 @@ def summarize(original_texts):
                 if (sentence in sentence_value) and (sentence_value[sentence] > (1.2 * average)):
                     summarized_text += " " + sentence
             if not summarized_text in str(summaries):
-                summaries += headline + ":\n" + (str(summarized_text)) + "\nFROM: " + url + "\n\n"
+                summaries += '<h3>' + headline + ':</h3><p>' + (str(summarized_text)) + '<br>FROM: <a href="' + url + '">' + url + '</a></p><br>'
         except Exception as e:
                 print('Error Summarizing. Skipping summary of current entry.')
     # return all summaries when finished
+    summaries += '''
+    </body>
+    </html>
+    '''
     return summaries

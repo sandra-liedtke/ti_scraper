@@ -104,9 +104,9 @@ def main():
         if CONFIG['mailconfig']['sendSummary']:
             webpage_contents = parse_websites(result.split("\n\n"))
             result_summary = summarize(webpage_contents)
-            send_mail(result_summary)
+            send_mail(result_summary, "html")
         else:
-            send_mail(result)
+            send_mail(result, "")
     if CONFIG['profileRecords']:
         print('Updating profile records')
         profiling_records(result)
