@@ -19,7 +19,7 @@ else:
     separator = "/"
 # select correct config file based on executed script
 APP_NAME = sys.argv[0].split(separator)[len(sys.argv[0].split(separator))-1]
-if APP_NAME == 'retrieve_article_links.py':
+if APP_NAME == 'retrieve_articles.py':
     config_file_name = '../config/articles_config.json'
 elif APP_NAME == 'keyword_search.py':
     config_file_name = '../config/keywords_config.json'
