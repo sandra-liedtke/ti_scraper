@@ -12,11 +12,14 @@ def parse_websites(webpages):
     print("Parsing webpages and getting article texts")
     webpage_texts = []
     for webpage_entry in webpages:
+        # do not try to summarize empty records
         if not str(webpage_entry) == "":
             # use only the URL
             url = []
             url.append(webpage_entry.split("\n")[1])
             if not url[0].startswith("http"):
+                continue
+            if url[0].rsplit(".", 1)[0] in str(CONFIG['websiteconfig']['rss_feeds']):
                 continue
             try:
                 # call webpage

@@ -1,8 +1,10 @@
 {
     "websiteconfig": {
+        "rss_feeds": [
+            "https://www.darkreading.com/rss.xml"
+        ],
         "webpages": [
             "https://www.bleepingcomputer.com/news/security",
-            "https://www.darkreading.com",
             "https://thehackernews.com",
             "https://www.infosecurity-magazine.com/news/",
             "https://www.security-insider.de/fachbeitraege",

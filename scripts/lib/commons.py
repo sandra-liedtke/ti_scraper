@@ -1,3 +1,4 @@
+import feedparser
 from email.mime.text import MIMEText
 import json
 import os
@@ -10,13 +11,13 @@ from stem.control import Controller
 import getpass
 import smtplib, ssl
 
-
 # get os to define the path separator to be used
 operating_sys = platform.system()
 if operating_sys == "Windows":
     separator = "\\"
 else:
     separator = "/"
+
 # select correct config file based on executed script
 APP_NAME = sys.argv[0].split(separator)[len(sys.argv[0].split(separator))-1]
 if APP_NAME == 'retrieve_articles.py':
@@ -34,6 +35,10 @@ else:
 with open(config_file_name, 'r') as config_file:
     CONFIG = json.load(config_file)
 
+#define header for webpage request
+header = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36",
+    }
 
 # get current date and add it to the result file name
 TODAY = datetime.today().date()
@@ -43,7 +48,6 @@ if CONFIG['resultfile']['folder']:
     DEST_FILE_NAME = DEST_FOLDER + str(TODAY) + '_' + strftime('%H%M%S', datetime.now().timetuple()) + '_' + CONFIG['resultfile']['filename']
 else:
     DEST_FILE_NAME = str(TODAY) + '_' + strftime('%H%M%S', datetime.now().timetuple()) + '_' + CONFIG['resultfile']['filename']
-
 
 # delta records can only be extracted if a subfolder is given and existing
 LATEST_CONTENT = ''
@@ -58,22 +62,27 @@ try:
 except:
     'continue without delta setting'
 
+
 # read url setting from config
 def get_urls():
     urls = CONFIG['websiteconfig']['webpages']
     return urls
 
 
+# read rss feeds from config
+def get_rss_feeds():
+    feeds = CONFIG['websiteconfig']['rss_feeds']
+    return feeds
+
+
+# get webpage content
 def get_webpage(urls):
     pages = []
-    # define client and prepare header
-    user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36'
-    headers = {'User-Agent': user_agent}
     # Check if a controller should be used
     if CONFIG['controllerPort'] == 0:
         for webpage in urls:
-            try: 
-                response = requests.get(webpage, headers=headers)
+            try:
+                response = requests.get(webpage, headers=header)
                 pages.append(response)
             except Exception as e:
                 print('Error accessing webpages. Error Message: ', str(e))
@@ -84,8 +93,8 @@ def get_webpage(urls):
             controller.authenticate()
             # loop through list of urls and get webpage contents
             for webpage in urls:
-                try: 
-                    response = requests.get(webpage, headers=headers)
+                try:
+                    response = requests.get(webpage, headers=header)
                     pages.append(response)
                 except Exception as e:
                     print('Error accessing webpages. Error Message: ', str(e))
@@ -93,6 +102,23 @@ def get_webpage(urls):
     return pages
 
 
+# get rss feeds
+def get_rss(urls):
+    # load RSS
+    feed_contents = []
+    for feed_url in urls:
+        try:
+            feed = feedparser.parse(feed_url)
+            # parse RSS Tree
+            for item in feed.entries:
+                record = item["link"] + "|" + item["title"]
+                feed_contents.append(record)
+        except Exception as e:
+            print('Error accessing webpages. Error Message: ', str(e))
+    return feed_contents
+
+
+# write result file
 def write_file(articles):
     # check if result file folder is there
     if CONFIG['resultfile']['folder'] and not os.path.exists(DEST_FOLDER):
@@ -107,6 +133,7 @@ def write_file(articles):
                 print('Error writing result file. Error Message: ', str(e))
 
 
+# check delta
 def keep_delta(record):
     # check if current record is in existing file
     if record.replace('\n', '') in LATEST_CONTENT.replace('\n', ''):
@@ -115,6 +142,7 @@ def keep_delta(record):
     return record
 
 
+# send mail
 def send_mail(articles, message_type):
     # SSL
     port = 465 

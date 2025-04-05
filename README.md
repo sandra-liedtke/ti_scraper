@@ -27,6 +27,7 @@ Diese Arbeit unterliegt den Bestimmungen einer MIT-Lizenz.<br/>
 ### Konfigurationsmöglichkeiten
 
 Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige Skript gestartet wird:
+ - Um Artikeleinträge aus RSS-Feeds zu laden, kann der Link zur entsprechenden XML-Datei in der `rss_feeds`-Sektion hinzugefügt oder gelöscht werden. Diese Artikel werden nicht für eine Zusammenfassung berücksichtigt
  - Um die Webseiten zu ändern, die durchsucht werden sollen, können in der `webpages`-Sektion Links hinzugefügt oder gelöscht werden
  - In articles_config können `stopwords` definiert werden, sodass Einträge, die diese Stopwords enthalten, nicht ins Ergebnis geschrieben werden
  - keywords_config enthält keine Stopword-Sektion, dafür können im `keywords`-Teil Schlüsselworte definiert werden, nach welchen gesucht werden soll. Nur Einträge, die diese Schlüsselworte enthalten werden ins Ergebnis geschrieben
@@ -58,6 +59,8 @@ Einige Konfigurationen sollten eventuell geändert werden, bevor das zugehörige
      - stem
      - demisto-py (oder aus [Github](https://github.com/demisto/demisto-py))
      - tzlocal
+     - nltk
+     - feedparser
  - Wenn der Controller verwendet wird, muss der Computer sich mit dem TOR-Netzwerk verbinden können
  - Ein E-Mail Account, um die Ergebnisse per Mail versenden zu können und ein weiterer Account (oder eine Alias-Adresse), der die Mails empfängt (kann auch der gleiche sein)
  - Notepad++ oder vergleichbares um die Text-Dateien zu öffnen
@@ -105,6 +108,7 @@ This work is licensed under an MIT License.<br/>
 ### Configuration Options
 
 There are some configurations that may be modified before running the related script:
+ - To consider RSS feeds for scraping, the url to the respective XML-file can be added to or deleted from the `rss_feeds` section. These articles will not be considered by the summarizer
  - To change the websites to be scraped, just add different links in the `webpages` section and/or remove existing links
  - In articles_config can be some `stopwords` defined to remove all entries which contain these stopwords
  - keywords_config does not contain a stopword section, but in the `keywords` part can be search words defined. Only entries containing these keywords will be kept in the result
@@ -136,6 +140,8 @@ There are some configurations that may be modified before running the related sc
      - stem
      - demisto-py (or from [Github](https://github.com/demisto/demisto-py))
      - tzlocal
+     - nltk
+     - feedparser
  - If the controller is used, the computer must be able to connect to the TOR-Network
  - A mail account for sending the result via mail and a mail account or alias-address receiving the result (may also be the same)
  - Notepad++ or similar to open the resulting text files

@@ -41,7 +41,7 @@ def clean_webpages(websites):
                         headline = cleaned_result.strip("/").split("/")[len(cleaned_result.strip("/").split("/"))-1].replace('-', ' ').replace('.html', '').title()
                 # remove unnecessary extracted entries
                 if not any(stopword.upper() in cleaned_result.upper() for stopword in CONFIG['websiteconfig']['stopwords']):
-                    # add webpage prefix if not already contained in url 
+                    # add webpage prefix if not already contained in url
                     if cleaned_result.strip().startswith("/"):
                         cleaned_result = str(listentry.url).replace("/fachbeitraege/", '') + cleaned_result.strip()
                     # add cleaned and filtered entry to result if it is not yet there
@@ -57,6 +57,11 @@ def format_result(all_articles):
     # remove leftovers
     try:
         articles = []
+        for rss_url in CONFIG['websiteconfig']['rss_feeds']:
+            rss_page = rss_url.rsplit(".", 2)[0]
+            for x in all_articles:
+                if x.startswith(rss_page):
+                    articles.append(x)
         for url in CONFIG['websiteconfig']['webpages']:
             page = url.rsplit(".", 1)[0]
             for x in all_articles:
@@ -76,7 +81,7 @@ def format_result(all_articles):
         # if the loop has not yet been stopped due to special handling
         else:
             # build and format record for each article to be added to the result
-            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/').replace('theregister.com/security//', 'theregister.com/').replace('/blog/blog/', '/blog/').replace('https://www.darkreading.com//', 'https://www.darkreading.com/')  +  '\n\n' )
+            new_record = keep_delta(entry.split("|")[1] + '\n' + entry.split("|")[0].replace('security//news/', '/news/').replace('theregister.com/security//', 'theregister.com/').replace('/blog/blog/', '/blog/')  +  '\n\n' )
             result_str += new_record
     return result_str
 
@@ -87,12 +92,18 @@ def main():
     # get urls from config.json
     print('Getting URLS from config')
     url_list = get_urls()
+    # getting rss feeds from config.json
+    print('Getting RSS Feeds from config.json')
+    feeds = get_rss_feeds()
     # call webpages
     print('Calling webpages as given in config.json')
     websites = get_webpage(url_list)
+    # getting feed items from RSS Feeds
+    print("Cleaning RSS feed items")
+    articles = get_rss(feeds)
     # clean webpage content and format result
     print('Cleaning webpage contents')
-    articles = clean_webpages(websites)
+    articles += clean_webpages(websites)
     result = format_result(articles)
     # write file and/or send as mail depending on config
     if CONFIG['resultfile']['createFile']:
