@@ -13,6 +13,6 @@ HEADLINE_DIV = re.compile(r'<div.*?>(.*?)</div>')
 HEADLINE_A = re.compile(r'<a .*?>(.*?)</a>')
 
 # regex to remove scripts, all tags and all duplicate empty spaces
-ALL_HTML = re.compile(r'<script.+?</script>|<.*?>|</.*?>|[ ]{2,5}', flags=re.DOTALL)
+ALL_HTML = re.compile(r'<script.+?</script>|<style.+?</style>|<.*?>|</.*?>|[ ]{2,5}', flags=re.DOTALL)
 # regex for all escape characters if they are duplicate
 ESCAPE = re.compile(r'\n{2,10}|\r{2,10}|\t')
