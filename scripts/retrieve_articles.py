@@ -1,6 +1,6 @@
 from lib.commons import *
 from lib.profiling import *
-from lib.regex import *
+from lib.regex_patterns import *
 from lib.aliases import update_aliases
 from lib.summarizer import *
 

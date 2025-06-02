@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 from lib.commons import *
-from lib.regex import *
+from lib.regex_patterns import *
 
 
 def clean_webpages(websites):

@@ -1,5 +1,5 @@
 from lib.commons import *
-from lib.regex import *
+from lib.regex_patterns import *
 from lib.profiling import *
 from lib.aliases import *
 from lib.summarizer import *

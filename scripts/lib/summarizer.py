@@ -1,9 +1,14 @@
+from __future__ import absolute_import
+from __future__ import division, print_function, unicode_literals
+from sumy.parsers.plaintext import PlaintextParser
+from sumy.nlp.tokenizers import Tokenizer
+from sumy.summarizers.lsa import LsaSummarizer as Summarizer
+from sumy.nlp.stemmers import Stemmer
+from sumy.utils import get_stop_words
 import re
 from bs4 import BeautifulSoup
 from lib.commons import *
-from lib.regex import ALL_HTML, ESCAPE
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize, sent_tokenize
+from lib.regex_patterns import ALL_HTML, ESCAPE
 from lib.commons import get_webpage
 
 
@@ -68,50 +73,26 @@ def summarize(original_texts):
             headline = split_entry[0]
             text = split_entry[1]
             url = split_entry[2]
-            # setting stopwords based on top level domain of the url
+            # setting the language based on top level domain of the url
             if url.rsplit(".", 1)[1].startswith("de"):
-                stop_words = set(stopwords.words("german"))
+                LANGUAGE = "german"
             else:
-                stop_words = set(stopwords.words("english"))
-            # tokenize words
-            words = word_tokenize(text)
-            # frequency table with the scores of the words in each sentence
-            freq_table = {}
-            for word in words:
-                word = word.lower()
-                if word in stop_words:
-                    continue
-                if word in freq_table:
-                    freq_table[word] += 1
-                else:
-                    freq_table[word] = 1
-            # get the score of the sentences
-            sentences = sent_tokenize(text)
-            sentence_value = {}
-            for sentence in sentences:
-                for word, freq in freq_table.items():
-                    if word in sentence.lower():
-                        if sentence in sentence_value:
-                            sentence_value[sentence] += freq
-                        else:
-                            sentence_value[sentence] = freq
+                LANGUAGE = "english"
+            SENTENCES_COUNT = 5
 
-            # summarize values
-            sum_values = 0
-            for sentence in sentence_value:
-                sum_values += sentence_value[sentence]
-
-            # use average value of the sentences to create summary
-            average = int(sum_values / len(sentence_value))
+            parser = PlaintextParser.from_string(text, Tokenizer(LANGUAGE))
+            stemmer = Stemmer(LANGUAGE)
+            summarizer = Summarizer(stemmer)
+            summarizer.stop_words = get_stop_words(LANGUAGE)
+            # the final summary
             summarized_text = ''
-            for sentence in sentences:
-                # define which sentences should be part of the summary - set last part (1.x * average) lower for more details and higher for less details
-                if (sentence in sentence_value) and (sentence_value[sentence] > (1.2 * average)):
-                    summarized_text += " " + sentence
-            if not summarized_text in str(summaries):
+            for sentence in summarizer(parser.document, SENTENCES_COUNT):
+                summarized_text += " " + str(sentence).replace('<Sentence:', '').replace('>', '')
+            if not str(summarized_text) in str(summaries):
                 summaries += '<h3>' + headline + ':</h3><p>' + (str(summarized_text)) + '<br>FROM: <a href="' + url + '">' + url + '</a></p><br>'
         except Exception as e:
-                print('Error Summarizing. Skipping summary of current entry.')
+            print(e)
+            print('Error Summarizing. Skipping summary of current entry.')
     # return all summaries when finished
     summaries += '''
     </body>
