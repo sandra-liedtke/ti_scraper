@@ -1,4 +1,4 @@
-#Configuration Options
+# Configuration Options
 
 There are some configurations that may be modified before running the related script:
 
