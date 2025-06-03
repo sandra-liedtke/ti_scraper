@@ -20,7 +20,8 @@ def clean_webpages(websites):
             if not cleaned_result in str(page_contents):
                 page_contents.append(cleaned_result) 
         except Exception as e:
-            print('Error cleaning webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
+            print(e)
+            print('Error cleaning webpage content for webpage ', str(listentry.url))
             continue
     return page_contents
 
@@ -37,7 +38,7 @@ def format_result(webpage):
 
 def main():
     print('\n')
-    print('++++++++++++++++++++++++++++++++++ CONTENT SCRIPT START ++++++++++++++++++++++++++++++++++')
+    print('+++++++++++++++++++++++++++++++++++++++++++ GET CONTENT SCRIPT START +++++++++++++++++++++++++++++++++++++++++++')
     # get urls from config.json
     print('Getting URLS from config')
     url_list = get_urls()
@@ -53,11 +54,11 @@ def main():
         print('Writing result file')
         write_file(result)
     if CONFIG['mailconfig']['sendMail']:
-        print('Sending mail')
+        print('Preparing mail')
         send_mail(result, "")
     # Checking for older files which will not be needed anymore
     delete_old_files()
-    print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')
+    print('+++++++++++++++++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++++++++++++++++')
 
 
 if __name__ == '__main__':

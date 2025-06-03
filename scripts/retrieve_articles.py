@@ -33,13 +33,13 @@ def clean_webpages(websites):
                     headline = re.findall(HEADLINE_DIV, str(entry))[0]
                 elif len(re.findall(HEADLINE_A, str(entry))) > 0:
                     headline = re.findall(HEADLINE_A, str(entry))[0]
-                # if headline still has not been set before
+                # if the headline could not be retrieved, generate it from URL
                 if headline == "":
                     if not cleaned_result.startswith('http'):
                         headline = cleaned_result.strip("/").replace('-', ' ').replace('.html', '').title()
                     else:
                         headline = cleaned_result.strip("/").split("/")[len(cleaned_result.strip("/").split("/"))-1].replace('-', ' ').replace('.html', '').title()
-                # remove unnecessary extracted entries
+                # remove unnecessary extracted entries which are excluded by the stopwords
                 if not any(stopword.upper() in cleaned_result.upper() for stopword in CONFIG['websiteconfig']['stopwords']):
                     # add webpage prefix if not already contained in url
                     if cleaned_result.strip().startswith("/"):
@@ -48,7 +48,8 @@ def clean_webpages(websites):
                     if not cleaned_result in str(articles):
                         articles.append(cleaned_result.strip() + "|" + str(headline))
         except Exception as e:
-            print('Error cleaning webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
+            print(e)
+            print('Error cleaning webpage content for webpage ', str(listentry.url))
     return articles
 
 
@@ -68,7 +69,8 @@ def format_result(all_articles):
                 if x.startswith(page):
                     articles.append(x)
     except Exception as e:
-        print('Error cleaning result ', str(all_articles), '. Error Message: ', str(e))
+        print(e)
+        print('Error cleaning result ', str(all_articles))
         exit()
     # concatenate list entries to result string
     for entry in articles:
@@ -88,7 +90,7 @@ def format_result(all_articles):
 
 def main():
     print('\n')
-    print('++++++++++++++++++++++++++++++++++ ARTICLE LINKS SCRIPT START ++++++++++++++++++++++++++++++++++')
+    print('++++++++++++++++++++++++++++++++++++++++ ARTICLE LINKS SCRIPT START ++++++++++++++++++++++++++++++++++++++++')
     # get urls from config.json
     print('Getting URLS from config')
     url_list = get_urls()
@@ -110,7 +112,7 @@ def main():
         print('Writing result file')
         write_file(result)
     if CONFIG['mailconfig']['sendMail']:
-        print('Sending mail')
+        print('Preparing mail')
         # get and send summaries if specified in config
         if CONFIG['mailconfig']['sendSummary']:
             webpage_contents = parse_websites(result.split("\n\n"))
@@ -123,12 +125,12 @@ def main():
         profiling_records(result)
         # Checking if aliases should be updated
         if CONFIG['profiling']['profile2cortex']:
-            alias_update = input("Want to update the cortex_aliases.config file (Y/n)? ")
+            alias_update = input("Want to update the cortex_aliases.config file [y/n]? ")
             if alias_update.upper() in ["Y", "YES"]:
                 update_aliases()
     # Checking for older files which will not be needed anymore
     delete_old_files()
-    print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')
+    print('+++++++++++++++++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++++++++++++++++')
 
 
 if __name__ == '__main__':

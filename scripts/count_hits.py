@@ -16,20 +16,23 @@ def get_hits(websites):
                 # if the record was found
                 if hit in website_content:
                     found = 1
+                    # save the url
                     webpage_url = listentry.url
+                    # get the last and next 35 characters before/after the hit to indicate the context
                     start_Idx = website_content.index(hit) - 35
                     end_Idx = website_content.index(hit) + 35
                     extract = '...' + website_content[start_Idx:end_Idx].replace('\n', '').replace('\t', '').replace('\r', '') + '...'
                 hits.append(hit + '|' + str(found) + '|' + webpage_url+ ': ' + extract) 
         except Exception as e:
-            print('Error preparing webpage content for webpage ', str(listentry.url), '. Error Message: ', str(e))
+            print(e)
+            print('Error preparing webpage content for webpage ', str(listentry.url))
     return hits
 
 
 def format_result(hit_counts):
     result_str = ''
     separator = ';'
-    # get headers
+    # get headers defined in config
     for header in CONFIG['resultfile']['tableHeaders']:
         result_str += header + separator 
     result_str += '\n'
@@ -52,8 +55,8 @@ def format_result(hit_counts):
                 context = old_result_record[2]  + ',\t\t' + entry[2]
             new_record = entry[0] + separator + str(count) + separator + context
             result_str = result_str.replace(entry[0] + separator + old_result_record[1] + separator + old_result_record[2] , new_record)
-        # add entry to result as it is not yet there
         else:
+            # add entry to result as it is not yet there
             new_record = str(entry[0]) + separator + str(entry[1]) + separator + str(entry[2])
             result_str += '\n' + new_record 
     return result_str
@@ -61,7 +64,7 @@ def format_result(hit_counts):
 
 def main():
     print('\n')
-    print('++++++++++++++++++++++++++++++++++ COUNTING HITS SCRIPT START ++++++++++++++++++++++++++++++++++')
+    print('+++++++++++++++++++++++++++++++++++++++++++ COUNT HITS SCRIPT START +++++++++++++++++++++++++++++++++++++++++++')
     # get urls from config.json
     print('Getting URLS from config')
     url_list = get_urls()
@@ -77,11 +80,11 @@ def main():
         print('Writing result file')
         write_file(result)
     if CONFIG['mailconfig']['sendMail']:
-        print('Sending mail')
+        print('Preparing mail')
         send_mail(result, "")
     # Checking for older files which will not be needed anymore
     delete_old_files()
-    print('+++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++')
+    print('+++++++++++++++++++++++++++++++++++++++++++++++++ SCRIPT END +++++++++++++++++++++++++++++++++++++++++++++++++')
 
 
 if __name__ == '__main__':

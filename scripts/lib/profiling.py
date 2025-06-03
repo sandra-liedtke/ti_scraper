@@ -7,12 +7,15 @@ import demisto_client.demisto_api
 from demisto_client.demisto_api.rest import ApiException
 import json
 
+# URL and API of the Cortex
 BASE_URL = CONFIG['profiling']['CortexXSOARAPIConfig']['host']
-api_instance = demisto_client.configure(base_url=BASE_URL, debug=False, verify_ssl=ssl.CERT_NONE,
+if not BASE_URL == '':
+    api_instance = demisto_client.configure(base_url=BASE_URL, debug=False, verify_ssl=ssl.CERT_NONE,
                                         api_key=CONFIG['profiling']['CortexXSOARAPIConfig']['api_key'])
 
 
 def create_new_indicator(entry, name):
+    # create new indicator if it could not be found - type is always threat actor, articles are added
     ioc_object = {
         "indicator": {
             "CustomFields": {"communitynotes": [{"notes": str(entry).replace('\n', ': '), "timestamp": datetime.datetime.now()}],
@@ -23,10 +26,14 @@ def create_new_indicator(entry, name):
             "value": name
         }
     }
-    api_response = api_instance.indicators_create(ioc_object=ioc_object)
-    print(api_response)
-    print(
-        "The new record has been created in the Cortex XSOAR Application. Please add further details of the record manually as the TI Scraper creates a record with very basic information only")
+    try:
+        api_response = api_instance.indicators_create(ioc_object=ioc_object)
+        print(api_response)
+        print(
+            "The new record has been created in the Cortex XSOAR Application. Please add further details of the record manually as the TI Scraper creates a record with very basic information only")
+    except ApiException as e:
+        print(e)
+        print("Error while writing " + name + " to Cortex XSOAR")
 
 
 # API Request to Cortex XSOAR
@@ -62,18 +69,18 @@ def send_api_request(curr_updt_value, indicator_name):
                 api_response = api_instance.indicators_edit(ioc_object=ioc_object)
                 print(api_response)
             except ApiException as e:
-                print("Error while writing " + indicator_name + " to Cortex XSOAR")
                 print(e)
+                print("Error while writing " + indicator_name + " to Cortex XSOAR")
         elif found_indicator.total == 0:
             # indicator does not exist -> let user chose to create it
             try:
                 create_indicator = input(
-                    "The requested Indicator with value " + indicator_name + " could not be found. Want to create it now (Yes,No)? ")
+                    "The requested Indicator with value " + indicator_name + " could not be found. Want to create it now [y/n]? ")
                 if create_indicator.upper() == "YES" or create_indicator.upper() == "Y":
                     create_new_indicator(curr_updt_value, indicator_name)
-            except Exception as ex:
+            except Exception as e:
+                print(e)
                 print("Cannot update or create record " + indicator_name + " for an unknown reason")
-                print(ex)
         else:
             # If more than one indicator is found it must be handled manually
             print(
@@ -84,7 +91,7 @@ def send_api_request(curr_updt_value, indicator_name):
         print("Skipping XSOAR Profiling for " + indicator_name)
 
 
-# add records to the respective file or Cortex entry for Tracing/Profiling
+# add records to the respective file or Cortex entry for tracing/profiling
 def profiling_records(records):
     # if records are available
     if not str(records) == '':
@@ -102,29 +109,31 @@ def profiling_records(records):
         for alias in existing_aliases:
             aliases_to_check.append(str(alias))
         for entry in aliases_to_check:
+
             # write profile files to folder
             if CONFIG['profiling']['profile2file'] == True:
                 print("Adding " + str(entry) + " to file...")
-                # check if the profiling folder exists
+                # check if the directory folder exists
                 if not os.path.exists('../' + CONFIG['profiling']['profileFolderName']):
                     os.makedirs('../' + CONFIG['profiling']['profileFolderName'])
+
+                # profiling file does not yet exist and needs to be created
                 if not os.path.exists('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt'):
-                    # profiling file does not yet exist and needs to be created
-                    with open('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt', 'w',
-                              encoding='utf-8') as profile_file:
+                    with open('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt', 'w', encoding='utf-8') as profile_file:
                         for new_rec in records:
                             if entry.upper() in new_rec.upper().replace(' ', ''):
                                 profile_file.write('\n\n' + new_rec)
+
                 else:
-                    # profiling file exists and needs to be appended
-                    with open('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt', 'a',
-                              encoding='utf-8') as profile_file:
+                    # profiling file exists and needs to be updated with the new record
+                    with open('../' + CONFIG['profiling']['profileFolderName'] + '/' + entry + '_profile.txt', 'a', encoding='utf-8') as profile_file:
                         for new_rec in records:
                             if entry.upper() in new_rec.upper().replace(' ', ''):
                                 profile_file.write('\n\n' + new_rec)
+
             # Cortex XSOAR Integration
             if CONFIG['profiling']['profile2cortex'] == True:
                 print("Adding records for profile " + str(entry) + " to Cortex XSOAR...")
                 for new_rec in records:
-                    if entry.upper() in new_rec.upper().replace(' ', ''):
+                    if entry.upper() in new_rec.upper().replace(' ', '').replace('-', ''):
                         send_api_request(new_rec, entry.replace(' ', ''))

@@ -20,7 +20,7 @@ def update_aliases():
             indicator_filter = demisto_client.demisto_api.IndicatorFilter()
             indicator_filter.query = 'aliases:"' + config_profile + '"'
             found_indicator = api_instance.indicators_search(indicator_filter=indicator_filter)
-            # write those aliases into a list
+            # write the aliases into a list
             if found_indicator.total == 1:
                 print("Checking aliases for indicator " + config_profile)
                 for cortex_alias in found_indicator.ioc_objects[0]['CustomFields']['aliases']:
@@ -32,7 +32,7 @@ def update_aliases():
             print(e)
             print("Cannot collect aliases. Aborting...")
 
-    # create the file
+    # create the new aliases file
     with open('../config/cortex_aliases.json', 'w', encoding='UTF-8') as file:
         file.write(json.dumps(list(set(missing_aliases))))
 

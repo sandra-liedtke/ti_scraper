@@ -11,12 +11,14 @@ from stem.control import Controller
 import getpass
 import smtplib, ssl
 
+
 # get os to define the path separator to be used
-operating_sys = platform.system()
-if operating_sys == "Windows":
+OPERATING_SYS = platform.system()
+if OPERATING_SYS == "Windows":
     separator = "\\"
 else:
     separator = "/"
+
 
 # select correct config file based on executed script
 APP_NAME = sys.argv[0].split(separator)[len(sys.argv[0].split(separator))-1]
@@ -32,6 +34,8 @@ else:
     print("Unknown app with name " + APP_NAME + ". Forgot to define the config file for it?")
     print("Cancelling...")
     exit()
+
+# read config file
 with open(config_file_name, 'r') as config_file:
     CONFIG = json.load(config_file)
 
@@ -85,7 +89,8 @@ def get_webpage(urls):
                 response = requests.get(webpage, headers=header)
                 pages.append(response)
             except Exception as e:
-                print('Error accessing webpages. Error Message: ', str(e))
+                print(e)
+                print('Error accessing webpages')
         print('Responses: ', pages)
     else:
         # use controller
@@ -97,7 +102,8 @@ def get_webpage(urls):
                     response = requests.get(webpage, headers=header)
                     pages.append(response)
                 except Exception as e:
-                    print('Error accessing webpages. Error Message: ', str(e))
+                    print(e)
+                    print('Error accessing webpages')
         print('Responses: ', pages)
     return pages
 
@@ -114,7 +120,8 @@ def get_rss(urls):
                 record = item["link"] + "|" + item["title"]
                 feed_contents.append(record)
         except Exception as e:
-            print('Error accessing webpages. Error Message: ', str(e))
+            print(e)
+            print('Error accessing webpages')
     return feed_contents
 
 
@@ -130,7 +137,8 @@ def write_file(articles):
         with open(DEST_FILE_NAME, 'w', encoding="utf-8") as resultfile:
             resultfile.write(str(articles))
     except Exception as e:
-                print('Error writing result file. Error Message: ', str(e))
+        print(e)
+        print('Error writing result file')
 
 
 # check delta
@@ -144,23 +152,26 @@ def keep_delta(record):
 
 # send mail
 def send_mail(articles, message_type):
-    # SSL
+    # use encrypted connection to the mailserver
     port = 465 
-    # prompt for password of sending mail account - do not show password on console
+    # prompt for password of sending mail account - do not display password on console
     sender_mail = str(CONFIG['mailconfig']['senderMailAddress'])
     password = getpass.getpass("Enter password for sending mail account: ")
+    # get receiver mail address and subject from config file
     receiver = str(CONFIG['mailconfig']['destinationMailAddress'])
     subject = str(CONFIG['mailconfig']['mailSubject'])
     # Create SSL context
     context = ssl.create_default_context()
+    # send articles if available, else send the placeholder text defined in the config
     if not str(articles) == '':
         message = MIMEText(articles, message_type)
     else:
         message = MIMEText(str(CONFIG['mailconfig']['placeholder']))
-    try: 
+
+    try:
+        # connect to the mailserver and send mail
         with smtplib.SMTP_SSL(CONFIG['mailconfig']['mailServer'], port, context=context) as server:
             server.login(sender_mail, password)
-            # build mail and send it
             message["Subject"] = subject
             message["From"] = sender_mail
             message["To"] = receiver
@@ -173,22 +184,23 @@ def send_mail(articles, message_type):
         except:
             'disconnected'
         print('Error sending mail. Error message: ' + str(e))
-        retry = input('Retry connection and sending mail (Y/n)? ')
+        retry = input('Retry connection and sending mail [y/n]? ')
+        # try again or skip
         if retry.upper() in ["Y", "YES"]:
             send_mail(articles, message_type)
         else:
             print("Skipping mailing function")
         
 
-# check if there are any files older than the days specified and if so, delete them based on user input
+# check if there are any files older than the days specified in config and if so, delete them based on user input
 def delete_old_files():
     obsolete_files = []
-    if operating_sys == 'Windows':
+    if OPERATING_SYS == 'Windows':
         [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getctime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
     else:
         [obsolete_files.append(file) for file in EXISTING_FILES if datetime.fromtimestamp(os.path.getmtime(file)).date() < (TODAY - timedelta(days=CONFIG['timeDelta4Delete']))]
     if obsolete_files:
-        delete_files = input("Found files older than " + str(CONFIG['timeDelta4Delete']) + " days. Delete them now (Y/n)? ")
+        delete_files = input("Found files older than " + str(CONFIG['timeDelta4Delete']) + " days. Delete them now [y/n]? ")
         if delete_files.upper() in ["Y", "YES"]:
             for f in obsolete_files:
                 os.remove(f)

@@ -11,9 +11,12 @@ from lib.commons import *
 from lib.regex_patterns import ALL_HTML, ESCAPE
 from lib.commons import get_webpage
 
+# define the number of sentences the summary should contain
+SENTENCES_COUNT = 5
 
 # Clean webpages from HTML
 def parse_websites(webpages):
+    global webpage
     print("Parsing webpages and getting article texts")
     webpage_texts = []
     for webpage_entry in webpages:
@@ -38,7 +41,7 @@ def parse_websites(webpages):
                 # find the text of the article for all other pages
                 elif website_content.find('p'):
                     website_content = website_content.find_all('p')
-                # only fallback - the article text should be organized in p tags
+                # only for fallback - the article text should be organized in p tags
                 elif website_content.find('main'):
                     website_content = website_content.find('main')
                 else:
@@ -53,7 +56,8 @@ def parse_websites(webpages):
                 if not orig_text in str(webpage_texts):
                     webpage_texts.append(webpage_entry.split("\n")[0] + "|" + orig_text + "|" + str(webpage_entry.split("\n")[1]))
             except Exception as e:
-                print('Error cleaning webpage content for webpage ', str(webpage.url), '. Error Message: ', str(e))
+                print(e)
+                print('Error cleaning webpage content for webpage ', str(webpage.url))
                 continue
     return webpage_texts
 
@@ -75,15 +79,14 @@ def summarize(original_texts):
             url = split_entry[2]
             # setting the language based on top level domain of the url
             if url.rsplit(".", 1)[1].startswith("de"):
-                LANGUAGE = "german"
+                language = "german"
             else:
-                LANGUAGE = "english"
-            SENTENCES_COUNT = 5
+                language = "english"
 
-            parser = PlaintextParser.from_string(text, Tokenizer(LANGUAGE))
-            stemmer = Stemmer(LANGUAGE)
+            parser = PlaintextParser.from_string(text, Tokenizer(language))
+            stemmer = Stemmer(language)
             summarizer = Summarizer(stemmer)
-            summarizer.stop_words = get_stop_words(LANGUAGE)
+            summarizer.stop_words = get_stop_words(language)
             # the final summary
             summarized_text = ''
             for sentence in summarizer(parser.document, SENTENCES_COUNT):
@@ -93,7 +96,9 @@ def summarize(original_texts):
         except Exception as e:
             print(e)
             print('Error Summarizing. Skipping summary of current entry.')
-    # return all summaries when finished
+            continue
+
+    # close html tags and return all summaries when finished
     summaries += '''
     </body>
     </html>

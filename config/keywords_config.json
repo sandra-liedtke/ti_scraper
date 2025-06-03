@@ -1,9 +1,11 @@
 {
     "websiteconfig": {
+        "rss_feeds": [
+            "https://www.n-tv.de/rss"
+        ],
         "webpages": [
-            "https://www.n-tv.de/",
             "https://www.tagesschau.de/",
-            "https://www.cnbc.com/"
+            "https://www.cnbc.com/world/"
         ],
         "keywords": [
             "Cyber",
